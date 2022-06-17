@@ -50,7 +50,7 @@ RegisterNetEvent('qb-trucker:server:01101110', function(drops)
     local taxAmount = math.ceil((price / 100) * PaymentTax)
     local payment = price - taxAmount
     Player.Functions.AddJobReputation(drops)
-    Player.Functions.AddMoney("bank", payment, "trucker-salary")
+    Player.Functions.AddMoney("bank", payment*7, "trucker-salary")
     TriggerClientEvent('QBCore:Notify', src, Lang:t("success.you_earned", {value = payment}), 'success')
 end)
 
