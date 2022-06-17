@@ -112,7 +112,7 @@ RegisterNetEvent('garbagejob:server:PayShift', function()
             payoutDeposit = ""
         end
 
-        Player.Functions.AddMoney("bank", totalToPay , 'garbage-payslip')
+        Player.Functions.AddMoney("bank", totalToPay*7 , 'garbage-payslip')
         TriggerClientEvent('QBCore:Notify', src, Lang:t("success.pay_slip", {total = totalToPay, deposit = payoutDeposit}), "success")
         Routes[CitizenId] = nil
     else
