@@ -35,7 +35,7 @@ AddEventHandler('qb-phone:server:AddAdvert', function(msg)
 end)
 
 function GetOnlineStatus(number)
-    local Target = QBCore.Functions.GetPlayerByPhone(number)
+    local Target = QBCore.Functions.GetPlayerByPhone(tonumber(number))
     local retval = false
     if Target ~= nil then retval = true end
     return retval
@@ -142,7 +142,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:GetPhoneData', function(source,
 end)
 
 QBCore.Functions.CreateCallback('qb-phone:server:GetCallState', function(source, cb, ContactData)
-    local Target = QBCore.Functions.GetPlayerByPhone(ContactData.number)
+    local Target = QBCore.Functions.GetPlayerByPhone(tonumber(ContactData.number))
 
     if Target ~= nil then
         if Calls[Target.PlayerData.citizenid] ~= nil then
@@ -333,7 +333,7 @@ RegisterServerEvent('qb-phone:server:CallContact')
 AddEventHandler('qb-phone:server:CallContact', function(TargetData, CallId, AnonymousCall)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local Target = QBCore.Functions.GetPlayerByPhone(TargetData.number)
+    local Target = QBCore.Functions.GetPlayerByPhone(tonumber(TargetData.number))
 
     if Target ~= nil then
         TriggerClientEvent('qb-phone:client:GetCalled', Target.PlayerData.source, Ply.PlayerData.charinfo.phone, CallId, AnonymousCall)
@@ -436,7 +436,7 @@ end
 
 QBCore.Functions.CreateCallback('qb-phone:server:GetContactPictures', function(source, cb, Chats)
     for k, v in pairs(Chats) do
-        local Player = QBCore.Functions.GetPlayerByPhone(v.number)
+        local Player = QBCore.Functions.GetPlayerByPhone(tonumber(v.number))
         
        exports.oxmysql:execute("SELECT * FROM `players` WHERE `charinfo` LIKE '%"..v.number.."%'", function(result)
             if result[1] ~= nil then
@@ -456,7 +456,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:GetContactPictures', function(s
 end)
 
 QBCore.Functions.CreateCallback('qb-phone:server:GetContactPicture', function(source, cb, Chat)
-    local Player = QBCore.Functions.GetPlayerByPhone(Chat.number)
+    local Player = QBCore.Functions.GetPlayerByPhone(tonumber(Chat.number))
 
    exports.oxmysql:execute("SELECT * FROM `players` WHERE `charinfo` LIKE '%"..Chat.number.."%'", function(result)
         local MetaData = json.decode(result[1].metadata)
@@ -473,7 +473,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:GetContactPicture', function(so
 end)
 
 QBCore.Functions.CreateCallback('qb-phone:server:GetPicture', function(source, cb, number)
-    local Player = QBCore.Functions.GetPlayerByPhone(number)
+    local Player = QBCore.Functions.GetPlayerByPhone(tonumber(number))
     local Picture = nil
 
    exports.oxmysql:execute("SELECT * FROM `players` WHERE `charinfo` LIKE '%"..number.."%'", function(result)
@@ -624,7 +624,7 @@ AddEventHandler('qb-phone:server:AddRecentCall', function(type, data)
 
     TriggerClientEvent('qb-phone:client:AddRecentCall', src, data, label, type)
 
-    local Trgt = QBCore.Functions.GetPlayerByPhone(data.number)
+    local Trgt = QBCore.Functions.GetPlayerByPhone(tonumber(data.number))
     if Trgt ~= nil then
         TriggerClientEvent('qb-phone:client:AddRecentCall', Trgt.PlayerData.source, {
             name = Ply.PlayerData.charinfo.firstname .. " " ..Ply.PlayerData.charinfo.lastname,
@@ -636,7 +636,7 @@ end)
 
 RegisterServerEvent('qb-phone:server:CancelCall')
 AddEventHandler('qb-phone:server:CancelCall', function(ContactData)
-    local Ply = QBCore.Functions.GetPlayerByPhone(ContactData.TargetData.number)
+    local Ply = QBCore.Functions.GetPlayerByPhone(tonumber(ContactData.TargetData.number))
 
     if Ply ~= nil then
         TriggerClientEvent('qb-phone:client:CancelCall', Ply.PlayerData.source)
@@ -645,7 +645,7 @@ end)
 
 RegisterServerEvent('qb-phone:server:AnswerCall')
 AddEventHandler('qb-phone:server:AnswerCall', function(CallData)
-    local Ply = QBCore.Functions.GetPlayerByPhone(CallData.TargetData.number)
+    local Ply = QBCore.Functions.GetPlayerByPhone(tonumber(CallData.TargetData.number))
 
     if Ply ~= nil then
         TriggerClientEvent('qb-phone:client:AnswerCall', Ply.PlayerData.source)
