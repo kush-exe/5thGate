@@ -107,7 +107,6 @@ RegisterNetEvent('garbagejob:server:PayShift', function()
         end
 
         local totalToPay = depositPay + Routes[CitizenId].actualPay
-        totalToPay = totalToPay * 7
         local payoutDeposit = Lang:t("info.payout_deposit", {value = depositPay})
         if depositPay == 0 then
             payoutDeposit = ""
