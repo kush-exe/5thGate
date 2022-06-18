@@ -47,7 +47,6 @@ RegisterNetEvent('qb-trucker:server:01101110', function(drops)
     end
 
     local price = (DropPrice * drops) + bonus
-    price = price * 7
     local taxAmount = math.ceil((price / 100) * PaymentTax)
     local payment = price - taxAmount
     Player.Functions.AddJobReputation(drops)
