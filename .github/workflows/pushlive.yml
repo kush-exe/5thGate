@@ -31,7 +31,7 @@ jobs:
           cd /home/ubuntu/liveserver/fx-server-data/resources
           git branch
           git fetch
-          git reset --hard
+          git reset --hard master
           git checkout master
           git pull
           
