@@ -173,7 +173,7 @@ function OpenSafeDoor()
           Wait(0)
         end
 
-        if not (GetEntityHeading(v) >= targetHeading) then SetEntityHeading(v, targetHeading); end
+        if GetEntityHeading(v) < targetHeading then SetEntityHeading(v, targetHeading); end
       end
     end  
   end)

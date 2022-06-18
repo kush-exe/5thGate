@@ -27,7 +27,7 @@ jobs:
           args: "-t --formatter JUnit"
       - name: Generate Lint Report
         if: always()
-        uses: mikepenz/action-junit-report@v3
+        uses: mikepenz/action-junit-report@v3.2
         with:
           report_paths: "**/junit.xml"
           check_name: Linting Report
