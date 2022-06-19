@@ -3,25 +3,6 @@ TriggerServerEvent("dp:CheckVersion")
 rightPosition = {x = 1450, y = 100}
 leftPosition = {x = 0, y = 100}
 menuPosition = {x = 0, y = 200}
-PlayerData = QBCore.Functions.GetPlayerData()
-isLoggedIn = false
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-    PlayerData = QBCore.Functions.GetPlayerData()
-    isLoggedIn = true
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerUnload')
-AddEventHandler('QBCore:Client:OnPlayerUnload', function()
-    PlayerData = {}
-    isLoggedIn = false
-end)
-
-RegisterNetEvent('QBCore:Player:SetPlayerData')
-AddEventHandler('QBCore:Player:SetPlayerData', function(val)
-    PlayerData = val
-end)
 
 if Config.MenuPosition then
   if Config.MenuPosition == "left" then
@@ -43,7 +24,7 @@ else
 end
 
 _menuPool = NativeUI.CreatePool()
-mainMenu = NativeUI.CreateMenu("dp Emotes", "", menuPosition["x"], menuPosition["y"], Menuthing, Menuthing)
+mainMenu = NativeUI.CreateMenu("", "", menuPosition["x"], menuPosition["y"], Menuthing, Menuthing)
 _menuPool:Add(mainMenu)
 
 function ShowNotification(text)
@@ -64,7 +45,7 @@ local FavoriteEmote = ""
 
 Citizen.CreateThread(function()
   while true do
-    if Config.FavKeybindEnabled and not PlayerData.metadata['inlaststand'] and not PlayerData.metadata['isdead'] then
+    if Config.FavKeybindEnabled then
       if IsControlPressed(0, Config.FavKeybind) then
         if not IsPedSittingInAnyVehicle(PlayerPedId()) then
           if FavoriteEmote ~= "" then
@@ -328,14 +309,4 @@ end)
 RegisterNetEvent("dp:RecieveMenu") -- For opening the emote menu from another resource.
 AddEventHandler("dp:RecieveMenu", function()
     OpenEmoteMenu() 
-end)
-
--- This is here to get the player data when the resource is restarted instead of having to log out and back in each time
--- This won't set the player data too early as this only triggers when the server side is started and not the client side
-AddEventHandler('onResourceStart', function(resource)
-  if resource == GetCurrentResourceName() then
-      Wait(200)
-      PlayerData = QBCore.Functions.GetPlayerData()
-      isLoggedIn = true
-  end
 end)
