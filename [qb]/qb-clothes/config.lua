@@ -92,11 +92,6 @@ Config.ClothingShops = {
 		coords = vector3(-1102.50, 2711.632, 18.107),
 		MarkerSize   = {x = 2.5, y = 2.0, z = 0.0}
 	},
-    [18] = { -- FBI 
-		blip = false,
-		coords = vector3(2514.72, -343.51, 101.89),
-		MarkerSize   = {x = 2.5, y = 2.0, z = 0.0}
-	},
 }
 
 
@@ -115,8 +110,7 @@ Config.ClothingRooms = {
     [1] = {requiredJob = "police", coords = vector3(462.1084, -999.1511, 30.6896)},
     [2] = {requiredJob = "ambulance", coords = vector3(298.8991, -598.097, 43.284)},
     [3] = {requiredJob = "sheriff", coords = vector3(-451.46, 6014.25, 31.72)},
-    [4] = {requiredJob = "sicarios", coords = vector3(153.28, -3014.15, 7.04)},
-    [5] = {requiredJob = "vanilla", coords = vector3(108.81, -1304.01, 29.26)},
+    [4] = {requiredJob = "sicarios", coords = vector3(153.28, -3014.15, 7.04)}
 }
 
 Config.Outfits = {
@@ -504,52 +498,9 @@ Config.Outfits = {
             },
         },
     },
-    ["vanilla"] = {
-        ["male"] = {
-            [1] = {
-                outfitLabel = "Male",
-                outfitData = {
-                    ["arms"]        = { item = 88, texture = 0},  -- Arms
-                    ["t-shirt"]     = { item = 15, texture = 0},  -- T Shirt
-                    ["vest"]        = { item = 0, texture = 0},  -- Body Vest
-                    ["torso2"]      = { item = 3, texture = 6},  -- Jacket / Vests
-                    ["pants"]       = { item = 35,texture = 0},  -- Pants
-                    ["decals"]      = { item = 58, texture = 1},  -- Decals
-                    ["accessory"]   = { item = 0, texture = 0},  -- Neck Tie
-                    ["bag"]         = { item = 0, texture = 0},  -- Bag
-                    ["hat"]         = { item = -1, texture = -1},  -- Hat
-                    --["glass"]       = { item = 0, texture = 0},  -- Glasses
-                    ["ear"]         = { item = -1, texture = 0},  -- Ear
-                    ["mask"]        = { item = 0, texture = 0},  -- Mask
-                    ["shoes"]       = { item = 25, texture = 0},  -- Shoes
-				},
-			},
-		},		
-        ["female"] = {
-            [1] = {
-                outfitLabel = "Fem",
-                outfitData = {
-                    ["arms"]        = { item = 100, texture = 0},  -- Arms
-                    ["t-shirt"]     = { item = 159, texture = 0},  -- T Shirt
-                    ["vest"]        = { item = 0, texture = 0},  -- Body Vest
-                    ["torso2"]      = { item = 258, texture = 0},  -- Jacket / Vests
-                    ["pants"]       = { item = 34,texture = 0},  -- Pants
-                    ["decals"]      = { item = 66, texture = 1},  -- Decals
-                    ["accessory"]   = { item = 0, texture = 0},  -- Neck Tie
-                    ["bag"]         = { item = 0, texture = 0},  -- Bag
-                    ["hat"]         = { item = -1, texture = -1},  -- Hat
-                    --["glass"]       = { item = 0, texture = 0},  -- Glasses
-                    ["ear"]         = { item = -1, texture = 0},  -- Ear
-                    ["mask"]        = { item = 0, texture = 0},  -- Mask
-                    ["shoes"]       = { item = 25, texture = 0},  -- Shoes
-                },
-            },
-        },
-    },
 }
 
 Config.PedQube = {
-    --[[
 	[1] = {
 		["nome"] = "pedclothing10",
         ["coordinate"] = vector3(427.0880, -805.900, 28.491), --215
@@ -800,14 +751,4 @@ Config.PedQube = {
 		["fisso"] = false, --whether the ped should spawn or despawn based on distance 
         ["spawnato"] = false, --bool to check if the ped has already spawned (don't touch if you don't know what you are doing) 
 	},
-    [26] = {
-		["nome"] = "pedclothing33",
-        ["coordinate"] = vector3(2514.77, -343.56, 101.89), --682
-		["heading"] = 47.99, --ped heading
-		["modello"] = "ig_miguelmadrazo",
-		["dict"] = "anim@amb@nightclub@peds@", --animation dict
-        ["anim"] = "rcmme_amanda1_stand_loop_cop", --anim name
-		["fisso"] = false, --whether the ped should spawn or despawn based on distance 
-        ["spawnato"] = false, --bool to check if the ped has already spawned (don't touch if you don't know what you are doing) 
-	},--]]
 }

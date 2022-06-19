@@ -77,8 +77,6 @@ RegisterNetEvent('qb-clothes:client:CreateFirstCharacter', function()  -- Event 
                 TriggerEvent("qb-apartments:CreatingNewChar", false)
 			end
 		end, config)
-        Wait(1200)
-        TriggerEvent('lj-brand:client:open')
 	end)
 end, false)
 
