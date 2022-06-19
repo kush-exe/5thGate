@@ -1,4 +1,4 @@
-RegisterCommand("postcode", function(source, args, raw)
+RegisterCommand("postal", function(source, args, raw)
 	if args[1] ~= nil then
 		local postalCode = args[1]
 		setWaypoint(postalCode)
@@ -21,7 +21,7 @@ function setWaypoint(postalCode)
 		end
 	end
 	
-	if postalCode_coords.x ~= 0.0 and postalCode_coords.y ~= 0.0then
+	if postalCode_coords.x ~= 0.0 and postalCode_coords.y ~= 0.0 then
 		SetNewWaypoint(postalCode_coords.x, postalCode_coords.y)
 		notify(Config.Prefix.. "Marker was set ~g~successfully~s~. ~y~Postcode~s~: ~y~" ..postalCode)
 	else
@@ -31,7 +31,7 @@ function setWaypoint(postalCode)
 end
 
 Citizen.CreateThread(function()	
-	TriggerEvent('chat:addSuggestion', '/postcode', 'set marker at target position', {
+	TriggerEvent('chat:addSuggestion', '/postal', 'set marker at target position', {
 	    { name="postal code", help="postal code of target (e.g. 001)" }
 	})
 end)
