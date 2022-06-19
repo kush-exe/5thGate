@@ -19,40 +19,21 @@ function LoadAnimDict(dict)
 	end
 end
 
-function DrawText3Ds(x, y, z, text)
-	local onScreen,_x,_y=World3dToScreen2d(x,y,z)
-
-	if onScreen then
-		SetTextScale(0.35, 0.35)
-		SetTextFont(4)
-		SetTextProportional(1)
-		SetTextColour(255, 255, 255, 215)
-		SetTextEntry("STRING")
-		SetTextCentre(1)
-		AddTextComponentString(text)
-		DrawText(_x,_y)
-	end
-end
-
 function Round(num, numDecimalPlaces)
 	local mult = 10^(numDecimalPlaces or 0)
-
 	return math.floor(num * mult + 0.5) / mult
 end
 
 function CreateBlip(coords)
 	local blip = AddBlipForCoord(coords)
-
 	SetBlipSprite(blip, 361)
 	SetBlipScale(blip, 0.6)
 	SetBlipColour(blip, 4)
 	SetBlipDisplay(blip, 4)
 	SetBlipAsShortRange(blip, true)
-
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString("Gas Station")
 	EndTextCommandSetBlipName(blip)
-
 	return blip
 end
 
@@ -64,9 +45,8 @@ function FindNearestFuelPump()
 
 	repeat
 		if Config.PumpModels[GetEntityModel(object)] then
-			table.insert(fuelPumps, object)
+			fuelPumps[#fuelPumps+1] = object
 		end
-
 		success, object = FindNextObject(handle, object)
 	until not success
 
@@ -85,4 +65,30 @@ function FindNearestFuelPump()
 	end
 
 	return pumpObject, pumpDistance
+end
+
+function isCloseVeh()
+    local ped = PlayerPedId()
+    coordA = GetEntityCoords(ped, 1)
+    coordB = GetOffsetFromEntityInWorldCoords(ped, 0.0, 100.0, 0.0)
+    vehicle = getVehicleInDirection(coordA, coordB)
+    if DoesEntityExist(vehicle) and NetworkHasControlOfEntity(vehicle) then
+        return true
+    end
+    return false
+end
+
+function getVehicleInDirection(coordFrom, coordTo)
+	local offset = 0
+	local rayHandle
+	local vehicle
+	for i = 0, 100 do
+		rayHandle = CastRayPointToPoint(coordFrom.x, coordFrom.y, coordFrom.z, coordTo.x, coordTo.y, coordTo.z + offset, 10, PlayerPedId(), 0)	
+		a, b, c, d, vehicle = GetRaycastResult(rayHandle)
+		offset = offset - 1
+		if vehicle ~= 0 then break end
+	end
+	local distance = Vdist2(coordFrom, GetEntityCoords(vehicle))
+	if distance > 25 then vehicle = nil end
+    return vehicle ~= nil and vehicle or 0
 end
