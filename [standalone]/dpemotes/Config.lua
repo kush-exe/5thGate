@@ -15,13 +15,13 @@ Config = {
 	MenuKeybindEnabled = true,
 	MenuKeybind = 170, -- Get the button number here https://docs.fivem.net/game-references/controls/
 -- You can disable the Favorite emote keybinding here.
-	FavKeybindEnabled = false,
+	FavKeybindEnabled = true,
 	FavKeybind = 171, -- Get the button number here https://docs.fivem.net/game-references/controls/
 -- You can change the header image for the f3 menu here
 -- Use a 512 x 128 image!
 -- NOte this might cause an issue of the image getting stuck on peoples screens
-	CustomMenuEnabled = false,
-	MenuImage = "https://i.imgur.com/kgzvDwQ.png",
+	CustomMenuEnabled = true,
+	MenuImage = "https://i.imgur.com/2c8X5Srh.jpg",
 -- You can change the menu position here
 	MenuPosition = "right", -- (left, right)
 -- You can disable the Ragdoll keybinding here.
@@ -35,7 +35,7 @@ Config = {
     SharedEmotesEnabled = true,
     CheckForUpdates = true,
 -- If you have the SQL imported enable this to turn on keybinding.
-    SqlKeybinding = false,
+    SqlKeybinding = true,
 }
 
 Config.KeybindKeys = {
@@ -50,7 +50,7 @@ Config.KeybindKeys = {
 Config.Languages = {
   ['en'] = {
         ['emotes'] = 'Emotes',
-        ['danceemotes'] = "🕺 Dance Emotes",
+        ['danceemotes'] = "🌟 Emotes",
         ['propemotes'] = "📦 Prop Emotes",
         ['favoriteemotes'] = "🌟 Favorite",
         ['favoriteinfo'] = "Select an emote here to set it as your favorite.",
@@ -69,7 +69,7 @@ Config.Languages = {
         ['infoupdateav'] = "Information (Update available)",
         ['infoupdateavtext'] = "An update is available, get the latest version from ~y~https://github.com/andristum/dpemotes~w~",
         ['suggestions'] = "Suggestions?",
-        ['suggestionsinfo'] = "'dullpear_dev' on FiveM forums for any feature/emote suggestions! ✉️",
+        ['suggestionsinfo'] = "Shout out to the Los Santos Roleplay Developer`",
         ['notvaliddance'] = "is not a valid dance.",
         ['notvalidemote'] = "is not a valid emote.",
         ['nocancel'] = "No emote to cancel.",

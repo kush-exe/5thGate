@@ -77,17 +77,12 @@ Config.ClothingShops = {
 		coords = vector3(5.868691, 6511.372, 30.877),
 		MarkerSize   = {x = 7.0, y = 7.0, z = 1.0}
 	},
-	[15] = {
-		blip = true,
-		coords = vector3(4495.485, -4452.16, 3.3664),
-		MarkerSize   = {x = 3.0, y = 5.0, z = 0.0}
-	},
-	[16] = {
+	[17] = {
 		blip = true,
 		coords = vector3(198.14, -875.92, 30.71),
 		MarkerSize   = {x = 2.5, y = 2.0, z = 0.0}
 	},
-    [17] = {
+    [18] = {
 		blip = true,
 		coords = vector3(-1102.50, 2711.632, 18.107),
 		MarkerSize   = {x = 2.5, y = 2.0, z = 0.0}

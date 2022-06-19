@@ -42,7 +42,7 @@ Config.Shops = {
             ['vans'] = 'Vans',
             ['cycles'] = 'Bicycles'
         },
-        ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted
+        ['TestDriveTimeLimit'] = 1.0, -- Time in minutes until the vehicle gets deleted
         ['Location'] = vector3(-45.67, -1098.34, 26.42), -- Blip Location
         ['ReturnLocation'] = vector3(-44.74, -1082.58, 26.68), -- Location to return vehicle, only enables if the vehicleshop has a job owned
         ['VehicleSpawn'] = vector4(-56.79, -1109.85, 26.43, 71.5), -- Spawn location when vehicle is bought
@@ -117,7 +117,7 @@ Config.Shops = {
             ['super'] = 'Super',
             ['sports'] = 'Sports'
         },
-        ['TestDriveTimeLimit'] = 0.5,
+        ['TestDriveTimeLimit'] = 1.0,
         ['Location'] = vector3(-1255.6, -361.16, 36.91),
         ['ReturnLocation'] = vector3(-1231.46, -349.86, 37.33),
         ['VehicleSpawn'] = vector4(-1231.46, -349.86, 37.33, 26.61),
@@ -202,6 +202,7 @@ Config.Shops = {
             },
         },
     },
+    --[[
     ['air'] = {
         ['Type'] = 'free-use', -- no player interaction is required to purchase a vehicle
         ['Zone'] = {
@@ -250,5 +251,5 @@ Config.Shops = {
                 chosenVehicle = 'frogger'
             },
         },
-    },
+    },--]]
 }

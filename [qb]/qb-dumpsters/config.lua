@@ -1,12 +1,10 @@
 Config = {}
 
 Config.Items = {
-    "brokengameboy",
-    "bulletcasings",
-    'aluminumcan',
-    'steeltrash',
-    'irontrash',
-    'brokenphone',
+    "copper",
+    'glass',
+    'aluminum',
+    'rubber',
     'plastic',
-    'metaltrash'
+    'metalscrap'
 }

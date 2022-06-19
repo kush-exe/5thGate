@@ -238,18 +238,6 @@ function createFreeUseShop(shopShape, name)
                             }
                         },
                         {
-                            header = Lang:t('menus.finance_header'),
-                            txt = Lang:t('menus.freeuse_finance_txt'),
-                            icon = "fa-solid fa-coins",
-                            params = {
-                                event = 'qb-vehicleshop:client:openFinance',
-                                args = {
-                                    price = getVehPrice(),
-                                    buyVehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
-                                }
-                            }
-                        },
-                        {
                             header = Lang:t('menus.swap_header'),
                             txt = Lang:t('menus.swap_txt'),
                             icon = "fa-solid fa-arrow-rotate-left",
@@ -312,18 +300,6 @@ function createManagedShop(shopShape, name)
                             }
                         },
                         {
-                            header = Lang:t('menus.finance_header'),
-                            txt = Lang:t('menus.managed_finance_txt'),
-                            icon = "fa-solid fa-coins",
-                            params = {
-                                event = 'qb-vehicleshop:client:openCustomFinance',
-                                args = {
-                                    price = getVehPrice(),
-                                    vehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
-                                }
-                            }
-                        },
-                        {
                             header = Lang:t('menus.swap_header'),
                             txt = Lang:t('menus.swap_txt'),
                             icon = "fa-solid fa-arrow-rotate-left",
@@ -353,24 +329,7 @@ function Init()
             end
         end
     end)
-    CreateThread(function()
-        local financeZone = BoxZone:Create(Config.FinanceZone, 2.0, 2.0, {
-            name = "vehicleshop_financeZone",
-            offset = {0.0, 0.0, 0.0},
-            scale = {1.0, 1.0, 1.0},
-            minZ = Config.FinanceZone.z - 1,
-            maxZ = Config.FinanceZone.z + 1,
-            debugPoly = false,
-        })
-
-        financeZone:onPlayerInOut(function(isPointInside)
-            if isPointInside then
-                exports['qb-menu']:showHeader(financeMenu)
-            else
-                exports['qb-menu']:closeMenu()
-            end
-        end)
-    end)
+    
     CreateThread(function()
         for k in pairs(Config.Shops) do
             for i = 1, #Config.Shops[k]['ShowroomVehicles'] do
