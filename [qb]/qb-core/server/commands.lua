@@ -250,20 +250,4 @@ QBCore.Commands.Add('ooc', 'OOC Chat Message', {}, false, function(source, args)
     end
 end, 'user')
 
--- Me command
 
-QBCore.Commands.Add('me', 'Show local message', {{name = 'message', help = 'Message to respond with'}}, false, function(source, args)
-    if #args < 1 then TriggerClientEvent('QBCore:Notify', source, Lang:t('error.missing_args2'), 'error') return end
-    local ped = GetPlayerPed(source)
-    local pCoords = GetEntityCoords(ped)
-    local msg = table.concat(args, ' '):gsub('[~<].-[>~]', '')
-    local Players = QBCore.Functions.GetPlayers()
-    for i=1, #Players do
-        local Player = Players[i]
-        local target = GetPlayerPed(Player)
-        local tCoords = GetEntityCoords(target)
-        if target == ped or #(pCoords - tCoords) < 20 then
-            TriggerClientEvent('QBCore:Command:ShowMe3D', Player, source, msg)
-        end
-    end
-end, 'user')
