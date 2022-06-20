@@ -1,5 +1,11 @@
 Config = Config or {}
 
+Config.WeaponDamage = {
+    ['weapon_bat'] 				 = 0.25,
+    ['weapon_unarmed'] 				 = 0.25,
+    
+}
+
 Config.ReloadTime = math.random(4000, 6000)
 
 Config.DurabilityBlockedWeapons = {
