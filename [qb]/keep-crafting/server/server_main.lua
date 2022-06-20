@@ -85,7 +85,7 @@ function StartCraftProcess(src, data)
 
      if item_config then
           if item_config.item_settings.level and
-              not (Player.PlayerData.metadata.craftingrep >= item_config.item_settings.level) then
+              (Player.PlayerData.metadata.craftingrep < item_config.item_settings.level) then
                TriggerClientEvent('QBCore:Notify', src, Lang:t('error.need_more_exp'), "error")
                return
           end
@@ -124,7 +124,7 @@ RegisterServerEvent("keep-crafting:server:crafting_is_done", function(data)
      local chance = math.random(0, 100)
      local SuccessRate = item_config.crafting.success_rate
 
-     if not (SuccessRate >= chance) then
+     if (SuccessRate < chance) then
           TriggerClientEvent('QBCore:Notify', src, Lang:t('error.crafting_failed'), 'error')
           return
      end
