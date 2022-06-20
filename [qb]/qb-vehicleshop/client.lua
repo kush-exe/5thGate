@@ -592,6 +592,7 @@ RegisterNetEvent('qb-vehicleshop:client:buyShowroomVehicle', function(vehicle, p
         SetEntityHeading(veh, Config.Shops[insideShop]["VehicleSpawn"].w)
         SetEntityAsMissionEntity(veh, true, true)
         TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
+        TriggerServerEvent('MojiaVehicleKeys:server:AddVehicleKey', QBCore.Functions.GetPlate(veh), vehicle)
         TriggerServerEvent("qb-vehicletuning:server:SaveVehicleProps", QBCore.Functions.GetVehicleProperties(veh))
     end, Config.Shops[insideShop]["VehicleSpawn"], true)
 end)
