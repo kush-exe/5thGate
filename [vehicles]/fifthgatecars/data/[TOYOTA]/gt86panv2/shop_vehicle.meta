@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ShopVehicleDataArray>
+	<Vehicles>
+		<Item>
+			<lockHash>CU_GT86PANV2_VEH</lockHash>
+			<modelNameHash>gt86panv2</modelNameHash>
+			<cost value="100"/>
+			<textLabel>GT86PANV2</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+		<Item>
+			<lockHash>CU_NAME_VEH</lockHash>
+			<modelNameHash>name</modelNameHash>
+			<cost value="100"/>
+			<textLabel>NAME</textLabel>
+			<vehicleMods></vehicleMods>
+		</Item>
+	</Vehicles>
+</ShopVehicleDataArray>
