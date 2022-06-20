@@ -116,7 +116,9 @@ Config.Shops = {
             ['super'] = 'Super',
             ['sports'] = 'Sports',
             ['sedans'] = 'Sedans',
-            ['suvs'] = 'SUVS'
+            ['suvs'] = 'SUVS',
+            ['coupes'] = 'Coupes',
+            ['motorcycles'] = 'Motorcycles'
         },
         ['TestDriveTimeLimit'] = 1.0,
         ['Location'] = vector3(-70.97, 67.9, 71.79),
