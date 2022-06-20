@@ -4611,7 +4611,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 140000,
 		["trunkslots"] = 70,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["z4alchemist"] = {
 		["name"] = "BMW z4 Alchemist",
@@ -4623,7 +4623,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["turs21"] = {
 		["name"] = "Porsche 911 Turbo",
@@ -4647,7 +4647,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rufyb"] = {
 		["name"] = "Porsche 911 RUF",
@@ -4671,7 +4671,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["mulca21"] = {
 		["name"] = "Bentley Bacalar",
@@ -4695,7 +4695,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m3tp"] = {
 		["name"] = "BMW E46 Wagon",
@@ -4707,7 +4707,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 200000,
 		["trunkslots"] = 100,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gt86panv2"] = {
 		["name"] = "Toyota GT86 Pandem",
@@ -4719,7 +4719,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["flhxs_streetglide_special18"] = {
 		["name"] = "Harley Streetglide",
@@ -4731,7 +4731,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 20000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["delsoleg"] = {
 		["name"] = "Honda Civic EG Hatch",
@@ -4755,7 +4755,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["93mustang"] = {
 		["name"] = "Ford Mustang 93",
@@ -4767,7 +4767,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["filthynsx"] = {
 		["name"] = "Acura NSX",
@@ -4791,7 +4791,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["pd_gwagon"] = {
 		["name"] = "Royal G63 AMG",
@@ -4851,7 +4851,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["wheelchair"] = {
 		["name"] = "Wheelchair",
@@ -4875,7 +4875,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["voyager96"] = {
 		["name"] = "Plymouth Voyager",
@@ -4923,7 +4923,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["silv86"] = {
 		["name"] = "Chevy Silverado Donk",
@@ -4935,7 +4935,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["shelbygt500"] = {
 		["name"] = "Ford GT500",
@@ -4947,7 +4947,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 150000,
 		["trunkslots"] = 75,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["sentrab15"] = {
 		["name"] = "Nissan Sentra",
@@ -4971,7 +4971,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 150000,
 		["trunkslots"] = 75,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rs52018"] = {
 		["name"] = "Audi RS5",
@@ -4983,7 +4983,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rs6avant20"] = {
 		["name"] = "Audi RS6 Avant",
@@ -5007,7 +5007,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rmodbmwm8"] = {
 		["name"] = "BMW M8",
@@ -5067,7 +5067,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["mustang19"] = {
 		["name"] = "Ford Mustang GT",
@@ -5079,7 +5079,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 140000,
 		["trunkslots"] = 70,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["mitstar88"] = {
 		["name"] = "Mitsubishi Starion",
@@ -5103,7 +5103,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m3e30"] = {
 		["name"] = "BMW M3 E30",
@@ -5115,7 +5115,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "nfs",
+		["shop"] = "luxury",
 	},
 	["lms"] = {
 		["name"] = "Audi R8 LMS",
@@ -5163,10 +5163,10 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["infinitig35"] = {
-		["name"] = "Inifiniti G35",
+		["name"] = "Infiniti G35",
 		["brand"] = "",
 		["model"] = "infinitig35",
 		["price"] = 7000,
@@ -5211,7 +5211,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gt86"] = {
 		["name"] = "Toyota GT86",
@@ -5223,7 +5223,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["golf75r"] = {
 		["name"] = "VW Golf R",
@@ -5235,7 +5235,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gdwrxsti"] = {
 		["name"] = "Subaru WRX STI",
@@ -5247,7 +5247,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["g63amg6x6"] = {
 		["name"] = "Mercedes G63 AMG 6x6",
@@ -5271,7 +5271,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["fd2"] = {
 		["name"] = "Honda Civic FD2",
@@ -5283,7 +5283,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["e15082"] = {
 		["name"] = "Ford e150",
@@ -5331,7 +5331,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["camry98"] = {
 		["name"] = "Toyota Camry 1998",
@@ -5355,7 +5355,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 180000,
 		["trunkslots"] = 90,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["amv19"] = {
 		["name"] = "Aston Martin Vanquish",
@@ -5403,7 +5403,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["488lb"] = {
 		["name"] = "Ferrari 488 LB",
@@ -5427,7 +5427,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["forgiecat"] = {
 		["name"] = "Dodge Charger SRT",
@@ -5451,7 +5451,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["17m760i"] = {
 		["name"] = "BMW M760i",
@@ -5487,7 +5487,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["01duramaxk"] = {
 		["name"] = "01 Chevy Silverado 3500HD",
@@ -5499,7 +5499,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["cateyedually"] = {
 		["name"] = "05 Chevy Silverado 3500HD",
@@ -5511,19 +5511,19 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["yAudiTTmk1"] = {
 		["name"] = "Audi TT MK1",
 		["brand"] = "",
 		["model"] = "yAudiTTmk1",
-		["price"] = 349000,
+		["price"] = 9859,
 		["category"] = "sports",
 		["hash"] = GetHashKey("yAudiTTmk1"),
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 40,
-		["shop"] = "nfs",
+		["shop"] = "pdm",
 	},
 	["sspres"] = {
 		["name"] = "Chevy Suburban Govt",
@@ -5547,7 +5547,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "nfs",
+		["shop"] = "luxury",
 	},
 	["burrito4"] = {
 		["name"] = "Delicious Mia",
@@ -5571,7 +5571,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 5,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["675lt"] = {
 		["name"] = "Mclaren 675LT",
@@ -5607,7 +5607,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 5,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gsxr"] = {
 		["name"] = "Suzuki GSXR1000",
@@ -5619,7 +5619,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 5,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["r1"] = {
 		["name"] = "Yamaha R1",
@@ -5631,7 +5631,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 5,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["asterope"] = {
 		["name"] = "Asterope",
@@ -5703,7 +5703,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["demon"] = {
 		["name"] = "Dodge Challenger Demon",
@@ -5715,7 +5715,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 150000,
 		["trunkslots"] = 75,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rs6c8"] = {
 		["name"] = "Audi RS6",
@@ -5739,7 +5739,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 150000,
 		["trunkslots"] = 75,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["yzf"] = {
 		["name"] = "Yamaha YZF450",
@@ -5751,7 +5751,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["yss"] = {
 		["name"] = "Yamaha Stryker",
@@ -5763,7 +5763,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["sxf450"] = {
 		["name"] = "KTM SXF450",
@@ -5775,7 +5775,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["srmz"] = {
 		["name"] = "Suzuki RMZ250",
@@ -5787,7 +5787,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["r3"] = {
 		["name"] = "Yamaha R3",
@@ -5799,7 +5799,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["kx450f"] = {
 		["name"] = "Kawasaki KX450F",
@@ -5811,7 +5811,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hxre"] = {
 		["name"] = "Honda XRE300",
@@ -5823,7 +5823,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hor14"] = {
 		["name"] = "Honda CB650",
@@ -5835,7 +5835,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["honcbr"] = {
 		["name"] = "Honda CBR Racing",
@@ -5847,7 +5847,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hfc250"] = {
 		["name"] = "Husqvarna 250",
@@ -5859,7 +5859,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 10000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hdss"] = {
 		["name"] = "Harley Davidson Sportster",
@@ -5871,7 +5871,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 15000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hdkn"] = {
 		["name"] = "Harley Davidson Knucklehead",
@@ -5883,7 +5883,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 15000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["hdfb"] = {
 		["name"] = "Harley Davidson Fat Boy",
@@ -5895,7 +5895,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 15000,
 		["trunkslots"] = 10,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["wildtrak"] = {
 		["name"] = "Ford Bronco Wildtrak",
@@ -5907,7 +5907,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 350000,
 		["trunkslots"] = 120,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["newvic"] = {
 		["name"] = "Ford Crown Vic",
@@ -6051,7 +6051,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/6/67/Futo-GTAV-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "nfs",
+		["shop"] = "luxury",
 	},
 	["rmodgt63"] = {
 		["name"] = "Mercedes-Benz GT63 AMG",
@@ -6111,7 +6111,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 140,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["vxr"] = {
 		["name"] = "Toyota Land Cruiser VXR",
@@ -6123,7 +6123,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["mk2100"] = {
 		["name"] = "Toyota Mark II JZX100",
@@ -6135,7 +6135,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["a80"] = {
 		["name"] = "Toyota Supra MK4",
@@ -6147,7 +6147,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 100000,
 		["trunkslots"] = 50,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["subisti08"] = {
 		["name"] = "Swapped Subaru WRX STI Hatch",
@@ -6159,7 +6159,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["wraith"] = {
 		["name"] = "Rolls Royce Wraith",
@@ -6207,7 +6207,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 200000,
 		["trunkslots"] = 100,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["taycan"] = {
 		["name"] = "Porsche Taycan Turbo S",
@@ -6267,7 +6267,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["Safari97"] = {
 		["name"] = "Nissan Patrol Super Safari",
@@ -6279,7 +6279,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["nzp"] = {
 		["name"] = "Nissan 370z",
@@ -6291,7 +6291,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 100000,
 		["trunkslots"] = 50,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["nissantitan17"] = {
 		["name"] = "Nissan Titan",
@@ -6303,7 +6303,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500,
 		["trunkslots"] = 200,
-		["shop"] = "nfs",
+		["shop"] = "luxury",
 	},
 	["nis15"] = {
 		["name"] = "Nissan S15 Spec-R",
@@ -6315,7 +6315,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["maj350"] = {
 		["name"] = "Nissan Fairlady Z",
@@ -6327,7 +6327,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 100000,
 		["trunkslots"] = 50,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gtr"] = {
 		["name"] = "Nissan GTR",
@@ -6351,7 +6351,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["fto"] = {
 		["name"] = "Mitsubishi FTO GP",
@@ -6363,7 +6363,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["cp9a"] = {
 		["name"] = "Mitsubishi Lancer EVO VI",
@@ -6375,7 +6375,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["v250"] = {
 		["name"] = "Mercedes-Benz V250 Sprinter",
@@ -6387,7 +6387,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 600000,
 		["trunkslots"] = 300,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["sl500"] = {
 		["name"] = "Mercedes-Benz SL500",
@@ -6399,7 +6399,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 60000,
 		["trunkslots"] = 30,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["s500w222"] = {
 		["name"] = "Mercedes-Benz S500",
@@ -6411,7 +6411,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gl63"] = {
 		["name"] = "Mercedes-Benz GL63 AMG",
@@ -6435,7 +6435,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["G65"] = {
 		["name"] = "Mercedes-Benz G65 AMG",
@@ -6459,7 +6459,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["na6"] = {
 		["name"] = "Mazda Miata",
@@ -6483,7 +6483,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["fc3s"] = {
 		["name"] = "Mazda RX-7 FC",
@@ -6495,7 +6495,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["majfd"] = {
 		["name"] = "Mazda RX-7 FD",
@@ -6507,7 +6507,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["miata3"] = {
 		["name"] = "Mazda Miata Turbo",
@@ -6519,7 +6519,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 40000,
 		["trunkslots"] = 20,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["levante"] = {
 		["name"] = "Maserati Levante",
@@ -6531,7 +6531,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["esprit02"] = {
 		["name"] = "Lotus Esprit",
@@ -6543,7 +6543,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["lrrr"] = {
 		["name"] = "Range Rover Classic",
@@ -6555,7 +6555,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["rcf"] = {
 		["name"] = "Lexus RCF",
@@ -6567,7 +6567,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["veneno"] = {
 		["name"] = "Lamborghini Veneno",
@@ -6651,7 +6651,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["srt8"] = {
 		["name"] = "Jeep Cherokee SRT-8",
@@ -6663,7 +6663,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["jeepreneg"] = {
 		["name"] = "Jeep Renegade",
@@ -6675,7 +6675,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 50000,
 		["trunkslots"] = 40,
-		["shop"] = "nfs",
+		["shop"] = "luxury",
 	},
 	["jeep2012"] = {
 		["name"] = "Jeep Wrangler",
@@ -6687,7 +6687,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["honcrx91"] = {
 		["name"] = "Honda CRX",
@@ -6711,7 +6711,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["gt17"] = {
 		["name"] = "Ford GT",
@@ -6735,7 +6735,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["f150"] = {
 		["name"] = "Ford F150",
@@ -6747,7 +6747,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 500000,
 		["trunkslots"] = 250,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["16charger"] = {
 		["name"] = "Dodge Charger 2016",
@@ -6759,7 +6759,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["czr1"] = {
 		["name"] = "Chevrolet Corvette ZR1",
@@ -6783,7 +6783,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["c8"] = {
 		["name"] = "Chevrolet Corvette C8",
@@ -6795,7 +6795,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["c7"] = {
 		["name"] = "Chevrolet Corvette C7",
@@ -6807,7 +6807,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["tahoe21"] = {
 		["name"] = "Chevrolet Tahoe 2021",
@@ -6819,7 +6819,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["camrs17"] = {
 		["name"] = "Chevrolet Camaro RS",
@@ -6831,7 +6831,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["15tahoe"] = {
 		["name"] = "Chevrolet Tahoe 2015",
@@ -6843,7 +6843,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["09tahoe"] = {
 		["name"] = "Chevrolet Tahoe 2009",
@@ -6855,7 +6855,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["cesc21"] = {
 		["name"] = "Cadillac Escalade",
@@ -6867,7 +6867,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 400000,
 		["trunkslots"] = 200,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m6f13"] = {
 		["name"] = "BMW F13 M6",
@@ -6879,7 +6879,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m4f82"] = {
 		["name"] = "BMW F82 M4",
@@ -6891,7 +6891,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m3f80"] = {
 		["name"] = "BMW F80 M3",
@@ -6903,7 +6903,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m3e36"] = {
 		["name"] = "BMW E36 M3",
@@ -6915,7 +6915,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["m2"] = {
 		["name"] = "BMW M2",
@@ -6927,7 +6927,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 120000,
 		["trunkslots"] = 60,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["760li04"] = {
 		["name"] = "BMW E66 760LI",
@@ -6939,7 +6939,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["sq72016"] = {
 		["name"] = "Audi SQ7",
@@ -6951,7 +6951,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 300000,
 		["trunkslots"] = 150,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["s8d2"] = {
 		["name"] = "Audi S8",
@@ -6963,7 +6963,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["r8ppi"] = {
 		["name"] = "Audi R8 PPI",
@@ -6987,7 +6987,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["amdbx"] = {
 		["name"] = "Aston Martin DBX Carbon",
@@ -7011,7 +7011,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 80000,
 		["trunkslots"] = 40,
-		["shop"] = "pdm",
+		["shop"] = "luxury",
 	},
 	["ast"] = {
 		["name"] = "Aston Martin Vanquish",
