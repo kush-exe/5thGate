@@ -94,18 +94,17 @@ Config.Shops = {
         ['Type'] = 'managed', -- meaning a real player has to sell the car
         ['Zone'] = {
             ['Shape'] = {
-                vector2(-1260.6973876953, -349.21334838867),
-                vector2(-1268.6248779297, -352.87365722656),
-                vector2(-1274.1533203125, -358.29794311523),
-                vector2(-1273.8425292969, -362.73715209961),
-                vector2(-1270.5701904297, -368.6716003418),
-                vector2(-1266.0561523438, -375.14080810547),
-                vector2(-1244.3684082031, -362.70278930664),
-                vector2(-1249.8704833984, -352.03326416016),
-                vector2(-1252.9503173828, -345.85726928711)
+                vector2(-69.013717651368, 63.89370727539),
+                vector2(-83.583068847656, 72.387130737304),
+                vector2(-77.578796386718, 82.776153564454),
+                vector2(-64.382781982422, 76.5464553833),
+                vector2(-62.07141494751, 82.637237548828),
+                vector2(-48.509624481202, 76.761238098144),
+                vector2(-55.212558746338, 60.53197479248),
+                vector2(-60.867813110352, 59.299026489258)
             },
-            ['minZ'] = 36.646457672119,
-            ['maxZ'] = 37.516143798828,
+            ['minZ'] = 71,
+            ['maxZ'] = 74,
             ['size'] = 2.75 -- size of the vehicles zones
         },
         ['Job'] = 'cardealer', -- Name of job or none
@@ -115,43 +114,31 @@ Config.Shops = {
         ['blipColor'] = 3, -- Blip color
         ['Categories'] = {
             ['super'] = 'Super',
-            ['sports'] = 'Sports'
+            ['sports'] = 'Sports',
+            ['sedans'] = 'Sedans',
+            ['suvs'] = 'SUVS'
         },
         ['TestDriveTimeLimit'] = 1.0,
-        ['Location'] = vector3(-1255.6, -361.16, 36.91),
-        ['ReturnLocation'] = vector3(-1231.46, -349.86, 37.33),
-        ['VehicleSpawn'] = vector4(-1231.46, -349.86, 37.33, 26.61),
+        ['Location'] = vector3(-70.97, 67.9, 71.79),
+        ['ReturnLocation'] = vector3(-79.88, 60.53, 71.63),
+        ['VehicleSpawn'] = vector4(-57.84, 77.66, 71.25, 66.12),
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-1265.31, -354.44, 35.91, 205.08),
-                defaultVehicle = 'italirsx',
-                chosenVehicle = 'italirsx'
+                coords = vector4(-58.51, 64.69, 72.02, 115.6),
+                defaultVehicle = 'trhawk',
+                chosenVehicle = 'trhawk'
             },
             [2] = {
-                coords = vector4(-1270.06, -358.55, 35.91, 247.08),
-                defaultVehicle = 'italigtb',
-                chosenVehicle = 'italigtb'
+                coords = vector4(-66.84, 72.19, 71.83, 198.96),
+                defaultVehicle = 'urus',
+                chosenVehicle = 'urus'
             },
             [3] = {
-                coords = vector4(-1269.21, -365.03, 35.91, 297.12),
-                defaultVehicle = 'nero',
-                chosenVehicle = 'nero'
+                coords = vector4(-76.27, 75.35, 71.71, 212.75),
+                defaultVehicle = 'rmodbmwm8',
+                chosenVehicle = 'rmodbmwm8'
             },
-            [4] = {
-                coords = vector4(-1252.07, -364.2, 35.91, 56.44),
-                defaultVehicle = 'bati',
-                chosenVehicle = 'bati'
-            },
-            [5] = {
-                coords = vector4(-1255.49, -365.91, 35.91, 55.63),
-                defaultVehicle = 'carbonrs',
-                chosenVehicle = 'carbonrs'
-            },
-            [6] = {
-                coords = vector4(-1249.21, -362.97, 35.91, 53.24),
-                defaultVehicle = 'hexer',
-                chosenVehicle = 'hexer'
-            },
+            
         }
     }, -- Add your next table under this comma
     ['boats'] = {
