@@ -116,7 +116,7 @@ Config.Shops = {
             ['super'] = 'Super',
             ['sports'] = 'Sports',
             ['sedans'] = 'Sedans',
-            ['suvs'] = 'SUVS'
+            ['suvs'] = 'SUVS',
             ['coupes'] = 'Coupes',
             ['motorcycles'] = 'Motorcycles'
         },
