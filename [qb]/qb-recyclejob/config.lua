@@ -62,5 +62,6 @@ Config = {
 		[5] = "aluminum",
 		[6] = "steel",
 		[7] = "glass",
+		[8] = "rubber"
 	}
 }

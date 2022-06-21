@@ -1,10 +1,12 @@
 Config = {}
 
 Config.Items = {
+    "metalscrap",
+    "plastic",
     "copper",
-    'glass',
-    'aluminum',
-    'rubber',
-    'plastic',
-    'metalscrap'
+    "iron",
+    "aluminum",
+    "steel",
+    "glass",
+    "rubber",
 }
