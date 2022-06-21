@@ -31,6 +31,12 @@ Config.categories = {
           label = 'Medical',
           icon = 'fa-solid fa-hand-holding-medical',
           jobs = {}
+     },
+     ['attachments'] = {
+          key = 'attachments',
+          label = 'attachments',
+          icon = 'fa-solid fa-gun',
+          jobs = {}
      }
 }
 
@@ -644,6 +650,34 @@ local weapons_recipe = {
                exp_per_craft = 6
           }
      },
+     ['smg_ammo'] = {
+          categories = {
+               sub = 'smg',
+          },
+          item_settings = {
+               label = 'SMG Ammo',
+               image = 'smg_ammo', -- use inventory's images
+               object = {
+                    name = 'prop_ld_ammo_pack_01',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 250,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 60,
+                    ["copper"] = 80,
+               },
+               exp_per_craft = 4
+          }
+     },
      ['weapon_pistol'] = {
           categories = {
                sub = 'pistol',
@@ -674,12 +708,226 @@ local weapons_recipe = {
                exp_per_craft = 12
           }
      },
-     ['pistol_suppressor'] = {
+     
+     --mac 10
+     ['microsmg_part_1'] = {
           categories = {
-               sub = 'smg',
+               main = 'smg',
           },
           item_settings = {
-               label = 'Pistol suppressor',
+               label = 'Mac-10 Loop',
+               image = 'weapon_microsmg', -- use inventory's images
+               object = {
+                    name = 'w_sb_microsmg',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 1200,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 250,
+                    ["steel"] = 250,
+                    ["iron"] = 250,
+                    ["ironoxide"] = 5,
+               },
+               exp_per_craft = 12
+          }
+     },
+     ['microsmg_part_2'] = {
+          categories = {
+               main = 'smg',
+          },
+          item_settings = {
+               label = 'Mac-10 Trigger',
+               image = 'weapon_microsmg', -- use inventory's images
+               object = {
+                    name = 'w_sb_microsmg',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 1200,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 125,
+                    ["steel"] = 170,
+                    ["aluminum"] = 160,
+               },
+               exp_per_craft = 12
+          }
+     },
+     ['microsmg_part_3'] = {
+          categories = {
+               main = 'smg',
+          },
+          item_settings = {
+               label = 'Mac-10 Clip',
+               image = 'weapon_microsmg', -- use inventory's images
+               object = {
+                    name = 'w_sb_microsmg_mag1',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 1200,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 150,
+                    ["steel"] = 150,
+                    ["rubber"] = 150,
+                    ["aluminumoxide"] = 5,
+               },
+               exp_per_craft = 12
+          }
+     },
+
+     --draco
+     ['compactrifle_part_1'] = {
+          categories = {
+               main = 'rifle',
+          },
+          item_settings = {
+               label = 'Draco Loop',
+               image = 'weapon_compactrifle', -- use inventory's images
+               object = {
+                    name = 'w_ar_assaultrifle',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 2200,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 300,
+                    ["steel"] = 250,
+                    ["iron"] = 150,
+                    ["ironoxide"] = 10,
+               },
+               exp_per_craft = 12
+          }
+     },
+     ['compactrifle_part_2'] = {
+          categories = {
+               main = 'rifle',
+          },
+          item_settings = {
+               label = 'Draco Trigger',
+               image = 'weapon_compactrifle', -- use inventory's images
+               object = {
+                    name = 'w_ar_assaultrifle',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 2400,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 125,
+                    ["steel"] = 170,
+                    ["aluminum"] = 160,
+               },
+               exp_per_craft = 12
+          }
+     },
+     ['compactrifle_part_3'] = {
+          categories = {
+               main = 'rifle',
+          },
+          item_settings = {
+               label = 'Draco Clip',
+               image = 'weapon_compactrifle', -- use inventory's images
+               object = {
+                    name = 'w_ar_assaultrifle_mag1',
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 2600,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 250,
+                    ["steel"] = 250,
+                    ["rubber"] = 180,
+                    ["aluminumoxide"] = 10,
+               },
+               exp_per_craft = 12
+          }
+     },
+}
+
+local attachments_recipe = {
+     ['pistol_suppressor'] = {
+          categories = {
+               sub = 'pistol',
+          },
+          item_settings = {
+               label = 'Walther suppressor',
+               image = 'pistol_suppressor', -- use inventory's images
+               object = {
+                    name = 'w_at_ar_supp_02',
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 0,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 120,
+               materials = {
+                    ["metalscrap"] = 350,
+                    ["steel"] = 300,
+                    ["rubber"] = 300,
+               },
+               exp_per_craft = 5
+          }
+     },
+     ['combatpistol_suppressor'] = {
+          categories = {
+               sub = 'pistol',
+          },
+          item_settings = {
+               label = 'Glock suppressor',
                image = 'pistol_suppressor', -- use inventory's images
                object = {
                     name = 'w_at_ar_supp_02',
