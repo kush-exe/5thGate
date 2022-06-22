@@ -182,7 +182,7 @@ RegisterNetEvent('keep-crafting:client:local_mailer', function(data)
           mat = mat .. " " .. string.format(Lang:t('mail.materials_list'), firstToUpper(name), amount)
      end
      msg = msg .. Lang:t('mail.materials_list_header') .. mat .. Lang:t('mail.tnx_message')
-     TriggerServerEvent('qb-phone:server:sendNewMail', {
+     TriggerServerEvent('jpr-newphone:server:sendNewMail', {
           sender = Lang:t('mail.sender'),
           subject = Lang:t('mail.subject'),
           message = msg,

@@ -9,7 +9,7 @@ Config.ItemInVehicle = false -- Put here, if you want the radio to be an item, i
 Config.CommandVehicle = "cmsc" -- Only will work if Config.ItemInVehicle == false
 
 Config.Zones = {
-	{
+	--[[{
 		name = "Mechanic Zone", -- The name of the radio, it doesn't matter
 		coords = vector3(-212.52,-1341.59,34.89), -- the position where the music is played
 		job = "mechanic", --the job that can change the music
@@ -32,5 +32,5 @@ Config.Zones = {
 		loop = false,-- when the music stops it will repaeat?
 		deftime = 0, -- where does the music starts? 0 and it will start in the beginning
 		changemusicblip = vector3(-212.53,-1341.61,34.89) -- where the player can change the music
-	},
+	},--]]
 }

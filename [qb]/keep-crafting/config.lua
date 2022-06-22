@@ -24,6 +24,9 @@ Config.categories = {
                ['smg'] = {
                     label = 'SMG',
                },
+               ['rifle'] = {
+                    label = 'Rifles',
+               },
           }
      },
      ['medical'] = {

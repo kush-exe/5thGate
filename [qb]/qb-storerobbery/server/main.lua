@@ -128,7 +128,7 @@ RegisterNetEvent('qb-storerobbery:server:callCops', function(type, safe, streetL
         description = "Someone Is Trying To Rob A Store At "..streetLabel.." (CAMERA ID: "..cameraId..")"
     }
     TriggerClientEvent("qb-storerobbery:client:robberyCall", -1, type, safe, streetLabel, coords)
-    TriggerClientEvent("qb-phone:client:addPoliceAlert", -1, alertData)
+    TriggerClientEvent("jpr-newphone:client:addPoliceAlert", -1, alertData)
 end)
 
 CreateThread(function()

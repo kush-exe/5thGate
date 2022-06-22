@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.store-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgb(233, 233, 233);
+    overflow: hidden;
+}
+
+.store-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 9vh;
+    color: black;
+    /* background-color: gray; */
+    border-bottom: .3vh solid rgb(224, 224, 224);
+}
+
+.store-header > p {
+    position: absolute;
+    left: 1.9vh;
+    top: 5vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8vh;
+}
+
+
+
+.storeapp {
+    position: relative;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(233, 233, 233);
+    
+    margin: 0 auto;
+    margin-bottom: .8vh;
+    border-radius: 0.35rem;
+    border-top: 0.2vh solid rgb(177, 177, 177);
+
+    /* border-radius: .6vh; */
+}
+
+
+
+.storeapp-icon {
+    position: absolute;
+    width: 4.5vh;
+    height: 4.5vh;
+    background-color: transparent;
+
+    margin: 1vh;
+    border-radius: .3vh;
+
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.storeapp-foto-icon {
+    position: absolute;
+    width: 26.5vh;
+    height: 45.5vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* width */
+.store-apps::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  .store-apps::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  .store-apps::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  .store-apps::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.store-app-header {
+    position: absolute;
+    height: 9vh;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(233, 233, 233);
+    line-height: 12.5vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; 
+    color: #7d7d7d;
+    border-bottom: 2px solid rgba(168, 168, 168, 0.8);
+    font-weight: bold;
+    -webkit-box-shadow: 0px 0px 7px px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.15);
+}
+
+
+.storeapp-icon > i {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 2.5vh;
+    color: rgb(233, 233, 233);
+}
+
+.storeapp-title {
+    position: absolute;
+    top: 1vh;
+    left: 6.9vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vh;
+}
+
+.storeapp-creator {
+    position: absolute;
+    bottom: 2.2vh;
+    left: 6.9vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2vh;
+}
+
+.storeapp-avaliacao {
+    position: absolute;
+    bottom: 0.6vh;
+    left: 6.9vh;
+    color: #7d7d7d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2vh;
+}
+
+
+
+
+.download-password-container {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.download-password-accept {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: rgb(192, 192, 192);
+    bottom: 1.75vh;
+    margin: 0 auto;
+    left: 0;
+    right: 5.2vh;
+    text-align: center;
+
+    font-size: 1.9vh;
+    transition: 0.1s linear;
+}
+.download-password-deny {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: rgb(192, 192, 192);
+    bottom: 1.75vh;
+    margin: 0 auto;
+    left: 5.2vh;
+    right: 0;
+    text-align: center;
+
+    font-size: 2vh;
+    transition: 0.1s linear;
+}
+
+.download-password-accept > i {
+    line-height: 4vh;
+}
+
+.download-password-deny > i {
+    line-height: 4vh;
+}
+
+.download-password-accept:hover {
+    color: rgb(114, 114, 114);
+}
+
+.download-password-deny:hover {
+    color: rgb(114, 114, 114);
+}

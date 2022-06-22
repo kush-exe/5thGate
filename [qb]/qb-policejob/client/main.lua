@@ -126,7 +126,7 @@ RegisterNetEvent('police:client:sendBillingMail', function(amount)
             gender = Lang:t('info.mrs')
         end
         local charinfo = QBCore.Functions.GetPlayerData().charinfo
-        TriggerServerEvent('qb-phone:server:sendNewMail', {
+        TriggerServerEvent('jpr-newphone:server:sendNewMail', {
             sender = Lang:t('email.sender'),
             subject = Lang:t('email.subject'),
             message = Lang:t('email.message', {value = gender, value2 = charinfo.lastname, value3 = amount}),

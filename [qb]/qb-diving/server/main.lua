@@ -38,7 +38,7 @@ RegisterNetEvent('qb-diving:server:CallCops', function(coords)
                     coords = coords,
                     description = msg
                 }
-                TriggerClientEvent("qb-phone:client:addPoliceAlert", -1, alertData)
+                TriggerClientEvent("jpr-newphone:client:addPoliceAlert", -1, alertData)
             end
         end
     end

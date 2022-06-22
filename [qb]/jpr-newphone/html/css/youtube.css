@@ -1,0 +1,263 @@
+.youtube-app {
+    display: none;
+    margin-top: 85px;
+    height: 86%;
+    width: 100%;
+    background: rgb(243, 243, 243);
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+.youtube-corpoemsi::-webkit-scrollbar {
+    width: .35vh;
+}
+
+.youtube-corpoemsi::-webkit-scrollbar-thumb {
+    background-color: #b52323;
+    border-radius: 65px;
+}
+
+.youtube-corpoemsi::-webkit-scrollbar-thumb:hover {
+    background-color: #da5e5e;
+}
+
+.youtube-corpoemsi::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+
+.youtube-corpoemsi2::-webkit-scrollbar {
+    width: .35vh;
+}
+
+.youtube-corpoemsi2::-webkit-scrollbar-thumb {
+    background-color: #b52323;
+    border-radius: 65px;
+}
+
+.youtube-corpoemsi2::-webkit-scrollbar-thumb:hover {
+    background-color: #da5e5e;
+}
+
+.youtube-corpoemsi2::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+
+.testeunicoyoutube2 {
+
+    color: black;
+    font-size: 1.3vh;
+    margin-left: 50px;
+ }
+
+ .testeunicoyoutube3 {
+    
+    color: black;
+    font-size: 1.3vh;
+    margin-left: 50px;
+ }
+
+
+
+.youtube-header-picture:hover {
+    transform: scale(1.01);
+}
+
+.youtube-header-picture2:hover {
+    transform: scale(1.01)
+}
+
+.youtube-header-picture3:hover {
+    transform: scale(1.01)
+}
+
+.youtube-header-picture4:hover {
+    transform: scale(1.01)
+}
+
+.youtube-header ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+
+
+
+.testeunicoyoutube {
+
+   color: black;
+   top: 50%;
+   font-size: 1.3vh;
+   margin-left: 50px;
+}
+
+.youtube-header-tab {
+    position: relative;
+    float: left;
+    width: 100.33%;
+    height: 100%;
+    text-align: center;
+    line-height: 5vh;
+    font-size: 1.5vh;
+    color: white;
+    transition: all 0.65s ease 1s;
+    box-shadow: 0 0 .2vh 0 rgba(0, 0, 0, 0.281);
+}
+
+.youtube-header-tab:hover {
+    border-radius: 5px;
+}
+
+.selected-youtube-header-tab {
+    border-top: .2vh solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+
+
+
+.youtube-header2 {
+    position: absolute;
+    top: 53.1vh;
+    width: 100%;
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #b52323;
+}
+
+.youtube-header > p {
+    line-height: 12vh;
+    text-indent: 2vh;
+}
+
+.youtube-header > span {
+    position: absolute;
+    top: 9vh;
+    left: 2vh;
+    font-size: 1.2vh;
+    height: 2vh;
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.youtube-list {
+    position: absolute;
+    background-color: #00000033;
+    width: 90%;
+    height: 73%;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 3%;
+
+    border-radius: .5vh;
+
+    overflow-y: scroll;
+}
+
+.youtube-list::-webkit-scrollbar {
+    display: none;
+}
+
+.youtube-list {
+    position: relative;
+    width: 95%;
+    height: 6vh;
+    background-color: rgba(31, 31, 31, 0.89);
+    margin: 2.5%;
+
+    border-radius: .5vh;
+}
+
+.youtube-list-firstletter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.5vh;
+    height: 3.5vh;
+    background-color: white;
+    text-align: center;
+    left: 1vh;
+    line-height: 3.5vh;
+    border-radius: 50%;
+    font-family: 'Samsung Sans Medium';
+    font-size: 1.8vh;
+
+    color: rgb(255, 255, 255);
+}
+
+.youtube-extra-button2 .fa-magnifying-glass:hover {
+    transform: scale(1.1);
+}
+
+.youtube-list-fullname {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5.5vh;
+    font-family: 'Samsung Sans Medium';
+    font-size: 1.5vh;
+
+    max-width: 14vh;
+
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+
+    color: rgb(255, 255, 255);
+}
+
+.youtube-header-tab .fa-home:hover {
+    transform: scale(1.2);
+}
+
+.no-youtube {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Samsung Sans Medium';
+    font-size: 1.3vh;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    max-width: 14vh;
+
+    color: rgb(255, 255, 255);
+}
+
+.youtube-list-call {
+    color: white;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+
+    right: 2vh;
+    font-size: 2vh;
+    transform: rotate(90deg);
+
+    transition: .08s ease-in-out;
+}
+
+.youtube-list-call:hover {
+    color: rgb(66, 161, 11);
+    opacity: .8;
+
+    transform: rotate(0deg);
+
+    cursor: pointer;
+}

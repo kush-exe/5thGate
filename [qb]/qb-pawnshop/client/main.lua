@@ -305,7 +305,7 @@ RegisterNetEvent('qb-pawnshop:client:startMelting', function(item, meltingAmount
                         isMelting = false
                         table.insert(meltedItem, { item = item, amount = meltingAmount })
                         if Config.SendMeltingEmail then
-                            TriggerServerEvent('qb-phone:server:sendNewMail', {
+                            TriggerServerEvent('jpr-newphone:server:sendNewMail', {
                                 sender = Lang:t('info.title'),
                                 subject = Lang:t('info.subject'),
                                 message = Lang:t('info.message'),

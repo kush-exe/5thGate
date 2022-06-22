@@ -571,7 +571,7 @@ function StartMusicLoop(i)
 								end
 								if pploop == carro then
 									if dina then
-										xSound:setSoundDynamic(v.name,false)
+										xSound:setSoundDynamic(v.name,false) --changed from false
 									end
 									if avolume ~= v.volume then
 										xSound:setVolume(v.name,v.volume)

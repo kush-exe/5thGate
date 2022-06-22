@@ -230,7 +230,7 @@ RegisterServerEvent('qb-crypto:server:ExchangeSuccess', function(LuckChance)
         Player.Functions.AddMoney('crypto', Amount)
         TriggerClientEvent('QBCore:Notify', src, "You have exchanged your Cryptostick for: "..Amount.." QBit(\'s)", "success", 3500)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cryptostick"], "remove")
-        TriggerClientEvent('qb-phone:client:AddTransaction', src, Player, {}, "There are "..Amount.." Qbit('s) credited!", "Credit")
+        TriggerClientEvent('jpr-newphone:client:AddTransaction', src, Player, {}, "There are "..Amount.." Qbit('s) credited!", "Credit")
     end
 end)
 
@@ -270,7 +270,7 @@ QBCore.Functions.CreateCallback('qb-crypto:server:BuyCrypto', function(source, c
             WalletId = Player.PlayerData.metadata["walletid"],
         }
         Player.Functions.RemoveMoney('bank', total_price)
-        TriggerClientEvent('qb-phone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) purchased!", "Credit")
+        TriggerClientEvent('jpr-newphone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) purchased!", "Credit")
         Player.Functions.AddMoney('crypto', tonumber(data.Coins))
         cb(CryptoData)
     else
@@ -290,7 +290,7 @@ QBCore.Functions.CreateCallback('qb-crypto:server:SellCrypto', function(source, 
         }
         Player.Functions.RemoveMoney('crypto', tonumber(data.Coins))
         local amount = math.floor(tonumber(data.Coins) * tonumber(Crypto.Worth["qbit"]))
-        TriggerClientEvent('qb-phone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) sold!", "Depreciation")
+        TriggerClientEvent('jpr-newphone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) sold!", "Depreciation")
         Player.Functions.AddMoney('bank', amount)
         cb(CryptoData)
     else
@@ -319,12 +319,12 @@ QBCore.Functions.CreateCallback('qb-crypto:server:TransferCrypto', function(sour
                 WalletId = Player.PlayerData.metadata["walletid"],
             }
             Player.Functions.RemoveMoney('crypto', tonumber(data.Coins))
-            TriggerClientEvent('qb-phone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) transferred!", "Depreciation")
+            TriggerClientEvent('jpr-newphone:client:AddTransaction', source, Player, data, "You have "..tonumber(data.Coins).." Qbit('s) transferred!", "Depreciation")
             local Target = QBCore.Functions.GetPlayerByCitizenId(result[1].citizenid)
 
             if Target ~= nil then
                 Target.Functions.AddMoney('crypto', tonumber(data.Coins))
-                TriggerClientEvent('qb-phone:client:AddTransaction', Target.PlayerData.source, Player, data, "There are "..tonumber(data.Coins).." Qbit('s) credited!", "Credit")
+                TriggerClientEvent('jpr-newphone:client:AddTransaction', Target.PlayerData.source, Player, data, "There are "..tonumber(data.Coins).." Qbit('s) credited!", "Credit")
             else
                 local MoneyData = json.decode(result[1].money)
                 MoneyData.crypto = MoneyData.crypto + tonumber(data.Coins)

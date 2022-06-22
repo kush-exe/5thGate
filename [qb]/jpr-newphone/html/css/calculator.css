@@ -1,0 +1,61 @@
+.calculator-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: black;
+    overflow: hidden;
+}
+
+.button-calc{
+    width: 5.68vh;
+    height: 5.68vh;
+    font-size: 1.89vh;
+    margin: 0.22vh;
+    cursor: pointer;
+    background: rgba(73, 73, 73, 0.9);
+    border: none;
+    color: white;
+    border-radius: 2.55rem;
+    transition: 200ms all;
+}
+.text{
+    width: 25.41vh;
+    font-size: 3.785vh;
+    padding: 0.3785vh;
+    border: none;
+    background: transparent !important;
+    color: white;
+    border-radius: 0.55rem;
+    margin-bottom: 3.02vh;
+    margin-top: 0.37vh;
+    text-align: right;
+}
+.main{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-35%);
+}
+
+.button-calc:hover {
+  background-color: rgba(87, 87, 87, 0.9);  
+}
+
+input:focus {
+    outline: none;
+}
+
+input[value="AC"], input[value="×"], input[value="÷"] {
+    color: black;
+    background-color: #b1b1b1;
+}
+input[value="AC"]:hover, input[value="×"]:hover, input[value="÷"]:hover {
+    background-color: #8f8f8f;
+}
+input[value="-"], input[value="+"], input[value="="],input[value="<"] {
+    color: white;
+    background-color: rgb(255, 188, 5);
+}
+input[value="-"]:hover, input[value="+"]:hover, input[value="="]:hover,input[value="<"]:hover {
+    background-color: rgb(212, 157, 7);
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.camera-app {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+}
+
+
+.camera-homescreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0vh;
+}
+
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

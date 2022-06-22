@@ -23,7 +23,7 @@ Real Estate for QB-Core Framework :house_with_garden:
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 - [qb-radialmenu](https://github.com/qbcore-framework/qb-radialmenu) - For the menu in screenshots
 - [qb-anticheat](https://github.com/qbcore-framework/qb-anticheat) - Anti Cheat 
-- [qb-phone](https://github.com/qbcore-framework/qb-phone) - Houses app
+- [jpr-newphone](https://github.com/qbcore-framework/jpr-newphone) - Houses app
 - [qb-multicharacter](https://github.com/qbcore-framework/qb-multicharacter) - Checking if player is inside after character chosen (You need to edit the lines if you don't use this)
 - [qb-garages](https://github.com/qbcore-framework/qb-garages) - House Garage
 - [qb-interior](https://github.com/qbcore-framework/qb-interior) - Necessary for house interiors
@@ -92,7 +92,7 @@ Real Estate for QB-Core Framework :house_with_garden:
 ensure qb-core
 ensure qb-radialmenu
 ensure qb-anticheat
-ensure qb-phone
+ensure jpr-newphone
 ensure qb-multicharacter
 ensure qb-garages
 ensure qb-interior
