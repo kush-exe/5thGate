@@ -121,24 +121,49 @@ Config.Shops = {
             ['motorcycles'] = 'Motorcycles'
         },
         ['TestDriveTimeLimit'] = 1.0,
-        ['Location'] = vector3(-70.97, 67.9, 71.79),
-        ['ReturnLocation'] = vector3(-79.88, 60.53, 71.63),
-        ['VehicleSpawn'] = vector4(-57.84, 77.66, 71.25, 66.12),
+        ['Location'] = vector3(-601.78, -1122.15, 22.33),
+        ['ReturnLocation'] = vector3(-586.2, -1160.53, 21.72),
+        ['VehicleSpawn'] = vector4(-614.45, -1142.57, 21.87, 179.88),
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-59.02, 64.53, 71.86, 102.33),
-                defaultVehicle = 'trhawk',
-                chosenVehicle = 'trhawk'
+                coords = vector4(-614.08, -1104.23, 21.65, 270.59),
+                defaultVehicle = 'redeye',
+                chosenVehicle = 'redeye'
             },
             [2] = {
-                coords = vector4(-66.57, 72.1, 71.17, 199.06),
-                defaultVehicle = '488lb',
-                chosenVehicle = '488lb'
+                coords = vector4(-605.0, -1127.19, 21.87, 0.83),
+                defaultVehicle = 'f488pista',
+                chosenVehicle = 'f488pista'
             },
             [3] = {
-                coords = vector4(-75.98, 74.88, 71.28, 208.87),
-                defaultVehicle = 'huracanst',
-                chosenVehicle = 'huracanst'
+                coords = vector4(-613.79, -1114.4, 22.25, 271.23),
+                defaultVehicle = '21f150',
+                chosenVehicle = '21f150'
+            },
+            [4] = {
+                coords = vector4(-614.17, -1127.94, 22.01, 270.92),
+                defaultVehicle = 'ikx3gtone',
+                chosenVehicle = 'ikx3gtone'
+            },
+            [5] = {
+                coords = vector4(-614.01, -1132.6, 22.17, 269.18),
+                defaultVehicle = 'rocket',
+                chosenVehicle = 'rocket'
+            },
+            [6] = {
+                coords = vector4(-604.84, -1105.95, 21.46, 182.16),
+                defaultVehicle = 'c8corvette',
+                chosenVehicle = 'c8corvettee'
+            },
+            [7] = 
+                coords = vector4(-604.88, -1116.58, 22.02, 180.99),
+                defaultVehicle = 'm8f91',
+                chosenVehicle = 'm8f91'
+            },
+            [8] = {
+                coords = vector4(-605.02, -1135.5, 21.55, 359.09),
+                defaultVehicle = 'durango18',
+                chosenVehicle = 'durango18'
             },
             
         }
