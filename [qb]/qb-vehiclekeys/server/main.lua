@@ -144,6 +144,7 @@ QBCore.Functions.CreateUseableItem("vehiclekey", function(source, item)
     if item.info.quality > 0 then
         TriggerClientEvent("vehiclekeys:client:UseKey", source, item.info.plate)
     else
-    TriggerClientEvent('QBCore:Notify', source, "These keys are broken and cannot be used!", "error")
+        TriggerClientEvent('QBCore:Notify', source, "These keys are broken and cannot be used!", "error")
+    end
 end)
 

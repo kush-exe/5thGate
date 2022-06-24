@@ -7,6 +7,7 @@ QBCore.Commands.Add("testdecay", "Description", {}, true, function(source, args)
     DegradeStashItems()
     DegradeTrunkItems()
     DegradeGloveboxItems()
+    print('decayed')
 end, "god")
 
 function DegradeInventoryItems()
