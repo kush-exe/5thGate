@@ -137,12 +137,13 @@ end
 
 
 
-function QBCore.Functions.Progressbar(name, label, duration, useWhileDead, canCancel, disableControls, animation, prop, propTwo, onFinish, onCancel)
+function QBCore.Functions.Progressbar(name, label, duration, useWhileDead, canCancel, disableControls, animation, prop, propTwo, onFinish, onCancel, icon)
     if GetResourceState('progressbar') ~= 'started' then error('progressbar needs to be started in order for QBCore.Functions.Progressbar to work') end
     exports['progressbar']:Progress({
         name = name:lower(),
         duration = duration,
         label = label,
+        icon = icon,
         useWhileDead = useWhileDead,
         canCancel = canCancel,
         controlDisables = disableControls,
@@ -161,6 +162,7 @@ function QBCore.Functions.Progressbar(name, label, duration, useWhileDead, canCa
         end
     end)
 end
+
 
 -- Getters
 
@@ -417,7 +419,10 @@ function QBCore.Functions.SpawnClear(coords, radius)
 end
 
 function QBCore.Functions.GetVehicleProperties(vehicle)
+   
     if DoesEntityExist(vehicle) then
+        return exports.renzu_customs:GetVehicleProperties(vehicle)
+         --[[
         local pearlescentColor, wheelColor = GetVehicleExtraColours(vehicle)
 
         local colorPrimary, colorSecondary = GetVehicleColours(vehicle)
@@ -558,7 +563,7 @@ function QBCore.Functions.GetVehicleProperties(vehicle)
             modLivery = modLivery,
             modKit49 = GetVehicleMod(vehicle, 49),
             liveryRoof = GetVehicleRoofLivery(vehicle),
-        }
+        }--]]
     else
         return
     end
@@ -566,6 +571,8 @@ end
 
 function QBCore.Functions.SetVehicleProperties(vehicle, props)
     if DoesEntityExist(vehicle) then
+        exports.renzu_customs:SetVehicleProp(vehicle, props)
+        --[[
         if props.extras then
             for id, enabled in pairs(props.extras) do
                 if enabled then
@@ -852,7 +859,7 @@ function QBCore.Functions.SetVehicleProperties(vehicle, props)
         end
         if props.liveryRoof then
             SetVehicleRoofLivery(vehicle, props.liveryRoof)
-        end
+        end--]]
     end
 end
 

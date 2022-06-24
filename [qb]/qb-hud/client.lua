@@ -585,11 +585,9 @@ RegisterNetEvent("qb-admin:client:ToggleDevmode", function()
     dev = not dev
 end)
 
-RegisterCommand('+engine', function()
-    TriggerEvent('MojiaVehicleKeys:client:Engine')
-end)
 
-RegisterKeyMapping('+engine', 'Toggle Engine', 'keyboard', 'G')
+
+
 
 local function IsWhitelistedWeaponArmed(weapon)
     if weapon then

@@ -1,5 +1,5 @@
 QBShared = QBShared or {}
-QBShared.VehicleHashes = {}
+QBShared.VehicleModels = {}
 
 QBShared.Vehicles = {
 	--- Compacts
@@ -4650,8 +4650,8 @@ QBShared.Vehicles = {
 		["shop"] = "luxury",
 	},
 	["rufyb"] = {
-		["name"] = "Porsche 911 RUF",
-		["brand"] = "",
+		["name"] = "911 RUF",
+		["brand"] = "Porsche",
 		["model"] = "rufyb",
 		["price"] = 1200000,
 		["category"] = "sports",

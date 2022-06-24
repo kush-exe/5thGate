@@ -5,9 +5,20 @@ local VehicleList = {}
 
 QBCore.Functions.CreateCallback('vehiclekeys:CheckHasKey', function(source, cb, plate)
     local Player = QBCore.Functions.GetPlayer(source)
-    cb(CheckOwner(plate, Player.PlayerData.citizenid))
+    local retval = false
+    --cb(CheckOwner(plate, Player.PlayerData.citizenid))
+    local keys = Player.Functions.GetItemsByName('vehiclekey')
+    if keys then
+        for _,v in pairs(keys) do
+            if plate == v.info.plate then
+                retval = true
+            end
+        end
+    end
+    cb(retval)
 end)
 
+--[[
 RegisterServerEvent('vehiclekeys:server:SetVehicleOwner')
 AddEventHandler('vehiclekeys:server:SetVehicleOwner', function(plate)
     local src = source
@@ -52,18 +63,18 @@ AddEventHandler('vehiclekeys:server:GiveVehicleKeys', function(plate, target)
     else
         TriggerClientEvent('chatMessage', src, "SYSTEM", "error", "You dont have the keys of the vehicle!")
     end
-end)
+end)--]]
 
 QBCore.Commands.Add("motor", "Toggle engine On/Off of the vehicle", {}, false, function(source, args)
 	TriggerClientEvent('vehiclekeys:client:ToggleEngine', source)
 end)
-
+--[[
 QBCore.Commands.Add("givekeys", "Give keys of the vehicle", {{name = "id", help = "ID"}}, true, function(source, args)
 	local src = source
     local target = tonumber(args[1])
     TriggerClientEvent('vehiclekeys:client:GiveKeys', src, target)
-end)
-
+end)--]]
+--[[
 function DoesPlateExist(plate)
     if VehicleList ~= nil then
         for k, val in pairs(VehicleList) do
@@ -73,6 +84,32 @@ function DoesPlateExist(plate)
         end
     end
     return false
+end--]]
+
+RegisterServerEvent('vehiclekeys:server:SetVehicleOwner')
+AddEventHandler('vehiclekeys:server:SetVehicleOwner', function(plate, model, owner)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    AddVehicleKey(plate,model, owner)
+end)
+
+function AddVehicleKey(plate, model, owner)
+	local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+	local info = {}
+	if owner == nil then info.owner = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname else info.owner = "STOLEN" end
+	if QBCore.Shared.VehicleModels[model] ~= nil then
+        info.vehname = QBCore.Shared.VehicleModels[model]['brand'] .. ' ' .. QBCore.Shared.VehicleModels[model]['name']
+    elseif model ~= nil then
+        info.vehname = model
+    else
+        info.vehname = 'Unknown'
+    end
+	info.plate = plate
+	info.citizenid = Player.PlayerData.citizenid
+    info.quality = 100
+	Player.Functions.AddItem('vehiclekey', 1, nil, info)
+	TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['vehiclekey'], 'add')
 end
 
 function CheckOwner(plate, identifier)
@@ -100,5 +137,13 @@ end)
 QBCore.Functions.CreateUseableItem("advancedlockpick", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("lockpicks:UseLockpick", source, true)
+end)
+
+QBCore.Functions.CreateUseableItem("vehiclekey", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if item.info.quality > 0 then
+        TriggerClientEvent("vehiclekeys:client:UseKey", source, item.info.plate)
+    else
+    TriggerClientEvent('QBCore:Notify', source, "These keys are broken and cannot be used!", "error")
 end)
 

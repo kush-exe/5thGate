@@ -439,9 +439,10 @@ QBShared.Items = {
 		['type'] = 'item',
 		['image'] = 'carkeys.png',
 		['unique'] = true,
-		['useable'] = false,
+		['useable'] = true,
 		['shouldClose'] = false,
 		['combinable'] = nil,
+		['degrade'] = 1.0,
 		['description'] = 'This is a car key, take good care of it, if you lose it you probably won\'t be able to use your car'
 	},
 
@@ -504,4 +505,7 @@ QBShared.Items = {
 	['markedbills'] 				 = {['name'] = 'markedbills', 			  	  	['label'] = 'Marked Money', 			['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'markedbills.png', 			['unique'] = true, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Money?'},
 	['labkey'] 			 			 = {['name'] = 'labkey', 						['label'] = 'Key', 						['weight'] = 500, 		['type'] = 'item', 		['image'] = 'labkey.png', 				['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Key for a lock...?'},
 	['printerdocument'] 			 = {['name'] = 'printerdocument', 				['label'] = 'Document', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'printerdocument.png', 		['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A nice document'},
+	["spray"] 					 	 = {["name"] = "spray", 			  	  		["label"] = "Bomboletta Spray", 		["weight"] = 300, 		["type"] = "item", 		["image"] = "spray.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Una bomboletta spray di vernice"},
+	["spray_remover"] 			     = {["name"] = "spray_remover", 			  	["label"] = "Kit rimozione Spray", 		["weight"] = 300, 		["type"] = "item", 		["image"] = "spray_remover.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Un kit di rimozione vernice spray"},
+
 }
