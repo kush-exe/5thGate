@@ -16,7 +16,7 @@ end)
 
 CreateThread(function()
     while true do
-        Wait(1000)
+        Wait(10000)
         local playerPed = PlayerPedId()
         if LocalPlayer.state.isLoggedIn then
             if group == 'user' then
@@ -42,7 +42,7 @@ CreateThread(function()
                                 elseif time == (10) then
                                     QBCore.Functions.Notify('You are AFK and will be kicked in ' .. time .. ' seconds!', 'error', 10000)
                                 end
-                                time = time - 1
+                                time = time - 10
                             else
                                 TriggerServerEvent('KickForAFK')
                             end

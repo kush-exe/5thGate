@@ -27,7 +27,6 @@ function DegradeInventoryItems()
                     local itemInfo = QBCore.Shared.Items[item.name:lower()]
                     if item.info ~= nil and item.info.quality ~= nil then
                         local degradeAmount = QBCore.Shared.Items[item.name:lower()]["degrade"] ~= nil and QBCore.Shared.Items[item.name:lower()]["degrade"] or 0.0
-                        local keyDone = false
                         if item.name == 'vehiclekey' then
                             if item.info.citizenid ~= citizenid then
                                 --degrade key

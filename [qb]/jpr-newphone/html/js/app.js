@@ -193,7 +193,7 @@ $(document).on('click', '.phone-application', function(e){
                         $(".phone-home-button").css({"background-color":"rgba(23, 23, 23, 90%)"});
                         $(".phone-application-container").css({"background-color":"rgb(65, 65, 65)"});
                         $("#myPhoneNumber").text(JPR.Phone.Data.PlayerData.charinfo.phone);
-                        $("#mySerialNumber").text("WILD-" + JPR.Phone.Data.PlayerData.metadata["phonedata"].SerialNumber);
+                        $("#mySerialNumber").text("5GRP-" + JPR.Phone.Data.PlayerData.metadata["phonedata"].SerialNumber);
                         $("#myIbanNumber").text(JPR.Phone.Data.PlayerData.charinfo.account);
                     } else if (PressedApplication == "twitter") {
                         $.post('https://jpr-newphone/GetMentionedTweets', JSON.stringify({}), function(MentionedTweets){

@@ -74,7 +74,7 @@ local weapons = {
 
 -- Wheapons that require the Police holster animation
 local holsterableWeapons = {
-	--'WEAPON_STUNGUN',
+	'WEAPON_STUNGUN',
 	'WEAPON_PISTOL',
 	'WEAPON_PISTOL_MK2',
 	'WEAPON_COMBATPISTOL',

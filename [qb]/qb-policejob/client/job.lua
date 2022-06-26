@@ -123,8 +123,8 @@ function TakeOutImpound(vehicle)
                 TriggerServerEvent('police:server:TakeOutImpound', vehicle.plate, currentGarage)
                 closeMenuFull()
                 TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
-                TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
-                SetVehicleEngineOn(veh, true, true)
+                TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh), vehicle.vehicle)
+                --SetVehicleEngineOn(veh, true, true)
             end, vehicle.plate)
         end, coords, true)
     end
@@ -148,9 +148,9 @@ function TakeOutVehicle(vehicleInfo)
 		end
             end
             TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
-            TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
+            TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh), vehicleInfo)
             TriggerServerEvent("inventory:server:addTrunkItems", QBCore.Functions.GetPlate(veh), Config.CarItems)
-            SetVehicleEngineOn(veh, true, true)
+            --SetVehicleEngineOn(veh, true, true)
         end, coords, true)
     end
 end
@@ -473,8 +473,8 @@ RegisterNetEvent('qb-police:client:spawnHelicopter', function(k)
             exports['ps-fuel']:SetFuel(veh, 100.0)
             closeMenuFull()
             TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
-            TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
-            SetVehicleEngineOn(veh, true, true)
+            TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh), Config.PoliceHelicopter)
+            --SetVehicleEngineOn(veh, true, true)
         end, coords, true)
     end
 end)

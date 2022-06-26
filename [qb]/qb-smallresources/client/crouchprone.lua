@@ -1,105 +1,110 @@
-local stage = 0
-local movingForward = false
-CreateThread(function()
-    while true do
-        Wait(1)
-        local ped = PlayerPedId()
-        if not IsPedSittingInAnyVehicle(ped) and not IsPedFalling(ped) and not IsPedSwimming(ped) and not IsPedSwimmingUnderWater(ped) then
-            if IsControlJustReleased(0, 36) then
-                stage = stage + 1
-                if stage == 2 then
-                    -- Crouch stuff
-                    ClearPedTasks(ped)
-                    RequestAnimSet("move_ped_crouched")
-                    while not HasAnimSetLoaded("move_ped_crouched") do
-                        Wait(0)
-                    end
+Crouched = false
+CrouchedForce = false
+Aimed = false
+LastCam = 0
+Cooldown = false
 
-                    SetPedMovementClipset(ped, "move_ped_crouched",1.0)
-                    SetPedWeaponMovementClipset(ped, "move_ped_crouched",1.0)
-                    SetPedStrafeClipset(ped, "move_ped_crouched_strafing",1.0)
-                elseif stage == 3 then
-                    ClearPedTasks(ped)
-                    RequestAnimSet("move_crawl")
-                    while not HasAnimSetLoaded("move_crawl") do
-                        Wait(0)
-                    end
-                elseif stage > 3 then
-                    stage = 0
-                    ClearPedTasksImmediately(ped)
-                    ResetAnimSet()
-                    SetPedStealthMovement(ped,0,0)
-                end
-            end
+CoolDownTime = 500 -- in ms
 
-            if stage == 2 then
-                if GetEntitySpeed(ped) > 1.0 then
-                    SetPedWeaponMovementClipset(ped, "move_ped_crouched",1.0)
-                    SetPedStrafeClipset(ped, "move_ped_crouched_strafing",1.0)
-                elseif GetEntitySpeed(ped) < 1.0 and (GetFollowPedCamViewMode() == 4 or GetFollowVehicleCamViewMode() == 4) then
-                    ResetPedWeaponMovementClipset(ped)
-                    ResetPedStrafeClipset(ped)
-                end
-            elseif stage == 3 then
-                DisableControlAction(0, 21, true ) -- sprint
-                DisableControlAction(1, 140, true)
-                DisableControlAction(1, 141, true)
-                DisableControlAction(1, 142, true)
+NormalWalk = function() 
+	local Player = PlayerPedId()
+	SetPedMaxMoveBlendRatio(Player, 1.0)
+	ResetPedMovementClipset(Player, 0.55)
+	ResetPedStrafeClipset(Player)
+	SetPedCanPlayAmbientAnims(Player, true)
+	SetPedCanPlayAmbientBaseAnims(Player, true)
+	ResetPedWeaponMovementClipset(Player)
+	Crouched = false
+end
 
-                if (IsControlPressed(0, 32) and not movingForward) and Config.EnableProne  then
-                    movingForward = true
-                    SetPedMoveAnimsBlendOut(ped)
-                    local pronepos = GetEntityCoords(ped)
-                    TaskPlayAnimAdvanced(ped, "move_crawl", "onfront_fwd", pronepos.x, pronepos.y, pronepos.z+0.1, 0.0, 0.0, GetEntityHeading(ped), 100.0, 0.4, 1.0, 7, 2.0, 1, 1)
-                    Wait(500)
-                elseif (not IsControlPressed(0, 32) and movingForward) then
-                    local pronepos = GetEntityCoords(ped)
-                    TaskPlayAnimAdvanced(ped, "move_crawl", "onfront_fwd", pronepos.x, pronepos.y, pronepos.z+0.1, 0.0, 0.0, GetEntityHeading(ped), 100.0, 0.4, 1.0, 6, 2.0, 1, 1)
-                    Wait(500)
-                    movingForward = false
-                end
+SetupCrouch = function()
+	while not HasAnimSetLoaded('move_ped_crouched') do
+		Citizen.Wait(5)
+		RequestAnimSet('move_ped_crouched')
+	end
+end
 
-                if IsControlPressed(0, 34) then
-                    SetEntityHeading(ped,GetEntityHeading(ped) + 1)
-                end
+CanCrouch = function()
+	local PlayerPed = PlayerPedId()
+	if IsPedOnFoot(PlayerPed) and not IsPedJumping(PlayerPed) and not IsPedFalling(PlayerPed) and not IsPedDeadOrDying(PlayerPed) then
+		return true
+	else
+		return false
+	end
+end
 
-                if IsControlPressed(0, 9) then
-                    SetEntityHeading(ped,GetEntityHeading(ped) - 1)
-                end
-            end
-        else
-            stage = 0
-            Wait(1000)
-        end
+CrouchPlayer = function()
+	local Player = PlayerPedId()
+	SetPedUsingActionMode(Player, false, -1, "DEFAULT_ACTION")
+	SetPedMovementClipset(Player, 'move_ped_crouched', 0.55)
+	SetPedStrafeClipset(Player, 'move_ped_crouched_strafing') -- it force be on third person if not player will freeze but this func make player can shoot with good anim on crouch if someone know how to fix this make request :D
+	SetWeaponAnimationOverride(Player, "Ballistic")
+	Crouched = true
+	Aimed = false
+end
+
+SetPlayerAimSpeed = function()
+	local Player = PlayerPedId()
+	SetPedMaxMoveBlendRatio(Player, 0.2)
+	Aimed = true
+end
+
+IsPlayerFreeAimed = function()
+	local Player = PlayerPedId()
+	local PlayerID = GetPlayerIndex()
+	if IsPlayerFreeAiming(PlayerID) or IsAimCamActive() or IsAimCamThirdPersonActive() then
+		return true
+	else
+		return false
+	end
+end
+
+Citizen.CreateThread( function()
+	SetupCrouch()
+    while true do 
+        DisableControlAction(0, 36, true) -- DISABLE DUCK and this make 0.01 and some time 0.02 but always left control will disable
+		-- SetPedStealthMovement(PlayerPedId(), false, "DEFAULT_ACTION") -- DISABLE DUCK But make script idle 0.02
+		
+		if CrouchedForce then
+			local CanDo = CanCrouch()
+			if CanDo and Crouched and IsPlayerFreeAimed() then
+				SetPlayerAimSpeed()
+			elseif CanDo and (not Crouched or Aimed) then
+				CrouchPlayer()
+			elseif not CanDo and Crouched then
+				CrouchedForce = false
+				NormalWalk()
+			end
+			local NowCam = GetFollowPedCamViewMode()
+			if CanDo and Crouched and NowCam == 4 then
+				SetFollowPedCamViewMode(LastCam)
+			elseif CanDo and Crouched and NowCam ~= 4 then
+				LastCam = NowCam
+			end
+		elseif Crouched then
+			NormalWalk()
+		end
+		
+        Citizen.Wait(5)
     end
 end)
 
-local walkSet = "default"
+RegisterCommand('crouch', function()
+	if not Cooldown then
+		CrouchedForce = not CrouchedForce
+		Cooldown = true
+		SetTimeout(CoolDownTime, function()
+			Cooldown = false
+		end)
+	end
+end, false)
 
-RegisterNetEvent('crouchprone:client:SetWalkSet', function(clipset)
-    walkSet = clipset
-end)
+RegisterKeyMapping('crouch', 'Crouch', 'keyboard', 'LCONTROL') -- now its better player can change to any bottom they want
 
-function ResetAnimSet()
-    local ped = PlayerPedId()
-    if walkSet == "default" then
-        ResetPedMovementClipset(ped)
-        ResetPedWeaponMovementClipset(ped)
-        ResetPedStrafeClipset(ped)
-    else
-        ResetPedMovementClipset(ped)
-        ResetPedWeaponMovementClipset(ped)
-        ResetPedStrafeClipset(ped)
-        Wait(100)
-        RequestWalking(walkSet)
-        SetPedMovementClipset(ped, walkSet, 1)
-        RemoveAnimSet(walkSet)
-    end
+
+-- Exports --
+IsCrouched = function()
+    return Crouched
 end
 
-function RequestWalking(set)
-    RequestAnimSet(set)
-    while not HasAnimSetLoaded(set) do
-        Wait(1)
-    end
-end
+exports("IsCrouched", IsCrouched)

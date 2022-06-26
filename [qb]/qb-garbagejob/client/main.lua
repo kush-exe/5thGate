@@ -408,7 +408,7 @@ RegisterNetEvent('qb-garbagejob:client:RequestRoute', function()
                 SetEntityHeading(veh, coords.w)
                 exports['ps-fuel']:SetFuel(veh, 100.0)
                 SetEntityAsMissionEntity(veh, true, true)
-                TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
+                TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh), "trash2")
                 currentStop = firstStop
                 currentStopNum = 1
                 amountOfBags = totalBags

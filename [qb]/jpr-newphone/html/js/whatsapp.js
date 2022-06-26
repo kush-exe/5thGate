@@ -482,7 +482,7 @@ JPR.Phone.Functions.GetLastMessage = function(messages) {
     var CurrentYear = CurrentDate.getFullYear();
     var LastMessageData = {
         time: "00:00",
-        message: "Nenhuma mensagem"
+        message: "No message"
     }
 
     $.each(messages[messages.length - 1], function(i, msg){
@@ -492,7 +492,7 @@ JPR.Phone.Functions.GetLastMessage = function(messages) {
             ALLOWED_TAGS: [],
             ALLOWED_ATTR: []
         });
-        if(LastMessageData.message == '') 'Inválido..'
+        if(LastMessageData.message == '') 'Invalid..'
     });
 
     return LastMessageData

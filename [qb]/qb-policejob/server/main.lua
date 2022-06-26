@@ -208,6 +208,7 @@ QBCore.Commands.Add("callsign", Lang:t("commands.callsign"), {{name = "name", he
     Player.Functions.SetMetaData("callsign", table.concat(args, " "))
 end)
 
+--[[
 QBCore.Commands.Add("clearcasings", Lang:t("commands.clear_casign"), {}, false, function(source)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -216,7 +217,7 @@ QBCore.Commands.Add("clearcasings", Lang:t("commands.clear_casign"), {}, false, 
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
     end
-end)
+end)--]]
 
 QBCore.Commands.Add("jail", Lang:t("commands.jail_player"), {}, false, function(source)
     local src = source
@@ -239,6 +240,7 @@ QBCore.Commands.Add("unjail", Lang:t("commands.unjail_player"), {{name = "id", h
     end
 end)
 
+--[[
 QBCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, function(source)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -247,7 +249,7 @@ QBCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, func
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.on_duty_police_only"), 'error')
     end
-end)
+end)--]]
 
 QBCore.Commands.Add("seizecash", Lang:t("commands.seizecash"), {}, false, function(source)
     local src = source
@@ -430,6 +432,7 @@ QBCore.Commands.Add("takedrivinglicense", Lang:t("commands.drivinglicense"), {},
     end
 end)
 
+--[[
 QBCore.Commands.Add("takedna", Lang:t("commands.takedna"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -446,7 +449,7 @@ QBCore.Commands.Add("takedna", Lang:t("commands.takedna"), {{name = "id", help =
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.have_evidence_bag"), "error")
     end
-end)
+end)--]]
 
 RegisterNetEvent('police:server:SendTrackerLocation', function(coords, requestId)
     local Target = QBCore.Functions.GetPlayer(source)
@@ -501,6 +504,7 @@ QBCore.Functions.CreateCallback('police:server:isPlayerDead', function(_, cb, pl
     cb(Player.PlayerData.metadata["isdead"])
 end)
 
+--[[
 QBCore.Functions.CreateCallback('police:GetPlayerStatus', function(_, cb, playerId)
     local Player = QBCore.Functions.GetPlayer(playerId)
     local statList = {}
@@ -512,7 +516,7 @@ QBCore.Functions.CreateCallback('police:GetPlayerStatus', function(_, cb, player
         end
     end
     cb(statList)
-end)
+end)--]]
 
 QBCore.Functions.CreateCallback('police:IsSilencedWeapon', function(source, cb, weapon)
     local Player = QBCore.Functions.GetPlayer(source)
@@ -903,6 +907,7 @@ RegisterNetEvent('police:server:Impound', function(plate, fullImpound, price, bo
     end
 end)
 
+--[[
 RegisterNetEvent('evidence:server:UpdateStatus', function(data)
     local src = source
     PlayerStatus[src] = data
@@ -977,7 +982,7 @@ RegisterNetEvent('evidence:server:CreateCasing', function(weapon, coords)
         end
     end
     TriggerClientEvent("evidence:client:AddCasing", -1, casingId, weapon, coords, serieNumber)
-end)
+end)--]]
 
 RegisterNetEvent('police:server:UpdateCurrentCops', function()
     local amount = 0
@@ -993,6 +998,7 @@ RegisterNetEvent('police:server:UpdateCurrentCops', function()
     updatingCops = false
 end)
 
+--[[
 RegisterNetEvent('evidence:server:ClearCasings', function(casingList)
     if casingList and next(casingList) then
         for _, v in pairs(casingList) do
@@ -1014,7 +1020,7 @@ RegisterNetEvent('evidence:server:AddCasingToInventory', function(casingId, casi
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t("error.have_evidence_bag"), "error")
     end
-end)
+end)--]]
 
 RegisterNetEvent('police:server:showFingerprint', function(playerId)
     local src = source

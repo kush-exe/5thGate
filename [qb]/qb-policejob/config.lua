@@ -10,6 +10,11 @@ Config.Objects = {
 
 Config.MaxSpikes = 5
 
+Config.PoliceJobs = {
+    'police',
+    'bcso'
+}
+
 Config.HandCuffItem = 'handcuffs'
 
 Config.LicenseRank = 2

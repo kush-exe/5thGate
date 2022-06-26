@@ -638,8 +638,8 @@ local function SpawnListVehicle(model)
         SetEntityHeading(veh, coords.w)
         exports['ps-fuel']:SetFuel(veh, 100.0)
         TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
-        TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
-        SetVehicleEngineOn(veh, true, true)
+        TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh), model)
+        --SetVehicleEngineOn(veh, true, true)
     end, coords, true)
 end
 

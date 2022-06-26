@@ -158,8 +158,8 @@ Config.StoreApps = {
         blockedjobs = {},
         slot = 6,
         Alerts = 0,
-        creator = "Wild Bank",
-        title = "WBank",
+        creator = "Fleeca Bank",
+        title = "Fleeca",
         avaliacao = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>'
     },
     ["crypto"] = {
@@ -171,7 +171,7 @@ Config.StoreApps = {
         blockedjobs = {},
         slot = 7,
         Alerts = 0,
-        creator = "Wild Roleplay",
+        creator = "Satoshi Nakamoto",
         title = "Crypto",
         avaliacao = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>'
     },
@@ -210,7 +210,7 @@ Config.StoreApps = {
         blockedjobs = {},
         slot = 10,
         Alerts = 0,
-        creator = "Wild Roleplay",
+        creator = "LSPD",
         title = "MDT",
         avaliacao = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>'
     },

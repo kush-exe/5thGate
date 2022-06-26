@@ -136,10 +136,7 @@ RegisterNetEvent('QBCore:Command:SpawnVehicle', function(vehName)
     SetVehicleFuelLevel(vehicle, 100.0)
     SetVehicleDirtLevel(vehicle, 0.0)
     SetModelAsNoLongerNeeded(hash)
-    while not IsPedInAnyVehicle(PlayerPedId()) do
-        Wait(500)
-    end
-    TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle))
+    TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle), vehName)
 end)
 
 RegisterNetEvent('QBCore:Command:DeleteVehicle', function()

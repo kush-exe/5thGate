@@ -39,6 +39,16 @@ local function CreateDutyBlips(playerId, playerLabel, playerJob, playerLocation)
     end
 end
 
+exports('IsCopCL', function()
+    for k, v in pairs(Config.PoliceJobs) do
+        if PlayerJob.name == v then
+            return true
+        end
+    end
+
+    return false
+end)
+
 -- Events
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     local player = QBCore.Functions.GetPlayerData()

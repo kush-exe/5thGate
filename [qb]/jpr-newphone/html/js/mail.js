@@ -97,7 +97,7 @@ var MonthFormatting = ["January", "February", "March", "April", "May", "June", "
 JPR.Phone.Functions.SetupMail = function(MailData) {
     var date = new Date(MailData.date);
     var DateString = date.getDate()+" "+MonthFormatting[date.getMonth()]+" "+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes();
-    $(".mail-subject").html("<p><span style='font-weight: bold;'>"+MailData.subject+"<br><img src='../html/img/apps2/mail.png' class='imagem-mail2'><a style='padding-left: 0.3vh; font-size: 1.25vh !important;'>"+MailData.sender+" &lt;wildroleplay@gov.pt&gt;</a></span></p>");
+    $(".mail-subject").html("<p><span style='font-weight: bold;'>"+MailData.subject+"<br><img src='../html/img/apps2/mail.png' class='imagem-mail2'><a style='padding-left: 0.3vh; font-size: 1.25vh !important;'>"+MailData.sender+" &lt;5GRP@gov.pt&gt;</a></span></p>");
     $(".mail-date").html("<p>"+DateString+"</p>");
     $(".mail-content").html("<p>"+MailData.message+"</p>");
 

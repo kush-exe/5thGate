@@ -154,7 +154,7 @@ local function openAnim()
     local ped = PlayerPedId()
     LoadAnimDict('pickup_object')
     TaskPlayAnim(ped,'pickup_object', 'putdown_low', 5.0, 1.5, 1.0, 48, 0.0, 0, 0, 0)
-    Wait(500)
+    Wait(300)
     StopAnimTask(ped, 'pickup_object', 'putdown_low', 1.0)
 end
 
@@ -332,10 +332,10 @@ end)
 
 RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventory, other)
     if not IsEntityDead(PlayerPedId()) then
-        Wait(500)
+        Wait(0)
         ToggleHotbar(false)
         if showBlur == true then
-            TriggerScreenblurFadeIn(1000)
+            TriggerScreenblurFadeIn(50)
         end
         SetNuiFocus(true, true)
         if other then
@@ -945,6 +945,7 @@ end)]]--
         `prop_toolchest_05`,
         `prop_toolchest_04`,
     }
+    --[[
     exports['qb-target']:AddTargetModel(toolBoxModels, {
             options = {
                 {
@@ -959,4 +960,4 @@ end)]]--
                 },
             },
         distance = 1.0
-    })
+    })--]]

@@ -276,7 +276,7 @@ JPR.Phone.Functions.LoadMetaData = function(MetaData) {
         $("[data-settingstab='contautilizador']").find('.settings-tab-icon3').html('<img src="'+fotoatual+'">');
     }
     $("[data-settingstab='contautilizador']").find('.settings-tab-title3').html(JPR.Phone.Data.PlayerData.charinfo.firstname+" "+JPR.Phone.Data.PlayerData.charinfo.lastname);
-    $("[data-settingstab='contautilizador']").find('.settings-tab-title4').html(JPR.Phone.Data.PlayerData.charinfo.firstname+"."+JPR.Phone.Data.PlayerData.charinfo.lastname+"@wildroleplay.com");
+    $("[data-settingstab='contautilizador']").find('.settings-tab-title4').html(JPR.Phone.Data.PlayerData.charinfo.firstname+"."+JPR.Phone.Data.PlayerData.charinfo.lastname+"@5GRP.com");
 }
 
 $(document).on('click', '#cancel-background', function(e){
