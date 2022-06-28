@@ -167,5 +167,14 @@ end
 
 RegisterNetEvent('qb-admin:client:maxmodVehicle', function()
     local vehicle = GetVehiclePedIsIn(PlayerPedId())
-    PerformanceUpgradeVehicle(vehicle)
+    --PerformanceUpgradeVehicle(vehicle)
+    local props = QBCore.Functions.GetVehicleProperties(GetVehiclePedIsIn(PlayerPedId()))
+    props["modEngine"] = 3
+    props["modBrakes"] = 2
+    props["modTransmission"] = 2
+    props["modSuspension"] = 2
+    props["modTurbo"] = true
+    QBCore.Functions.SetVehicleProperties(GetVehiclePedIsIn(PlayerPedId()), props)
+    SetVehicleFixed(GetVehiclePedIsIn(PlayerPedId()))
+    QBCore.Functions.Notify('Vehicle Upgraded!')
 end)

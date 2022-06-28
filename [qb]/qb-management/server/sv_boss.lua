@@ -247,3 +247,15 @@ QBCore.Functions.CreateCallback('qb-bossmenu:getplayers', function(source, cb)
 		end)
 	cb(players)
 end)
+
+RegisterServerEvent("qb-bossmenu:server:okokBillingDeposit")
+AddEventHandler("qb-bossmenu:server:okokBillingDeposit", function(job, amount)
+    local src = source
+    local xPlayer = QBCore.Functions.GetPlayer(src)
+
+    AddMoney(job,amount)
+
+    --TriggerClientEvent('qb-bossmenu:client:refreshSociety', -1, job, Accounts[job])
+    --SaveResourceFile(GetCurrentResourceName(), "./database.json", json.encode(Accounts), -1)
+    TriggerEvent('qb-log:server:CreateLog', 'bossmenu', 'Deposit Money', "Successfully deposited $" .. amount .. ' (' .. job .. ')', src)
+end)

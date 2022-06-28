@@ -4,7 +4,7 @@ local stress = 0
 local config = Config
 local speedMultiplier = config.UseMPH and 2.23694 or 3.6
 local seatbeltIsOn = false
-local hasPlayerLoaded = true
+local hasPlayerLoaded = false
 
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(player)
     hasPlayerLoaded = true

@@ -1,9 +1,9 @@
 local density = {
-    ['parked'] = 1.0,
-    ['vehicle'] = 1.0,
-    ['multiplier'] = 1.0,
-    ['peds'] = 1.0,
-    ['scenario'] = 1.0,
+    ['parked'] = 0.5,
+    ['vehicle'] = 0.5,
+    ['multiplier'] = 0.5,
+    ['peds'] = 0.5,
+    ['scenario'] = 0.5,
 }
 
 CreateThread(function()

@@ -8,8 +8,8 @@ ui_page 'html/index.html'
 shared_scripts {
     'config.lua',
     '@qb-apartments/config.lua',
-    --'@qb-garages/config.lua',
-    '@MojiaGarages/config.lua,'
+    '@qb-garages/config.lua',
+    --'@MojiaGarages/config.lua,'
 }
 
 client_scripts {

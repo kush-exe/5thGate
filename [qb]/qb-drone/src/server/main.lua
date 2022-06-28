@@ -19,5 +19,5 @@ QBCore.Functions.CreateUseableItem("police_drone", function(source)
 
     local drone_data = Config.Drones[1]
     TriggerClientEvent("Drones:UseDrone", source, drone_data)
-    xPlayer.Functions.RemoveItem('drone', 1)
+    --xPlayer.Functions.RemoveItem('drone', 1)
 end)
