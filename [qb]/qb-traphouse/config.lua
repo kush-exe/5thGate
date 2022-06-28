@@ -118,21 +118,46 @@ Config.AllowedItems = {
     ["phone"] = {
         name = "phone",
         wait = 2000,
-        reward = 750,
+        reward = 100,
     },
     ["radio"] = {
         name = "radio",
         wait = 2000,
-        reward = 180,
+        reward = 100,
     },
     ["handcuffs"] = {
         name = "handcuffs",
         wait = 2000,
         reward = 400,
     },
+    ["goldbar"] = {
+        name = "goldbar",
+        wait = 10000,
+        reward = 7000,
+    },
+    ["rolex"] = {
+        name = "rolex",
+        wait = 10000,
+        reward = 2500,
+    },
     ["10kgoldchain"] = {
         name = "10kgoldchain",
         wait = 10000,
-        reward = 3000,
+        reward = 1500,
+    },
+    ["diamond_ring"] = {
+        name = "diamond_ring",
+        wait = 10000,
+        reward = 4500,
+    },
+    ["goldchain"] = {
+        name = "goldchain",
+        wait = 10000,
+        reward = 750,
+    },
+    ["diamond"] = {
+        name = "diamond",
+        wait = 10000,
+        reward = 10000,
     },
 }
