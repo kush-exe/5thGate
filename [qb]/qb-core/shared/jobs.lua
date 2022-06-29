@@ -19,7 +19,7 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
+                name = 'Cadet',
                 payment = 50
             },
 			['1'] = {
@@ -27,17 +27,49 @@ QBShared.Jobs = {
                 payment = 75
             },
 			['2'] = {
-                name = 'Sergeant',
+                name = 'Senior Officer',
                 payment = 100
             },
 			['3'] = {
-                name = 'Lieutenant',
+                name = 'Corporal',
                 payment = 125
             },
 			['4'] = {
-                name = 'Chief',
-				isboss = true,
+                name = 'Sergeant',
                 payment = 150
+            },
+            ['5'] = {
+                name = 'Lieutenant',
+                payment = 175
+            },
+            ['6'] = {
+                name = 'Captain',
+                payment = 200
+            },
+            ['7'] = {
+                name = 'Major',
+                isboss = true,
+                payment = 225
+            },
+            ['8'] = {
+                name = 'Colonel',
+                isboss = true,
+                payment = 250
+            },
+            ['9'] = {
+                name = 'Assistant Chief of Police',
+                isboss = true,
+                payment = 275
+            },
+            ['10'] = {
+                name = 'Chief of Police',
+                isboss = true,
+                payment = 300
+            },
+            ['11'] = {
+                name = 'Comissioner',
+                isboss = true,
+                payment = 325
             },
         },
 	},
@@ -212,6 +244,11 @@ QBShared.Jobs = {
                 name = 'Associate',
                 payment = 50
             },
+            ['1'] = {
+                name = 'Partner',
+                payment = 50,
+                isboss = true
+            },
         },
 	},
 	['reporter'] = {
@@ -277,6 +314,26 @@ QBShared.Jobs = {
             ['0'] = {
                 name = 'Sales',
                 payment = 50
+            },
+        },
+	},
+    ['vanilla'] = {
+		label = 'Vanilla Unicorn',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Security',
+                payment = 50
+            },
+			['1'] = {
+                name = 'Employee',
+                payment = 50
+            },
+			['2'] = {
+                name = 'Boss',
+				isboss = true,
+                payment = 0
             },
         },
 	},

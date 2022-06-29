@@ -602,7 +602,7 @@ local misc_recipe = {
                exp_per_craft = 12
           }
      },
-     ['molotov_part_1'] = {
+     ['weapon_molotov'] = {
           categories = {
                main = 'misc',
           },
@@ -625,6 +625,7 @@ local misc_recipe = {
                duration = 60,
                materials = {
                     ["glass"] = 50,
+                    ['weapon_petrolcan'] = 1
                },
                exp_per_craft = 2
           }

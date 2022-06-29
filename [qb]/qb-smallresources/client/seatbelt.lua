@@ -73,11 +73,11 @@ end)
 function ToggleSeatbelt()
     if seatbeltOn then
         seatbeltOn = false
-        TriggerEvent("seatbelt:client:ToggleSeatbelt")
+        TriggerEvent("seatbelt:client:ToggleSeatbelt", seatbeltOn)
         TriggerServerEvent("InteractSound_SV:PlayOnSource", "carunbuckle", 0.25)
     else
         seatbeltOn = true
-        TriggerEvent("seatbelt:client:ToggleSeatbelt")
+        TriggerEvent("seatbelt:client:ToggleSeatbelt", seatbeltOn)
         TriggerServerEvent("InteractSound_SV:PlayOnSource", "carbuckle", 0.25)
     end
 end

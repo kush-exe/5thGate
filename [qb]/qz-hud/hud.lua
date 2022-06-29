@@ -5,6 +5,7 @@ local config = Config
 local speedMultiplier = config.UseMPH and 2.23694 or 3.6
 local seatbeltIsOn = false
 local hasPlayerLoaded = false
+local speedLevel = 0
 
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(player)
     hasPlayerLoaded = true
@@ -39,7 +40,7 @@ Citizen.CreateThread(function()
         local fuelLevel  = 0
         local gearLevel  = 0
         local healthCar  = 0
-        local speedLevel = 0
+        
         local damage = GetVehicleEngineHealth(vehicle)
         
         if IsPedSittingInAnyVehicle(ped) and not IsPlayerDead(ped) then
@@ -266,8 +267,8 @@ function SetSeatBeltActive(e)
     end
 end
 
-AddEventHandler("seatbelt:client:ToggleSeatbelt", function()
-    seatbeltIsOn = not seatbeltIsOn
+AddEventHandler("seatbelt:client:ToggleSeatbelt", function(seatbelt)
+    seatbeltIsOn = seatbelt
     SetSeatBeltActive({
         active = seatbeltIsOn,
         checkIsVeh = true,
@@ -275,3 +276,31 @@ AddEventHandler("seatbelt:client:ToggleSeatbelt", function()
 end)
 
 ---------------------------------SPEEDOMETER---------------------------------
+
+----------------Speed for Driveby ------------------------------------------
+exports('GetSpeed', function()
+    return speedLevel
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Wait(1000)
+
+		local playerPed = PlayerPedId()
+		car = GetVehiclePedIsIn(playerPed, false)
+		if car then
+			if GetPedInVehicleSeat(car, -1) == playerPed then
+				SetPlayerCanDoDriveBy(PlayerId(), false)
+			elseif GetVehicleClass(car) == 15 and exports['qb-policejob']:IsCopCL() then --helis for pd
+				SetPlayerCanDoDriveBy(PlayerId(), true)
+			else
+                --local speed = exports['qz-hud']:GetSpeed()
+                if speedLevel < 30 then
+                    SetPlayerCanDoDriveBy(PlayerId(), true)
+                else
+                    SetPlayerCanDoDriveBy(PlayerId(), false)
+                end
+			end
+		end
+	end
+end)

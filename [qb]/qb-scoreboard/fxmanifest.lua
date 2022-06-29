@@ -1,17 +1,21 @@
-fx_version 'cerulean'
+fx_version 'adamant'
+
 game 'gta5'
 
-description 'QB-Scoreboard'
-version '1.0.1'
+ui_page "html/ui.html"
 
-ui_page 'html/ui.html'
-
-shared_script 'config.lua'
-client_script 'client.lua'
-server_script 'server.lua'
-
-files {
-    'html/*'
+client_scripts {
+    'client.lua',
+	'config.lua',
 }
 
-lua54 'yes'
+server_scripts {
+	'config.lua',
+	'server.lua',
+}
+
+files {
+    "html/*"
+}
+--client_script '@qb-core/init.lua'
+--server_script '@qb-core/init.lua'

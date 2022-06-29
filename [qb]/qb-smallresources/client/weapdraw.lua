@@ -74,7 +74,7 @@ local weapons = {
 
 -- Wheapons that require the Police holster animation
 local holsterableWeapons = {
-	'WEAPON_STUNGUN',
+	--'WEAPON_STUNGUN',
 	'WEAPON_PISTOL',
 	'WEAPON_PISTOL_MK2',
 	'WEAPON_COMBATPISTOL',
@@ -89,17 +89,13 @@ local holsterableWeapons = {
 local holstered = true
 local canFire = true
 local currWeapon = `WEAPON_UNARMED`
-local currentHolster = nil
-local currentHolsterTexture = nil
-local WearingHolster = nil
+local currentHoldster = nil
 
 RegisterNetEvent('weapons:ResetHolster', function()
 	holstered = true
 	canFire = true
 	currWeapon = `WEAPON_UNARMED`
-	currentHolster = nil
-	currentHolsterTexture = nil
-	WearingHolster = nil
+	currentHoldster = nil
 end)
 
 CreateThread(function()
@@ -108,7 +104,7 @@ CreateThread(function()
 		if DoesEntityExist(ped) and not IsEntityDead(ped) and not IsPedInParachuteFreeFall(ped) and not IsPedFalling(ped) and (GetPedParachuteState(ped) == -1 or GetPedParachuteState(ped) == 0) then
 			if currWeapon ~= GetSelectedPedWeapon(ped) then
 				pos = GetEntityCoords(ped, true)
-				local rot = GetEntityHeading(ped)
+				rot = GetEntityHeading(ped)
 
 				local newWeap = GetSelectedPedWeapon(ped)
 				SetCurrentPedWeapon(ped, currWeapon, true)
@@ -116,38 +112,22 @@ CreateThread(function()
 				loadAnimDict("reaction@intimidation@cop@unarmed")
 				loadAnimDict("rcmjosh4")
 				loadAnimDict("weapons@pistol@")
-
-				local HolsterVariant = GetPedDrawableVariation(ped, 7)
-				if HolsterVariant == 8 then
-					WearingHolster = true
-				elseif HolsterVariant == 1 then
-					WearingHolster = true
-				elseif HolsterVariant == 6 then
-					WearingHolster = true
-				elseif HolsterVariant == 2 then
-					WearingHolster = true
-				elseif HolsterVariant == 3 then
-					WearingHolster = true
-				elseif HolsterVariant == 5 then
-					WearingHolster = false
-				end
 				if CheckWeapon(newWeap) then
 					if holstered then
-						if WearingHolster == true then
+						if exports["qb-policejob"]:IsCopCL() then
 							--TaskPlayAnim(ped, "rcmjosh4", "josh_leadout_cop2", 8.0, 2.0, -1, 48, 10, 0, 0, 0 )
 							canFire = false
-							currentHolster = GetPedDrawableVariation(ped, 7)
-							currentHolsterTexture = GetPedTextureVariation(ped, 7)
+							currentHoldster = GetPedDrawableVariation(ped, 7)
 							TaskPlayAnimAdvanced(ped, "rcmjosh4", "josh_leadout_cop2", GetEntityCoords(ped, true), 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
 							Wait(300)
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								if currentHolster == 8 then
+								if currentHoldster == 8 then
 									SetPedComponentVariation(ped, 7, 2, 0, 2)
-								elseif currentHolster == 1 then
+								elseif currentHoldster == 1 then
 									SetPedComponentVariation(ped, 7, 3, 0, 2)
-								elseif currentHolster == 6 then
+								elseif currentHoldster == 6 then
 									SetPedComponentVariation(ped, 7, 5, 0, 2)
 								end
 							end
@@ -168,30 +148,29 @@ CreateThread(function()
 							canFire = true
 						end
 					elseif newWeap ~= currWeapon and CheckWeapon(currWeapon) then
-						if WearingHolster == true then
+						if exports["qb-policejob"]:IsCopCL() then
 							canFire = false
 
 							TaskPlayAnimAdvanced(ped, "reaction@intimidation@cop@unarmed", "intro", GetEntityCoords(ped, true), 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
 							Wait(500)
 
 							if IsWeaponHolsterable(currWeapon) then
-								SetPedComponentVariation(ped, 7, currentHolster, currentHolsterTexture, 2)
+								SetPedComponentVariation(ped, 7, currentHoldster, 0, 2)
 							end
 
 							SetCurrentPedWeapon(ped, `WEAPON_UNARMED`, true)
-							currentHolster = GetPedDrawableVariation(ped, 7)
-							currentHolsterTexture = GetPedTextureVariation(ped, 7)
+							currentHoldster = GetPedDrawableVariation(ped, 7)
 
 							TaskPlayAnimAdvanced(ped, "rcmjosh4", "josh_leadout_cop2", GetEntityCoords(ped, true), 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
 							Wait(300)
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								if currentHolster == 8 then
+								if currentHoldster == 8 then
 									SetPedComponentVariation(ped, 7, 2, 0, 2)
-								elseif currentHolster == 1 then
+								elseif currentHoldster == 1 then
 									SetPedComponentVariation(ped, 7, 3, 0, 2)
-								elseif currentHolster == 6 then
+								elseif currentHoldster == 6 then
 									SetPedComponentVariation(ped, 7, 5, 0, 2)
 								end
 							end
@@ -216,20 +195,19 @@ CreateThread(function()
 							canFire = true
 						end
 					else
-						if WearingHolster == true then
+						if exports["qb-policejob"]:IsCopCL() then
 							SetCurrentPedWeapon(ped, `WEAPON_UNARMED`, true)
-							currentHolster = GetPedDrawableVariation(ped, 7)
-							currentHolsterTexture = GetPedTextureVariation(ped, 7)
+							currentHoldster = GetPedDrawableVariation(ped, 7)
 							TaskPlayAnimAdvanced(ped, "rcmjosh4", "josh_leadout_cop2", GetEntityCoords(ped, true), 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
 							Wait(300)
 							SetCurrentPedWeapon(ped, newWeap, true)
 
 							if IsWeaponHolsterable(newWeap) then
-								if currentHolster == 8 then
+								if currentHoldster == 8 then
 									SetPedComponentVariation(ped, 7, 2, 0, 2)
-								elseif currentHolster == 1 then
+								elseif currentHoldster == 1 then
 									SetPedComponentVariation(ped, 7, 3, 0, 2)
-								elseif currentHolster == 6 then
+								elseif currentHoldster == 6 then
 									SetPedComponentVariation(ped, 7, 5, 0, 2)
 								end
 							end
@@ -253,13 +231,13 @@ CreateThread(function()
 					end
 				else
 					if not holstered and CheckWeapon(currWeapon) then
-						if WearingHolster == true then
+						if exports["qb-policejob"]:IsCopCL() then
 							canFire = false
 							TaskPlayAnimAdvanced(ped, "reaction@intimidation@cop@unarmed", "intro", GetEntityCoords(ped, true), 0, 0, rot, 3.0, 3.0, -1, 50, 0, 0, 0)
 							Wait(500)
 							
 							if IsWeaponHolsterable(currWeapon) then
-								SetPedComponentVariation(ped, 7, currentHolster, 0, 2)
+								SetPedComponentVariation(ped, 7, currentHoldster, 0, 2)
 							end
 
 							SetCurrentPedWeapon(ped, `WEAPON_UNARMED`, true)
