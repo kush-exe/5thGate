@@ -40,7 +40,7 @@ Config.CircleZones = {
 
 Config.MethLab = {
 	["enter"] = {
-        coords = vector4(1529.73, 3794.52, 34.47, 316.84),
+        coords = vector4(3541.16, 3668.3, 28.12, 139.58),
     },
     ["exit"] = {
         coords = vector4(969.57, -147.07, -46.4, 267.52),  --vector3(969.57, -147.07, -46.4)
