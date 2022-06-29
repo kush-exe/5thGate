@@ -16,10 +16,10 @@ Config.CircleZones = {
 	MethProcessing = {coords = vector3(978.17, -147.98, -48.53), name = ('Meth Process'), radius = 20.0},
 	MethTemp = {coords = vector3(982.56, -145.59, -49.0), name = ('Meth Temperature'), radius = 20.0},
 	MethBag = {coords = vector3(987.81, -140.43, -49.0), name = ('Meth Bagging'), radius = 20.0},
-	HydrochloricAcidFarm = {coords = vector3(-1069.25, 4945.57, 212.18), name = ('Hydrochloric Acid'), radius = 100.0},
+	HydrochloricAcidFarm = {coords = vector3(-2051.69, 3410.81, 28.95), name = ('Hydrochloric Acid'), radius = 50.0},
 
-	SulfuricAcidFarm = {coords = vector3(-3026.89, 3334.91, 10.04), name = ('Sulfuric Acid'), radius = 100.0},
-	SodiumHydroxideFarm = {coords = vector3(-389.35, -1874.85, 20.53), name = ('Sodium Hydroxide'), radius = 100.0},
+	SulfuricAcidFarm = {coords = vector3(290.38, -2430.69, 8.04), name = ('Sulfuric Acid'), radius = 50.0},
+	SodiumHydroxideFarm = {coords = vector3(1582.19, 2164.24, 79.4), name = ('Sodium Hydroxide'), radius = 50.0},
 	
 	ChemicalsField = {coords = vector3(1264.97, 1803.96, 82.94), name = ('Chemicals'), radius = 100.0},
 	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
@@ -40,7 +40,7 @@ Config.CircleZones = {
 
 Config.MethLab = {
 	["enter"] = {
-        coords = vector4(-1187.17, -446.24, 43.91, 306.59),
+        coords = vector4(1529.73, 3794.52, 34.47, 316.84),
     },
     ["exit"] = {
         coords = vector4(969.57, -147.07, -46.4, 267.52),  --vector3(969.57, -147.07, -46.4)
