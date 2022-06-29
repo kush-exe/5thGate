@@ -24,12 +24,12 @@ Config.CircleZones = {
 	ChemicalsField = {coords = vector3(1264.97, 1803.96, 82.94), name = ('Chemicals'), radius = 100.0},
 	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
 
-	CokeField = {coords = vector3(2806.5, 4774.46, 46.98), name = ('Coke'), radius = 100.0},
+	CokeField = {coords = vector3(5346.69, -5813.02, 22.18), name = ('Coke'), radius = 50.0},
 	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
 	CokePowder = {coords = vector3(1092.9, -3196.65, -38.99), name = ('Powder Cutting'), radius = 20.0},--vector3(1092.9, -3196.65, -38.99)
 	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
 	
-	HeroinField = {coords = vector3(-2339.15, -54.32, 95.05), name = ('Heroin'), radius = 100.0},
+	HeroinField = {coords = vector3(4796.64, -5944.42, 18.55), name = ('Heroin'), radius = 50.0},
 	HeroinProcessing = {coords = vector3(1413.37, -2041.74, 52.0), name = ('Heroin Process'), radius = 100.0},
 
 	lsdProcessing = {coords = vector3(2503.84, -428.11, 92.99), heading = 178.54, name = ('LSD process'), radius = 100.0},
@@ -49,7 +49,7 @@ Config.MethLab = {
 
 Config.CokeLab = {
 	["enter"] = {
-        coords = vector4(813.21, -2398.69, 23.66, 171.51), --vector3(813.21, -2398.69, 23.66)
+        coords = vector4(-411.79, 151.95, 81.74, 302.83), --vector3(813.21, -2398.69, 23.66)
     },
     ["exit"] = {
         coords = vector4(1088.68, -3187.68, -38.99, 176.04), -- GTA DLC Biker Cocaine Lab -- vector3(1088.68, -3187.68, -38.99)

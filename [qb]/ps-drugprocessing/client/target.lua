@@ -22,7 +22,7 @@ CreateThread(function()
     })
     exports['qb-target']:SpawnPed({
         model = 'a_m_m_mlcrisis_01',
-        coords = vector4(812.49, -2399.59, 23.66, 223.1), 
+        coords = vector4(-411.79, 151.95, 81.74, 302.83), 
         minusOne = true, 
         freeze = true, 
         invincible = true, 
