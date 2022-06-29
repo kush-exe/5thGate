@@ -3,7 +3,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 CreateThread(function()
     exports['qb-target']:SpawnPed({
         model = 'a_m_m_hillbilly_02',
-        coords = vector4(-1187.73, -445.27, 43.91, 289.45), 
+        coords = vector4(3541.16, 3668.3, 28.12, 139.58), 
         minusOne = true, 
         freeze = true, 
         invincible = true, 
@@ -22,7 +22,7 @@ CreateThread(function()
     })
     exports['qb-target']:SpawnPed({
         model = 'a_m_m_mlcrisis_01',
-        coords = vector4(812.49, -2399.59, 23.66, 223.1), 
+        coords = vector4(-411.79, 151.95, 81.74, 302.83), 
         minusOne = true, 
         freeze = true, 
         invincible = true, 
