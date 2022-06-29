@@ -9,7 +9,7 @@ Config.TakeoverPrice = 5000
 Config.TrapHouses = {
     [1] = {
         coords = {
-            ["enter"] = vector3(-1202.21, -1308.48, 4.92),
+            ["enter"] = vector3(621.66, -204.28, 54.47),
             ["interaction"] = vector3(-1207.63, -1311.75, -32.65),
         },
         polyzoneBoxData = {
@@ -156,8 +156,8 @@ Config.AllowedItems = {
         reward = 750,
     },
     ["diamond"] = {
-        name = "diamond",
+        name = "5ctdiamond",
         wait = 10000,
-        reward = 10000,
+        reward = 50000,
     },
 }

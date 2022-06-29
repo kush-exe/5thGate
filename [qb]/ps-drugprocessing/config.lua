@@ -16,7 +16,7 @@ Config.CircleZones = {
 	MethProcessing = {coords = vector3(978.17, -147.98, -48.53), name = ('Meth Process'), radius = 20.0},
 	MethTemp = {coords = vector3(982.56, -145.59, -49.0), name = ('Meth Temperature'), radius = 20.0},
 	MethBag = {coords = vector3(987.81, -140.43, -49.0), name = ('Meth Bagging'), radius = 20.0},
-	HydrochloricAcidFarm = {coords = vector3(-2051.69, 3410.81, 28.95), name = ('Hydrochloric Acid'), radius = 50.0},
+	HydrochloricAcidFarm = {coords = vector3(-1171.36, -2059.25, 14.31), name = ('Hydrochloric Acid'), radius = 50.0},
 
 	SulfuricAcidFarm = {coords = vector3(290.38, -2430.69, 8.04), name = ('Sulfuric Acid'), radius = 50.0},
 	SodiumHydroxideFarm = {coords = vector3(1582.19, 2164.24, 79.4), name = ('Sodium Hydroxide'), radius = 50.0},
@@ -24,12 +24,12 @@ Config.CircleZones = {
 	ChemicalsField = {coords = vector3(1264.97, 1803.96, 82.94), name = ('Chemicals'), radius = 100.0},
 	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
 
-	CokeField = {coords = vector3(5346.69, -5813.02, 22.18), name = ('Coke'), radius = 50.0},
+	CokeField = {coords = vector3(5346.69, -5813.02, 22.18), name = ('Coke'), radius = 20.0},
 	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
 	CokePowder = {coords = vector3(1092.9, -3196.65, -38.99), name = ('Powder Cutting'), radius = 20.0},--vector3(1092.9, -3196.65, -38.99)
 	CokeBrick = {coords = vector3(1099.57, -3194.35, -38.99), name = ('Brick Up Packages'), radius = 20.0},--vector3(1099.57, -3194.35, -38.99)
 	
-	HeroinField = {coords = vector3(4796.64, -5944.42, 18.55), name = ('Heroin'), radius = 50.0},
+	HeroinField = {coords = vector3(4796.64, -5944.42, 18.55), name = ('Heroin'), radius = 20.0},
 	HeroinProcessing = {coords = vector3(1413.37, -2041.74, 52.0), name = ('Heroin Process'), radius = 100.0},
 
 	lsdProcessing = {coords = vector3(2503.84, -428.11, 92.99), heading = 178.54, name = ('LSD process'), radius = 100.0},
