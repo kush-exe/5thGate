@@ -169,7 +169,8 @@ end
 
 local function PoliceCall()
     if Config.PoliceCallChance <= math.random(1, 100) then
-        TriggerServerEvent('police:server:policeAlert', 'Suspicous activity')
+        --TriggerServerEvent('police:server:policeAlert', 'Suspicous activity')
+        exports['ps-dispatch']:SuspiciousActivity()
     end
 end
 

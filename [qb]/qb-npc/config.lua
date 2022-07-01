@@ -38,6 +38,25 @@ Config.TalkToNPC = {
 			
 		},
 	},--]]
+
+	{
+		npc = "u_m_y_smugmech_01", -- legion
+		header = "Redline Performance",
+		name = "Redline Mechanic",
+		uiText = "Roberto",
+		dialog = "Hello, how may I help you?",
+		coordinates = vector3(-588.94, -930.6, 23.89-1),
+		heading = 97.74,
+		camOffset = vector3(0.0, 0.0, 0.0),
+		camRotation = vector3(0.0, 0.0, 0.0),
+		interactionRange = 3,
+		options = {
+			{"Call a mechanic", 'qb-smallresources:client:sendJobNotiMech', 'c'},
+		},
+		jobs = {	-- Example jobs
+		},
+	},
+
 	{
 		npc = "u_f_o_moviestar",
 		header = "Pillbox Hospital",
@@ -74,6 +93,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
+	--[[
 	{
 		npc = "mp_m_shopkeep_01", --grove
 		header = "24/7 Supermarket",
@@ -396,7 +416,7 @@ Config.TalkToNPC = {
 		},
 		jobs = {	-- Example jobs
 		},
-	},
+	},--]]
 	{
 		npc = "s_m_m_lathandy_01", --shop keeper HARDWARE strawberry
 		header = "Hardware Store",
@@ -448,6 +468,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
+	--[[
 	{
 		npc = "cs_wade", --shop keeper WEED STORE
 		header = "Smoke On the Water",
@@ -465,7 +486,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
-
+--]]
 
 	--banks
 
@@ -482,7 +503,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -499,7 +520,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -516,7 +537,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -533,7 +554,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -550,7 +571,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -567,7 +588,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -584,7 +605,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
@@ -601,14 +622,14 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,
 		options = {
-			{"Access your account", 'qb-banking:openbank', 'c'},
+			{"Access your account", 'qb-banking:openBankScreen', 'c'},
 		},
 		jobs = {	-- Example jobs
 		},
 	},
 
 	-- clothing stores
-
+--[[
 	{
 		npc = "ig_miguelmadrazo", --Bank paleto
 		header = "Clothing Shop",
@@ -1052,7 +1073,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
-
+--]]
 	--weapon store
 	{
 		npc = "mp_m_weapexp_01", -- legion
@@ -1060,7 +1081,7 @@ Config.TalkToNPC = {
 		name = "Cleetus",
 		uiText = "ammunation employee",
 		dialog = "Hello, how may I help you?",
-		coordinates = vector3(18.35, -1107.46, 28.8),
+		coordinates = vector3(22.7, -1105.44, 29.8-1),
 		heading = 168.99,
 		camOffset = vector3(0.0, 0.0, 0.0),
 		camRotation = vector3(0.0, 0.0, 0.0),
@@ -1071,6 +1092,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
+	--[[
 	{
 		npc = "mp_m_weapexp_01", --Bank paleto
 		header = "Gun Shop",
@@ -1227,7 +1249,7 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
-
+--[[
 	{
 		npc = "csb_burgerdrug", -- burgershot
 		header = "BurgerShot Garage",
@@ -1246,7 +1268,7 @@ Config.TalkToNPC = {
 			"burgershot"
 		},
 	},
-
+--]]
 
 	--[[
 	-- This is the template to create new NPCs

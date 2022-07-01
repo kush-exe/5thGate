@@ -67,21 +67,23 @@ Config.RepairCost = 1500 -- repair cost
 -- Can a single job can owned both/multiple shop? = yes
 Config.Customs = { -- Multiple Shop Start
 
-    ['Bennys'] = { -- Shop id -- Sample bennys (IPL coordinates) Change this to your liking (CHANGE COORDINATES IF CUSTOM BENNYS MAP)
+    ['Redline'] = { -- Shop id -- Sample bennys (IPL coordinates) Change this to your liking (CHANGE COORDINATES IF CUSTOM BENNYS MAP)
 		job = 'mechanic', -- job name permmision for this shop
 		min_grade = 0, -- min grade to access the whole shop feature
 		radius = 30, -- radius for whole shop
 		stockroom = {coord = vector4(-227.70811462402,-1322.9874267578,30.890409469604,90.902221679688), grade = 0}, -- vector 4 why the F is this vector4, x,y,z,w (heading)
-		paintmenu = {coord = vector3(-228.27142333984,-1333.4058837891,30.89038848877), grade = 0},
+		paintmenu = {coord = vector3(-560.27, -914.6, 23.89), grade = 0},
 		garage_inventory = {coord = vector4(-200.8703918457,-1317.6979980469,31.089340209961,267.89974975586), grade = 0},
-		shopcoord = vector4(-212.58630371094,-1325.0119628906,30.89038848877,157.28034973145),
+		shopcoord = vector4(-558.34, -930.16, 23.86, 266.92),
 		mod = {
-			{coord = vector4(-224.20236206055,-1329.8156738281,30.21583366394,87.278968811035), taken = false},
-			{coord = vector4(-213.22569274902,-1331.546875,30.215799331665,356.6969909668), taken = false},
+			{coord = vector4(-582.89, -931.75, 23.89, 273.91), taken = false},
+			{coord = vector4(-583.32, -924.67, 23.89, 266.4), taken = false},
+			{coord = vector4(-583.22, -917.6, 23.89, 266.7), taken = false},
 		},
 		Blips = {sprite = 446, color = 68, scale = 0.8},
     },
 
+	--[[
 	['Custom Garage'] = { -- Shop id -- Custom Map Tuner Garage (2372 Build only, canary and release) IPL and Int https://forum.cfx.re/t/free-mlo-tuner-auto-shop/4247145
 		job = 'police', -- job name permmision for this shop
 		min_grade = 0, -- min grade to access the whole shop feature
@@ -95,7 +97,7 @@ Config.Customs = { -- Multiple Shop Start
 			{coord = vector4(830.01727294922,-953.10614013672,25.440238952637,97.936683654785), taken = false},
 		},
 		Blips = {sprite = 446, color = 68, scale = 0.8},
-    },
+    },--]]
 
 }
 
@@ -873,7 +875,7 @@ Config.VehicleMod = {
         label = 'Transmission',
 		name = 'transmission',
         index = 13,
-		cost = 3000,
+		cost = 5000,
 		percent_cost = 8,
 		bone = 'engine',
 		multicostperlvl = true,
@@ -917,7 +919,7 @@ Config.VehicleMod = {
         label = 'Engine',
 		name = 'engine',
         index = 11,
-		cost = 3000,
+		cost = 10000,
 		percent_cost = 10,
 		bone = 'engine',
 		action = 'openhood',
@@ -1136,7 +1138,7 @@ Config.VehicleMod = {
 		label = 'Spoiler',
 		name = 'spoiler',
         index = 0,
-		cost = 900,
+		cost = 3000,
 		percent_cost = 5,
 		bone = 'boot',
 		camera = {val = 'back', x = 0.5, y = -1.6,z = 1.3},
@@ -1255,7 +1257,7 @@ Config.VehicleMod = {
 		label = 'Neon Lights',
 		name = 'neon',
         index = 103,
-		cost = 2500,
+		cost = 4000,
 		percent_cost = 3,
 		bone = 'boot',
         type = 'Neon Lights',

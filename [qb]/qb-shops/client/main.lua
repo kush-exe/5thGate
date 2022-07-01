@@ -4,6 +4,17 @@ local currentShop, currentData
 local pedSpawned = false
 local ShopPed = {}
 
+exports["qb-target"]:AddTargetModel({GetHashKey('mp_m_shopkeep_01'), GetHashKey('mp_m_weapexp_01'), GetHashKey('s_m_m_lathandy_01')}, {
+    options = {
+        {
+            event = "qb-shops:client:shop",
+            icon = "fas fa-shopping-cart",
+            label = "Open Shop"
+        },
+    },
+    distance = 3
+})
+
 -- Functions
 local function SetupItems(shop)
     local products = Config.Locations[shop].products
@@ -81,8 +92,8 @@ local function openShop(shop, data)
                         end
                     end
                 end
-                QBCore.Functions.Notify(Lang:t("error.dealer_decline"), "error")
-                Wait(500)
+                --QBCore.Functions.Notify(Lang:t("error.dealer_decline"), "error")
+                --Wait(500)
                 QBCore.Functions.Notify(Lang:t("error.talk_cop"), "error")
                 Wait(1000)
             end
@@ -193,6 +204,21 @@ local function deletePeds()
     end
 end
 
+RegisterNetEvent('qb-shops:client:shop', function()
+        local InRange = false
+        local PlayerPed = PlayerPedId()
+        local PlayerPos = GetEntityCoords(PlayerPed)
+
+        for shop, _ in pairs(Config.Locations) do
+            local position = vector3(Config.Locations[shop]["coords"]['x'],Config.Locations[shop]["coords"]['y'],Config.Locations[shop]["coords"]['z'])
+            local products = Config.Locations[shop].products
+            local dist = #(PlayerPos - position)
+            if dist < 10 then
+                openShop(shop, Config.Locations[shop])
+            end
+        end
+end)
+
 -- Threads
 
 local NewZones = {}
@@ -234,7 +260,7 @@ end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     createBlips()
-    createPeds()
+    --createPeds()
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
@@ -244,7 +270,7 @@ end)
 AddEventHandler('onResourceStart', function(resourceName)
     if GetCurrentResourceName() == resourceName then
         createBlips()
-        createPeds()
+        --createPeds()
     end
 end)
 

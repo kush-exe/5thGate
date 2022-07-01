@@ -341,4 +341,28 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['carbuilder'] = {
+		label = 'Car Manufacturer',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Employee',
+                payment = 50
+            },
+            ['1'] = {
+                name = 'Truck Driver',
+                payment = 75
+            },
+            ['2'] = {
+                name = 'Plant Manager',
+                payment = 100
+            },
+            ['3'] = {
+                name = 'Owner',
+                payment = 125,
+                isboss = true
+            },
+        },
+	},
 }

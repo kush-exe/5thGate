@@ -210,6 +210,37 @@ local function ProcessBricks()
 	end)
 end
 
+local function ProcessBags()
+	isProcessing = true
+	local playerPed = PlayerPedId()
+
+	TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_PARKING_METER", 0, true)
+	QBCore.Functions.Progressbar("search_register", Lang:t("progressbar.packing"), 15000, false, true, {
+		disableMovement = true,
+		disableCarMovement = true,
+		disableMouse = false,
+		disableCombat = true,
+	}, {}, {}, {}, function()
+		TriggerServerEvent('ps-drugprocessing:processCocaBags')
+
+		local timeLeft = Config.Delays.CokeProcessing / 1000
+		while timeLeft > 0 do
+			Wait(1000)
+			timeLeft -= 1
+
+			if #(GetEntityCoords(playerPed)-Config.CircleZones.CokeProcessing.coords) > 6 then
+				TriggerServerEvent('ps-drugprocessing:cancelProcessing')
+				break
+			end
+		end
+		ClearPedTasks(playerPed)
+		isProcessing = false
+	end, function()
+		ClearPedTasks(playerPed)
+		isProcessing = false
+	end)
+end
+
 RegisterNetEvent('ps-drugprocessing:ProcessCocaFarm', function()
 	local coords = GetEntityCoords(PlayerPedId())
 
@@ -267,6 +298,22 @@ RegisterNetEvent('ps-drugprocessing:ProcessBricks', function()
 		else
 			QBCore.Functions.Notify(Lang:t("error.already_processing"), 'error')
 		end
+	end
+end)
+
+RegisterNetEvent('ps-drugprocessing:ProcessCokeBags', function()
+	local coords = GetEntityCoords(PlayerPedId(source))
+	
+	if not isProcessing then
+		QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
+			if result then
+				ProcessBags()
+			else
+				QBCore.Functions.Notify(Lang:t("error.not_all_items"), 'error')
+			end
+		end, {coke_brick = 1, finescale = 1})
+	else
+		QBCore.Functions.Notify(Lang:t("error.already_processing"), 'error')
 	end
 end)
 

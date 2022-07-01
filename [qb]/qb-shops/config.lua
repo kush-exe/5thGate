@@ -176,21 +176,13 @@ Config.Products = {
         },
         [6] = {
             name = "phone",
-            price = 850,
+            price = 500,
             amount = 50,
             info = {},
             type = "item",
             slot = 6,
         },
         [7] = {
-            name = "radio",
-            price = 250,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 7,
-        },
-        [8] = {
             name = "binoculars",
             price = 50,
             amount = 50,
@@ -198,7 +190,7 @@ Config.Products = {
             type = "item",
             slot = 8,
         },
-        [9] = {
+        [8] = {
             name = "firework1",
             price = 50,
             amount = 50,
@@ -206,7 +198,7 @@ Config.Products = {
             type = "item",
             slot = 9,
         },
-        [10] = {
+        [9] = {
             name = "firework2",
             price = 50,
             amount = 50,
@@ -214,7 +206,7 @@ Config.Products = {
             type = "item",
             slot = 10,
         },
-        [11] = {
+        [10] = {
             name = "firework3",
             price = 50,
             amount = 50,
@@ -222,7 +214,7 @@ Config.Products = {
             type = "item",
             slot = 11,
         },
-        [12] = {
+        [11] = {
             name = "firework4",
             price = 50,
             amount = 50,
@@ -230,7 +222,7 @@ Config.Products = {
             type = "item",
             slot = 12,
         },
-        [13] = {
+        [12] = {
             name = "fitbit",
             price = 400,
             amount = 150,
@@ -238,7 +230,7 @@ Config.Products = {
             type = "item",
             slot = 13,
         },
-        [14] = {
+        [13] = {
             name = "cleaningkit",
             price = 150,
             amount = 150,
@@ -246,7 +238,7 @@ Config.Products = {
             type = "item",
             slot = 14,
         },
-        [15] = {
+        [14] = {
             name = "advancedrepairkit",
             price = 500,
             amount = 50,

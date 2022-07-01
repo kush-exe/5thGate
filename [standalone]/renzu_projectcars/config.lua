@@ -21,7 +21,7 @@ Config.MetaInventory = false -- ox_inventory is the only supported for esx Frame
 Config.items = {'vehicle_shell','vehicle_blueprints'} -- note: vehicle_shell usage is for item meta inventory only, if you are not using meta inventory, vehicle_blueprints are the one usable to spawn your bought shells.(junk vehicle)
 
 -- CONFIGURE THIS PART (MAIN SETTINGS)
-Config.jobonly = false -- enable disable job requirement for using the shops
+Config.jobonly = true -- enable disable job requirement for using the shops
 Config.carbuilderjob = 'mechanic'
 Config.job_AllShopFree = true
 -- CONFIGURE THIS PART (MAIN SETTINGS)
@@ -54,7 +54,7 @@ Config.JunkShop = {
 -- Boss can request orders from manufacturer (imaginary) and be paid after releasing orders
 -- integration with my vehicle shop (renzu_vehicleshop v2) Soon
 Config.EnableBuilderJob = true -- enable disable this feature
-Config.MaxProjectOrderList = 10 -- max vehicles from job order lists
+Config.MaxProjectOrderList = 100 -- max vehicles from job order lists
 Config.BuilderJobs = {
 	['mechanic'] = { -- job
 		blip = 569,

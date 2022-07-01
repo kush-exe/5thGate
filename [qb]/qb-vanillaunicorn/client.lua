@@ -36,7 +36,7 @@ CreateThread(function()
         if pedId then
             GLOBAL_COORDS = GetEntityCoords(pedId)
         end
-        Wait(200)
+        Wait(1200)
     end
 end)
 
@@ -212,7 +212,7 @@ CreateThread(function()
     while true do
         Wait(1)
         local plyCoords = GetEntityCoords(PlayerPedId(), 0)
-        local distance = #(vector3(110.74, -1288.16, 28.26) - plyCoords)
+        local distance = #(vector3(126.1, -1300.86, 29.23) - plyCoords)
         if distance < 2 then
             if not IsPedInAnyVehicle(PlayerPedId(), true) then
                 if distance < 2 then
@@ -243,11 +243,11 @@ CreateThread(function()
 			if distance < 1 then
 				if not IsPedInAnyVehicle(PlayerPedId(), true) then
 					if distance < 1 then
-						DrawText3D(126.29, -1297.86, 29.26, '~p~[E]~w~ Entry Fee (1000$)')
+						DrawText3D(126.29, -1297.86, 29.26, '~p~[E]~w~ Entry Fee (250$)')
 						if IsControlJustReleased(0, 38) then 
 							TriggerServerEvent('paystripclub:pay')
 							TriggerEvent('animations:client:EmoteCommandStart', {"id"})
-							Progressbar(2500,"Paying...")
+							Progressbar(5000,"Paying...")
 						end
 					end
 				end

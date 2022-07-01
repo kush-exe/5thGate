@@ -87,7 +87,8 @@ local function PoliceCall()
         chance = 25
     end
     if math.random(1, 100) <= chance then
-        TriggerServerEvent('police:server:policeAlert', 'Attempted House Robbery')
+        --TriggerServerEvent('police:server:policeAlert', 'Attempted House Robbery')
+        exports['ps-dispatch']:HouseRobbery()
     end
 end
 

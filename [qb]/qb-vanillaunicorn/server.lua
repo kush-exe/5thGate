@@ -1,4 +1,4 @@
-QBCore = nil
+
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterServerEvent('paystripclub:pay')
@@ -6,12 +6,12 @@ AddEventHandler('paystripclub:pay', function()
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
-	if Player.PlayerData.money.cash >= 1000 then
-		Player.Functions.RemoveMoney("cash", 1000)
-		TriggerEvent("qb-bossmenu:server:addAccountMoney", "vanilla", 1000)
-		TriggerClientEvent('DoLongHudText', src, "You paid 1000$ Entry Fee for VU.")
+	if Player.PlayerData.money.cash >= 250 then
+		Player.Functions.RemoveMoney("cash", 250)
+		TriggerEvent("qb-bossmenu:server:addAccountMoney", "vanilla", 250)
+		TriggerClientEvent('QBCore:Notify', src, "You paid 250$ Entry Fee for VU.")
 	else
-		TriggerClientEvent('DoLongHudText', src, 'Not enough money.', 2)
+		TriggerClientEvent('QBCore:Notify', src, 'Not enough money.', 2)
 		end
 		TriggerClientEvent("strippers:mail", -1, {
             sender = "Vanilla Unicorn",
@@ -41,7 +41,7 @@ AddEventHandler('stripclubstack:pay', function()
 		Player.Functions.RemoveMoney("cash", 1000)
 		TriggerEvent("qb-bossmenu:server:addAccountMoney", "vanilla", 1000)
     else
-        TriggerClientEvent('DoLongHudText', src, 'Not enough money.', 2)
+        TriggerClientEvent('QBCore:Notify', src, 'Not enough money.', 2)
     end
 end)
 

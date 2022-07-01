@@ -222,6 +222,24 @@ CreateThread(function()
         },
     distance = 3.5
     })
+    exports["qb-target"]:AddBoxZone("cokebagging", vector3(1086.35, -3197.44, -38.99), 2.2, 1.0, {
+        name = "cokebricked",
+        heading = 90,
+        debugPoly = false,
+        minZ = -39.99,
+        maxZ = -38.59,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:ProcessCokeBags",
+                icon = "fas fa-weight-scale",
+                label = Lang:t("target.bagging"),
+                --job = "cokecutter", -- Remove this line if you do not want a job check.
+            },
+        },
+    distance = 3.5
+    })
     exports["qb-target"]:AddBoxZone("weedproces", vector3(2328.53, 2570.99, 46.61), 2.5, 2.5, {
         name = "weedproces",
         heading = 331.74,

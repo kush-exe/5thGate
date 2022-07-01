@@ -192,6 +192,7 @@ CreateThread(function()
     end
 end)
 
+--[[
 CreateThread(function()
     while true do
         Wait(1)
@@ -237,7 +238,7 @@ CreateThread(function()
             Wait(2500)
         end
     end
-end)
+end)--]]
 
 RegisterNetEvent('qb-newsjob:client:TakeOutVehicle', function(data)
     local vehicle = data.vehicle

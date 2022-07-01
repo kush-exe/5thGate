@@ -44,3 +44,9 @@ RegisterNetEvent('hud:server:RelieveStress', function(amount)
     TriggerClientEvent('hud:client:UpdateStress', src, newStress)
     TriggerClientEvent('QBCore:Notify', src, "Feeling More Relaxed!")
 end)
+
+QBCore.Commands.Add('cash', 'Check Cash Balance', {}, false, function(source, _)
+    local Player = QBCore.Functions.GetPlayer(source)
+    local cashamount = Player.PlayerData.money.cash
+    TriggerClientEvent('QBCore:Notify', source, '$'..cashamount)
+end)

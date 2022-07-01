@@ -267,7 +267,7 @@ Citizen.CreateThread(function()
             var['@hash'] = tostring(GetHashKey(data.model))
             var['@citizenid'] = xPlayer.citizenid
         end
-        SqlFunc(Config.Mysql,'execute',query,var)
+        --SqlFunc(Config.Mysql,'execute',query,var)
         projectcars[data.plate] = nil
         GlobalState.ProjectCars = projectcars
         SqlFunc(Config.Mysql,'execute','DELETE FROM renzu_projectcars WHERE TRIM(UPPER(plate)) = @plate',{['@plate'] = data.plate})

@@ -127,7 +127,7 @@
     font-size: 1.75vh;
     color: white;
     border-bottom: 4px solid;
-    border-image: linear-gradient(var(--angle), #221115, #52202a,#861c31,#8b11f0,#ee0131) 1;
+    border-image: linear-gradient(var(--angle), #221115, #232052,#331c86,#8b11f0,#1101ee) 1;
     animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite;
     box-shadow: 0 0 40px #8b11f0;
 }
@@ -141,7 +141,7 @@
     width: 110%;
     height: 100%;
     border-top: 4px solid;
-    border-image: linear-gradient(var(--angle), #221115, #52202a,#861c31,#8b11f0,#ee0131) 1;
+    border-image: linear-gradient(var(--angle), #221115, #232052,#331c86,#8b11f0,#1101ee) 1;
     animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite;
     box-shadow: 0 0 40px #8b11f0;
 } 
@@ -333,7 +333,7 @@
     border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #682e3ac2, #913144c9,#72192bc0,#a01732c4,#ff0033c4);
+    background: linear-gradient(-45deg, #3d2e68c2, #433191c9,#191a72c0,#2517a0c4,#0400ffc4);
     background-size: 400% 400%;
     border-radius: .3vh;
     transition: all 0.2s ease;
@@ -344,11 +344,11 @@
     border-radius: .6vh;
     border:3px solid black;
     transition: 0.2s;
-    box-shadow: 0 0 10px #ff0033 !important;
+    box-shadow: 0 0 10px #1900ff !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #682e3ac2, #913144c9,#72192bc0,#a01732c4,#ff0033c4);
+    background: linear-gradient(-45deg, #3d2e68c2, #433191c9,#191a72c0,#191a72c0,#0400ffc4);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #ff0033,#25b6c300,#ff0033,#25b6c300) 1;
+    border-image: linear-gradient(var(--angle), #1900ff,#25b6c300,#1900ff,#25b6c300) 1;
     font-size:5vh;
     transform:scale(1.05);
     cursor: pointer;
@@ -360,11 +360,11 @@
     border-radius: 4px;
     transition: 0.5s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #30151ac2, #36121ac9,#3d0d17c0,#3a0812c4,#49000fc4);
+    background: linear-gradient(-45deg, #1b1530c2, #191236c9,#160d3dc0,#0d083ac4,#130049c4);
     background-size: 400% 400%;
     border-radius: .3vh;
     transition: all 0.2s ease;
-    box-shadow: 0 0 5px #ff0033 !important;
+    box-shadow: 0 0 5px #1900ff !important;
 }
 
 #delete:hover {
@@ -372,11 +372,11 @@
     border-radius: .6vh;
     border:3px solid black;
     transition: 0.2s;
-    box-shadow: 0 0 10px #ff0033 !important;
+    box-shadow: 0 0 10px #1900ff !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #30151ac2, #36121ac9,#3d0d17c0,#3a0812c4,#49000fc4);
+    background: linear-gradient(-45deg, #1b1530c2, #191236c9,#160d3dc0,#0d083ac4,#130049c4);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #ff0033,#25b6c300,#ff0033,#25b6c300) 1;
+    border-image: linear-gradient(var(--angle), #1900ff,#25b6c300,#1900ff,#25b6c300) 1;
     font-size:5vh;
     transform:scale(1.05);
     cursor: pointer;
@@ -562,7 +562,7 @@
     border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #682e3a, #913144,#72192b,#a01732,#ff0033);
+    background: linear-gradient(-45deg, #682e3a, #913144,#72192b,#a01732,#1900ff);
     background-size: 400% 400%;
 }
 
@@ -577,11 +577,11 @@
     border-radius: .6vh;
     border:2px solid black;
     transition: 0.2s;
-    box-shadow: 0 0 20px #ff0033 !important;
+    box-shadow: 0 0 20px #1900ff !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #682e3a, #913144,#72192b,#a01732,#ff0033);
+    background: linear-gradient(-45deg, #682e3a, #913144,#72192b,#a01732,#1900ff);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #ff0033,#25b6c300,#25b6c300,#25b6c300,#ff0033) 1;
+    border-image: linear-gradient(var(--angle), #1900ff,#25b6c300,#25b6c300,#25b6c300,#1900ff) 1;
     cursor: pointer;
 }
 

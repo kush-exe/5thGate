@@ -67,3 +67,16 @@ RegisterServerEvent('ps-drugprocessing:processCocaBrick', function()
 		end
 	end
 end)
+
+RegisterServerEvent('ps-drugprocessing:processCocaBags', function()
+	local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+
+	if Player.Functions.RemoveItem('coke_brick', Config.CokeProcessing.LargeBrick) then
+		if Player.Functions.AddItem('cokebaggy', Config.CokeProcessing.Bags) then
+			TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items['coke_brick'], "remove", Config.CokeProcessing.SmallBrick)
+			TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items['cokebaggy'], "add", Config.CokeProcessing.Bags)
+			TriggerClientEvent('QBCore:Notify', src, 'Processing Successful', "success")
+		end
+	end
+end)

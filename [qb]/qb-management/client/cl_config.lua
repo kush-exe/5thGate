@@ -22,6 +22,9 @@ Config.BossMenus = {
     ['mechanic'] = {
         vector3(-339.53, -156.44, 44.59),
     },
+    ['vanilla'] = {
+        vector3(97.62, -1303.48, 29.26),
+    },
 }
 
 Config.BossMenuZones = {
@@ -42,6 +45,9 @@ Config.BossMenuZones = {
     },
     ['mechanic'] = {
         { coords = vector3(-339.53, -156.44, 44.59), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+    },
+    ['vanilla'] = {
+        { coords = vector3(97.62, -1303.48, 29.26), length = 1.15, width = 2.6, heading = 353.0, minZ = 29.0-1, maxZ = 33.99 },
     },
 }
 

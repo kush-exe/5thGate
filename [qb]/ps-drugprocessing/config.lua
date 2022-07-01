@@ -75,15 +75,16 @@ Config.WeedLab = {
 --------------------------------
 
 Config.CokeProcessing = {
-	CokeLeaf = 1, -- Amount of Leaf Needed to Process
-	ProcessCokeLeaf = math.random(2,7), -- Amount of Coke Received
+	CokeLeaf = 200, -- Amount of Leaf Needed to Process
+	ProcessCokeLeaf = math.random(20,70), -- Amount of Coke Received
 	-- Processing Small Bricks --
-	Coke = 10, -- Amount of Coke Needed for Small Brick
-	BakingSoda = 5, -- Amount of Baking Soda Needed for Small Brick
-	SmallCokeBrick = math.random(2,7),
+	Coke = 50, -- Amount of Coke Needed for Small Brick
+	BakingSoda = 10, -- Amount of Baking Soda Needed for Small Brick
+	SmallCokeBrick = 1,
 	-- Process Small Bricks Into Large Brick --
-	SmallBrick = 4, -- Amount of Small Bricks Required
+	SmallBrick = 5, -- Amount of Small Bricks Required
 	LargeBrick = 1, -- Large Bricks Received
+	Bags = 500,
 }
 
 --------------------------------
@@ -91,10 +92,10 @@ Config.CokeProcessing = {
 --------------------------------
 Config.MethProcessing = {
 	-- Chemical Processing --
-	SulfAcid = 1, -- Amount of Sulfuric Acid Needed for Liquid Mix
-	HydAcid = 1, -- Amount of Hydrochloric Acid Needed for Liquid Mix
-	SodHyd = 1, -- Amount of Sodium Hydroxide Needed for Liquid Mix
-	Meth = math.random(5,12), -- Amount of Meth Recevied From 1 Tray
+	SulfAcid = 50, -- Amount of Sulfuric Acid Needed for Liquid Mix
+	HydAcid = 50, -- Amount of Hydrochloric Acid Needed for Liquid Mix
+	SodHyd = 50, -- Amount of Sodium Hydroxide Needed for Liquid Mix
+	Meth = math.random(50,100), -- Amount of Meth Recevied From 1 Tray
 }
 
 --------------------------------

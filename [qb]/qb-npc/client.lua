@@ -66,6 +66,34 @@ local function AddNPC(v)
 end
 exports("AddNPC", AddNPC)
 
+local function AddNPCNoSpawn(v)
+
+	if Config.AutoCamPosition then
+		local px, py, pz = table.unpack(GetEntityCoords(v.ped, true))
+		local x, y, z = px + GetEntityForwardX(v.ped) * 1.2, py + GetEntityForwardY(v.ped) * 1.2, pz + 0.52
+
+		camCoords = vector3(x, y, z)
+	end
+
+	if Config.AutoCamRotation then
+		local rx = GetEntityRotation(v.ped, 2)
+
+		camRotation = rx + vector3(0.0, 0.0, 181)
+	end
+
+	pedInfo = {
+		name = v.name,
+		model = v.npc,
+		pedCoords = v.coordinates,
+		entity = v.ped,
+		camCoords = camCoords,
+		camRotation = camRotation,
+	}
+
+	table.insert(pedList, pedInfo)
+end
+exports("AddNPCNoSpawn", AddNPCNoSpawn)
+
 -- CREATE NPCs
 
 Citizen.CreateThread(function()

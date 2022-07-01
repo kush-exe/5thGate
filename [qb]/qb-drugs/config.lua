@@ -145,12 +145,12 @@ Config.DrugsPrice = {
         max = 34,
     },
     ["cokebaggy"] = {
-        min = 18,
-        max = 37,
+        min = 80,
+        max = 100,
     },
     ["meth"] = {
-        min = 18,
-        max = 40,
+        min = 50,
+        max = 80,
     },
 }
 

@@ -4,9 +4,9 @@ Config.DefaultVolume = 0.1 -- Accepted values are 0.01 - 1
 
 Config.Locations = {
     ['vanilla'] = {
-        ['job'] = 'police', -- Required job to use booth
-        ['radius'] = 30, -- The radius of the sound from the booth
-        ['coords'] = vector3(11.7, -1598.41, 29.38), -- Where the booth is located
+        ['job'] = 'vanilla', -- Required job to use booth
+        ['radius'] = 60, -- The radius of the sound from the booth
+        ['coords'] = vector3(117.16, -1281.38, 29.26), -- Where the booth is located
         ['playing'] = false
     }
 }

@@ -286,7 +286,8 @@ RegisterNetEvent('electronickit:UseElectronickit', function()
                                 local street2 = GetStreetNameFromHashKey(s2)
                                 local streetLabel = street1
                                 if street2 then streetLabel = streetLabel .. " " .. street2 end
-                                TriggerServerEvent("qb-bankrobbery:server:callCops", "small", closestBank, streetLabel, pos)
+                                --TriggerServerEvent("qb-bankrobbery:server:callCops", "small", closestBank, streetLabel, pos)
+                                exports['ps-dispatch']:FleecaBankRobbery(Config.SmallBanks[closestBank]["camId"])
                                 copsCalled = true
                                 SetTimeout(60000 * Config.OutlawCooldown, function() copsCalled = false end)
                             end, function() -- Cancel

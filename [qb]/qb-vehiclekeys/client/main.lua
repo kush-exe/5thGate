@@ -374,7 +374,7 @@ function lockpickFinish(success)
 
     else
         TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
-        AttemptPoliceAlert("steal")
+        AttemptPoliceAlert("steal", vehicle)
     end
 
     if usingAdvanced then
@@ -420,7 +420,7 @@ function Hotwire(vehicle, plate)
     end)
 
     Wait(10000)
-    AttemptPoliceAlert("steal")
+    AttemptPoliceAlert("steal", vehicle)
 end
 
 function CarjackVehicle(target)
@@ -476,7 +476,7 @@ function CarjackVehicle(target)
             end
             isCarjacking = false
             Wait(2000)
-            AttemptPoliceAlert("carjack")
+            AttemptPoliceAlert("carjack", vehicle)
             Wait(Config.DelayBetweenCarjackings)
             canCarjack = true
         end
@@ -488,14 +488,19 @@ function CarjackVehicle(target)
     end)
 end
 
-function AttemptPoliceAlert(type)
+function AttemptPoliceAlert(type, vehicle)
     if not AlertSend then
         local chance = Config.PoliceAlertChance
         if GetClockHours() >= 1 and GetClockHours() <= 6 then
             chance = Config.PoliceNightAlertChance
         end
         if math.random() <= chance then
-           TriggerServerEvent('police:server:policeAlert', 'Vehicle theft in progress. Type: ' .. type)
+           --TriggerServerEvent('police:server:policeAlert', 'Vehicle theft in progress. Type: ' .. type)
+           if type == 'carjack' then
+            exports['ps-dispatch']:CarJacking(vehicle)
+           elseif type == 'steal' then
+            exports['ps-dispatch']:VehicleTheft(vehicle)
+           end
         end
         AlertSend = true
         SetTimeout(Config.AlertCooldown, function()

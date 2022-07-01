@@ -51,7 +51,8 @@ RegisterNetEvent('qb-bankrobbery:UseBankcardB', function()
                         local street2 = GetStreetNameFromHashKey(s2)
                         local streetLabel = street1
                         if street2 then streetLabel = streetLabel .. " " .. street2 end
-                        TriggerServerEvent("qb-bankrobbery:server:callCops", "pacific", 0, streetLabel, pos)
+                        exports['ps-dispatch']:PacificBankRobbery(1)
+                        --TriggerServerEvent("qb-bankrobbery:server:callCops", "pacific", 0, streetLabel, pos)
                         copsCalled = true
                     end, function() -- Cancel
                         StopAnimTask(ped, "anim@gangops@facility@servers@", "hotwire", 1.0)
@@ -100,7 +101,8 @@ RegisterNetEvent('electronickit:UseElectronickit', function()
                                 local street2 = GetStreetNameFromHashKey(s2)
                                 local streetLabel = street1
                                 if street2 then streetLabel = streetLabel .. " " .. street2 end
-                                TriggerServerEvent("qb-bankrobbery:server:callCops", "pacific", 0, streetLabel, pos)
+                                --TriggerServerEvent("qb-bankrobbery:server:callCops", "pacific", 0, streetLabel, pos)
+                                exports['ps-dispatch']:PacificBankRobbery(2)
                                 copsCalled = true
                             end, function() -- Cancel
                                 StopAnimTask(ped, "anim@gangops@facility@servers@", "hotwire", 1.0)
