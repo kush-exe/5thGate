@@ -69,7 +69,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 2.5,
 		options = {
-			{"Check in", 'qb-ambulancejob:client:checkin', 'c'},
+			{"Check in", 'qb-ambulancejob:checkin', 'c'},
 			{"Call Doctor", 'hospital:server:SendDoctorAlert', 's'},
 		},
 		jobs = {	-- Example jobs
@@ -87,7 +87,7 @@ Config.TalkToNPC = {
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 2.5,
 		options = {
-			{"Check in", 'qb-ambulancejob:client:checkin', 'c'},
+			{"Check in", 'qb-ambulancejob:checkin', 'c'},
 			{"Call Doctor", 'hospital:server:SendDoctorAlert', 's'},
 		},
 		jobs = {	-- Example jobs

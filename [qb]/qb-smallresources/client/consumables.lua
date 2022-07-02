@@ -323,6 +323,7 @@ RegisterNetEvent('consumables:client:UseJoint', function()
             TriggerEvent('animations:client:EmoteCommandStart', {"smokeweed"})
         end
         TriggerEvent("evidence:client:SetStatus", "weedsmell", 300)
+        TriggerServerEvent('hud:server:RelieveStress', math.random(20, 30))
         TriggerEvent('animations:client:SmokeWeed')
     end)
 end)

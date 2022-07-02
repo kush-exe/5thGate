@@ -9,13 +9,13 @@
     position: absolute;
     top: 10vh;
     left: 10vh;
-    background: linear-gradient(-45deg, #351c1ca1, #2b1010ab,#270505a6,#2c0808a1,#290202b0);
+    background: linear-gradient(-45deg, #351c34a1, #2b102aab,#270527a6,#28082ca1,#290227b0);
     background-size: 400% 400%;
     border-radius: .8vh;
     padding: 30px;
     border-top: 4px solid;
     border-bottom: 4px solid;
-    border-image: linear-gradient(var(--angle), #dc143c,#c3252500,#c3252500,#c3252500,#dc143c) 1;
+    border-image: linear-gradient(var(--angle), #dc14dc,#b125c300,#c325bb00,#b125c300,#dc14d2) 1;
     animation:5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
 }
 
@@ -40,7 +40,7 @@
 
 .location:hover {
     border: 2px solid;
-    border-image: linear-gradient(var(--angle), #dc143c,#c3252500,#c3252500,#c3252500,#dc143c) 1;
+    border-image: linear-gradient(var(--angle), #dc14bb,#be25c300,#a925c300,#b625c300,#bb14dc) 1;
     animation: blinkxd 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
     background-color: rgb(0, 0, 0, 0.3);
     transition: 0.2s;
@@ -48,7 +48,7 @@
 
 .selected {
     border: 3px solid;
-    border-image: linear-gradient(var(--angle), #dc143c,#c3252500,#c3252500,#c3252500,#dc143c) 1;
+    border-image: linear-gradient(var(--angle), #bb14dc,rgba(163, 37, 195, 0),#b125c300,#c3252500,#c514dc) 1;
     animation: blinkxd 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,8s rotate linear infinite, shake-slow1 10s ease-in-out infinite;
     background-color: rgb(0, 0, 0, 0.3);
     box-shadow: 0 0 10px #ff0c0c8f !important;
@@ -63,7 +63,7 @@
     transition: 0.2s;
     border-radius: .3vh;
     box-shadow: 0 0 10px #ff0c0c8f !important;
-    background: linear-gradient(-45deg, #be4b62c2, #bb324ec9,#a71b37c0,#d3163cc4,#ff0033c4);
+    background: linear-gradient(-45deg, #a34bbec2, #bb32bbc9,#a21ba7c0,#d316d3c4,#f700ffc4);
     background-size: 400% 400%;
 }
 
@@ -83,11 +83,11 @@
 
     border:2px solid black;
     box-shadow: 0 0 30px #0cffe38f !important;
-    background-color: rgb(190, 0, 0);
+    background-color: rgb(152, 0, 190);
     transition: 0.2s;
-    background: linear-gradient(-45deg, #be4b62c2, #bb324ec9,#a71b37c0,#d3163cc4,#ff0033c4);
+    background: linear-gradient(-45deg, #a34bbec2, #a032bbc9,#7f1ba7c0,#c316d3c4,#ff00ffc4);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #dc143c,#c3252500,#c3252500,#c3252500,#dc143c) 1;
+    border-image: linear-gradient(var(--angle), #bb14dc,#c325bb00,#be25c300,#b125c300,#b414dc) 1;
 }
 
 #spawn-label {

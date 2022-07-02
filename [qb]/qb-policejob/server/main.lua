@@ -466,7 +466,7 @@ RegisterNetEvent('police:server:SendTrackerLocation', function(coords, requestId
     TriggerClientEvent("police:client:TrackerMessage", requestId, msg, coords)
     TriggerClientEvent("jpr-newphone:client:addPoliceAlert", requestId, alertData)
 end)
-
+--[[
 QBCore.Commands.Add('911p', Lang:t("commands.police_report"), {{name='message', help= Lang:t("commands.message_sent")}}, false, function(source, args)
 	local src = source
     local message
@@ -481,7 +481,7 @@ QBCore.Commands.Add('911p', Lang:t("commands.police_report"), {{name='message', 
             TriggerClientEvent('police:client:policeAlert', v.PlayerData.source, coords, message)
         end
     end
-end)
+end)--]]
 
 -- Items
 QBCore.Functions.CreateUseableItem("handcuffs", function(source)

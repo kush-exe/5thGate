@@ -71,7 +71,7 @@ Config.UsableEvidence = true -- set to false to disable copying text from eviden
 -- camera webhooks, these allow the camera to upload evidence to a discord channel using screeenshot-basic
 
 Config.CivWebhook = ''
-Config.LEOWebhook = 'https://discord.com/api/webhooks/990054907140780093/ktxD6bg7sL2Z5tR_VMyrreUSQUGo75WOFjCAMXP52C3txVrhCgp-ztCqloJoxejEdE2Z'
+Config.LEOWebhook = 'https://discord.com/api/webhooks/992502330954096770/a-_DiTyXlzecqlgMhDt4OBrH_Lv8BfsTp50MuM03EfeLhaIQTMl_Y7rzHk2IK7bkNy57'
 
 -- station polyzones
 

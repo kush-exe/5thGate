@@ -4,8 +4,9 @@ local stress = 0
 local config = Config
 local speedMultiplier = config.UseMPH and 2.23694 or 3.6
 local seatbeltIsOn = false
-local hasPlayerLoaded = false
+local hasPlayerLoaded = true
 local speedLevel = 0
+local limiter = false
 
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(player)
     hasPlayerLoaded = true
@@ -28,6 +29,43 @@ function PauseMenuState()
     end
     return true
 end
+
+local function startLimiter()
+    Citizen.CreateThread(function()
+        local ped = PlayerPedId()
+        local veh = GetVehiclePedIsIn(ped)
+        local speed = GetEntitySpeed(veh)
+        while limiter do
+            if GetEntitySpeed(veh) > speed then
+                SetVehicleForwardSpeed(veh, speed)
+            end
+            if not IsPedInAnyVehicle(ped) then
+                limiter = false
+            end
+            Wait(100)
+        end
+    end)
+end
+
+RegisterCommand("togglelimiter", function()
+    local ped = PlayerPedId()
+    local vehicle = GetVehiclePedIsIn(ped, false)
+    local inVehicle = IsPedSittingInAnyVehicle(ped)
+            if (inVehicle) then
+                if (GetPedInVehicleSeat(vehicle, -1) == ped) then
+                    if limiter == false then
+                        limiter = true
+                        startLimiter()
+                        QBCore.Functions.Notify('Speed Limiter: Enabled')
+                    else
+                        limiter = false
+                        QBCore.Functions.Notify('Speed Limiter: Disabled')
+                    end
+                end
+            end
+end)
+
+RegisterKeyMapping("togglelimiter", "Toggle Speed Limiter", "keyboard", "Y")
 
 Citizen.CreateThread(function()
     while true do 

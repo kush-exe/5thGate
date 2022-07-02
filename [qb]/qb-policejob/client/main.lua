@@ -49,6 +49,16 @@ exports('IsCopCL', function()
     return false
 end)
 
+exports('isCopCL', function()
+    for k, v in pairs(Config.PoliceJobs) do
+        if PlayerJob.name == v then
+            return true
+        end
+    end
+
+    return false
+end)
+
 -- Events
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     local player = QBCore.Functions.GetPlayerData()

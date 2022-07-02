@@ -52,6 +52,49 @@ if Config.EnableDefaultOptions then
         end
     end
 
+    local function flip()
+        local playerPed	= PlayerPedId()
+        local coords = GetEntityCoords(playerPed)
+        local vehicle = nil
+        if IsPedSittingInAnyVehicle(playerPed) then
+            TriggerEvent("QBCore:Notify", "Cannot flip while inside vehicle", "error")
+            ClearPedTasks(playerPed)
+            return
+        end
+        if IsAnyVehicleNearPoint(coords.x, coords.y, coords.z, 3.5) then
+            vehicle = GetClosestVehicle(coords.x, coords.y, coords.z, 3.5, 0, 71)
+            if DoesEntityExist(vehicle) then
+                QBCore.Functions.Progressbar("accepted_key", "Flipping Vehicle", 12000, false, true, {
+                    disableMovement = true,
+                    disableCarMovement = true,
+                    disableMouse = false,
+                    disableCombat = true,
+                }, {
+                    task = "CODE_HUMAN_MEDIC_TEND_TO_DEAD"
+                }, {}, {}, function() -- Done
+                    ClearPedTasks(playerPed)
+                    FreezeEntityPosition(playerPed, false)
+                    vehiclecoords = GetEntityCoords(vehicle)
+                    SetEntityCoords(vehicle, vehiclecoords.x+0.5, vehiclecoords.y+0.5, vehiclecoords.z+1)
+                    Wait(200)
+                    SetEntityRotation(vehicle, GetEntityRotation(PlayerPedId(), 2), 2)
+                    Wait(500)
+                    SetVehicleOnGroundProperly(vehicle)
+                    TriggerEvent("QBCore:Notify", "Success! Vehicle Flipped", "success")
+                end, function() -- Cancel
+    
+                    TriggerEvent("QBCore:Notify", "Vehicle flip failed!", "error")
+                    FreezeEntityPosition(playerPed, false)
+                    ClearPedTasks(playerPed)								
+                end)
+            else
+                TriggerEvent("QBCore:Notify", "There is no vehicle nearby", "error")
+            end
+        else
+            TriggerEvent("QBCore:Notify", "There is no vehicle nearby", "error")
+        end
+    end
+
     Bones.Options['seat_dside_f'] = {
         ["Toggle Front Door"] = {
             icon = "fas fa-door-open",
@@ -61,6 +104,17 @@ if Config.EnableDefaultOptions then
             end,
             action = function(entity)
                 ToggleDoor(entity, 0)
+            end,
+            distance = 1.2
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
             end,
             distance = 1.2
         }
@@ -77,6 +131,17 @@ if Config.EnableDefaultOptions then
                 ToggleDoor(entity, 1)
             end,
             distance = 1.2
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
+            end,
+            distance = 1.2
         }
     }
 
@@ -89,6 +154,17 @@ if Config.EnableDefaultOptions then
             end,
             action = function(entity)
                 ToggleDoor(entity, 2)
+            end,
+            distance = 1.2
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
             end,
             distance = 1.2
         }
@@ -105,6 +181,17 @@ if Config.EnableDefaultOptions then
                 ToggleDoor(entity, 3)
             end,
             distance = 1.2
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
+            end,
+            distance = 1.2
         }
     }
 
@@ -116,6 +203,17 @@ if Config.EnableDefaultOptions then
                 ToggleDoor(entity, BackEngineVehicles[GetEntityModel(entity)] and 5 or 4)
             end,
             distance = 0.9
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
+            end,
+            distance = 1.2
         }
     }
 
@@ -127,6 +225,17 @@ if Config.EnableDefaultOptions then
                 ToggleDoor(entity, BackEngineVehicles[GetEntityModel(entity)] and 4 or 5)
             end,
             distance = 0.9
+        },
+        ["Flip Vehicle"] = {
+            icon = "fas fa-car",
+            label = "Flip Vehicle",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function()
+                flip()
+            end,
+            distance = 1.2
         }
     }
 end

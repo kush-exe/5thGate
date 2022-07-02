@@ -37,7 +37,7 @@ function playSample() {
 	request.addEventListener("abort", transferCanceled);
 	
 	//var r = Math.floor(Math.random() * 4);
-	var s = 'music/song.ogg';
+	var s = 'music/holymoly.ogg';
 
 
 	request.open('GET', s, true);

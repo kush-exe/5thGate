@@ -169,6 +169,8 @@ RegisterNetEvent('qb-clothes:client:CreateFirstCharacter', function()
                 end
             end, config)
         end, Config.PedMenuGroup)
+        Wait(1200)
+        TriggerEvent('lj-brand:client:open')
     end)
 end)
 

@@ -4,7 +4,8 @@ files {
     'js/*.js',
     'img/background.jpg',
     'img/logo.png',
-    'music/song.ogg'
+    'music/song.ogg',
+    'music/*.ogg'
 }
 
 loadscreen 'index.html'

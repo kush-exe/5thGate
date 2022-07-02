@@ -80,22 +80,22 @@ SetupLawyers = function(data) {
     } else {
         $(".lawyers-list").append('<h1 style="font-size:1.541025641025641vh; padding:0.7256410256410255vh; color:rgba(23, 23, 23, 90%); font-weight: bold; margin-top:0; border-radius: 0.55rem; width:95%; display:block; background-color: rgb(42, 137, 214); margin-left: 0.6vh !important;"><i class="fa-solid fa-people-group fa-shake" style="--fa-animation-duration: 3s;font-size: 1.4vh;"></i>&nbsp;Police (' + police.length + ')</h1>');
 
-        var element = '<div class="lawyer-list"><div class="no-lawyers">Não está Police on duty.</div></div>'
+        var element = '<div class="lawyer-list"><div class="no-lawyers">No Police on duty.</div></div>'
         $(".lawyers-list").append(element);
 
         $(".lawyers-list").append('<br><h1 style="font-size:1.541025641025641vh; border-radius: 0.55rem; padding:0.7256410256410255vh; font-weight: bold;color:rgba(23, 23, 23, 90%); margin-top:0; width:95%; display:block; background-color: rgb(255, 190, 27); margin-left: 0.6vh !important;"><i class="fa-solid fa-people-group fa-shake" style="--fa-animation-duration: 3s;font-size: 1.4vh;"></i>&nbsp;Medical (' + ambulance.length + ')</h1>');
 
-        var element = '<div class="lawyer-list"><div class="no-lawyers">They are not Medical on duty.</div></div>'
+        var element = '<div class="lawyer-list"><div class="no-lawyers">No EMS on duty.</div></div>'
         $(".lawyers-list").append(element);
 
         $(".lawyers-list").append('<br><h1 style="font-size:1.541025641025641vh; border-radius: 0.55rem; padding:0.7256410256410255vh; font-weight: bold;color:rgba(23, 23, 23, 90%); margin-top:0; width:95%; display:block; background-color: #652b2c; margin-left: 0.6vh !important;"><i class="fa-solid fa-people-group fa-shake" style="--fa-animation-duration: 3s;font-size: 1.4vh;"></i>&nbsp;Mechanic (' + mechanic.length + ')</h1>');
 
-        var element = '<div class="lawyer-list"><div class="no-lawyers">They are not Mechanic on duty.</div></div>'
+        var element = '<div class="lawyer-list"><div class="no-lawyers">No Mechanics on duty.</div></div>'
         $(".lawyers-list").append(element);
 
         $(".lawyers-list").append('<br><h1 style="font-size:1.541025641025641vh; border-radius: 0.55rem; padding:0.7256410256410255vh; font-weight: bold;color:rgba(23, 23, 23, 90%); margin-top:0; width:95%; display:block; background-color: rgb(0, 204, 102); margin-left: 0.6vh !important;"><i class="fa-solid fa-people-group fa-shake" style="--fa-animation-duration: 3s;font-size: 1.4vh;"></i>&nbsp;Uber (' + taxi.length + ')</h1>');
 
-        var element = '<div class="lawyer-list"><div class="no-lawyers">Não está uber on duty.</div></div>'
+        var element = '<div class="lawyer-list"><div class="no-lawyers">No Ubers available.</div></div>'
         $(".lawyers-list").append(element);
         
 
