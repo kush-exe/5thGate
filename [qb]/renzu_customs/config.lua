@@ -67,18 +67,19 @@ Config.RepairCost = 1500 -- repair cost
 -- Can a single job can owned both/multiple shop? = yes
 Config.Customs = { -- Multiple Shop Start
 
-    ['Redline'] = { -- Shop id -- Sample bennys (IPL coordinates) Change this to your liking (CHANGE COORDINATES IF CUSTOM BENNYS MAP)
+    ['Precision'] = { -- Shop id -- Sample bennys (IPL coordinates) Change this to your liking (CHANGE COORDINATES IF CUSTOM BENNYS MAP)
 		job = 'mechanic', -- job name permmision for this shop
 		min_grade = 0, -- min grade to access the whole shop feature
 		radius = 30, -- radius for whole shop
 		stockroom = {coord = vector4(-227.70811462402,-1322.9874267578,30.890409469604,90.902221679688), grade = 0}, -- vector 4 why the F is this vector4, x,y,z,w (heading)
 		paintmenu = {coord = vector3(-560.27, -914.6, 23.89), grade = 0},
 		garage_inventory = {coord = vector4(-200.8703918457,-1317.6979980469,31.089340209961,267.89974975586), grade = 0},
-		shopcoord = vector4(-558.34, -930.16, 23.86, 266.92),
+		shopcoord = vector4(822.45, -988.38, 26.5, 182.2),
 		mod = {
-			{coord = vector4(-582.89, -931.75, 23.89, 273.91), taken = false},
-			{coord = vector4(-583.32, -924.67, 23.89, 266.4), taken = false},
-			{coord = vector4(-583.22, -917.6, 23.89, 266.7), taken = false},
+			{coord = vector4(836.18, -959.61, 26.5, 84.06), taken = false},
+			{coord = vector4(836.28, -968.17, 26.5, 97.88), taken = false},
+			{coord = vector4(836.26, -977.01, 26.65, 89.98), taken = false},
+			{coord = vector4(836.37, -985.59, 26.65, 87.45), taken = false},
 		},
 		Blips = {sprite = 446, color = 68, scale = 0.8},
     },

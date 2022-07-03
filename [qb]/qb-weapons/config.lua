@@ -16,11 +16,13 @@ Config.WeaponDamage = {
     ['weapon_sawnoffshotgun'] 		= 0.15,
     ['weapon_pumpshotgun'] 			= 0.15,
     ['weapon_dbshotgun'] 			= 0.25,
-    ['weapon_compactrifle'] 		= 0.39,
+    ['weapon_compactrifle'] 		= 0.399,
     ['weapon_carbinerifle'] 		= 0.405,
     ['weapon_carbinerifle_mk2'] 	= 0.42,
     ['weapon_knuckle']           	= 0.35,
     ['weapon_navyrevolver'] 		 = 0.45,
+    ['weapon_pistol_mk2'] 			 = 1.00,
+    ['weapon_snspistol'] 			 = 0.45,
 }
 
 Config.ReloadTime = math.random(4000, 6000)

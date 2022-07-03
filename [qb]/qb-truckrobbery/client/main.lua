@@ -1,6 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local MissionMarker = vector3(960.71197509766, -215.51979064941, 76.2552947998) -- <<place where is the marker with the mission
-local dealerCoords = vector3(960.78, -216.25, 76.25) 							-- << place where the NPC dealer stands
+local MissionMarker = vector3(651.89, 249.29, 102.38) -- <<place where is the marker with the mission
+local dealerCoords = vector4(651.27, 248.1, 102.34, 281.97) 							-- << place where the NPC dealer stands
 local VehicleSpawn1 = vector3(-1327.479736328, -86.045326232910, 49.31) 		-- << below the coordinates for random vehicle responses
 local VehicleSpawn2 = vector3(-2075.888183593, -233.73908996580, 21.10)
 local VehicleSpawn3 = vector3(-972.1781616210, -1530.9045410150, 4.890)
@@ -60,7 +60,7 @@ Citizen.CreateThread(function()
                 end
                 dealer = CreatePed(26, "s_m_y_dealer_01", dealerCoords.x, dealerCoords.y, dealerCoords.z, 268.9422,
                     false, false)
-                SetEntityHeading(dealer, 1.8)
+                SetEntityHeading(dealer, 271.8)
                 SetBlockingOfNonTemporaryEvents(dealer, true)
                 TaskStartScenarioInPlace(dealer, "WORLD_HUMAN_AA_SMOKE", 0, false)
             end

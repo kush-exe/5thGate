@@ -1,4 +1,4 @@
-local SpeedLimitEnabled = false
+local SpeedLimitEnabled = true
 local UIOpen = false
 
 -- TEST COMMAND

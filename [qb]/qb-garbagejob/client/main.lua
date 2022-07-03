@@ -159,7 +159,7 @@ local function RunWorkLoop()
                 DrawMarker(2, DeliveryData.coords.x, DeliveryData.coords.y, DeliveryData.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.3, 255, 55, 22, 255, false, false, false, false, false, false, false)
 
                 if not hasBag and canTakeBag then
-                    if Distance < 1.5 then
+                    if Distance < 3 then
                         if not GarbText then
                             GarbText = true
                             exports['qb-core']:DrawText(Lang:t("info.grab_garbage"), 'left')
@@ -186,7 +186,7 @@ local function RunWorkLoop()
                             DrawText3D2(DeliveryData.coords, Lang:t("info.garbage_in_truck"))
                         end
 
-                        if TruckDist < 2 then
+                        if TruckDist < 4 then
                             if not TrucText then
                                 TrucText = true
                                 exports['qb-core']:DrawText(Lang:t("info.dispose_garbage"), 'left')

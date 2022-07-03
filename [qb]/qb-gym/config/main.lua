@@ -9,13 +9,13 @@ Config.Abilities = {
     ['Stamina'] = {
         ['current'] = 15,
         ['label'] = 'Stamina',
-        ['removeSec'] = -0.2,
+        ['removeSec'] = -0.1,
         ['stat'] = 'MP0_STAMINA'
     },
     ['Strength'] = {
         ['current'] = 10,
         ['label'] = 'Strength',
-        ['removeSec'] = -0.3,
+        ['removeSec'] = -0.1,
         ['stat'] = 'MP0_STRENGTH'
     },
     ['Lung Capacity'] = {
@@ -54,8 +54,8 @@ Config.Yoga = 20000 -- Yoga
 Config.GymWait = 60000 -- Relaxing before next exercise
 
 -- GAIN IN THE GYN --
-Config.GymStrength = 0.1 -- Strength
-Config.GymStamina = 0.2 -- Strength
+Config.GymStrength = 0.5 -- Strength
+Config.GymStamina = 0.5 -- Strength
 
 -- GAIN OUTSIDE THE GYM --
 Config.Stamina = true -- false if you dont want to gain while running

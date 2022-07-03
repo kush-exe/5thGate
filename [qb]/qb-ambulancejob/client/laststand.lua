@@ -134,7 +134,8 @@ RegisterNetEvent('hospital:client:UseFirstAid', function()
 end)
 
 RegisterNetEvent('hospital:client:CanHelp', function(helperId)
-    if InLaststand then
+    TriggerServerEvent('hospital:server:CanHelp', helperId, true)
+    --[[if InLaststand then
         if LaststandTime <= 300 then
             TriggerServerEvent('hospital:server:CanHelp', helperId, true)
         else
@@ -142,7 +143,7 @@ RegisterNetEvent('hospital:client:CanHelp', function(helperId)
         end
     else
         TriggerServerEvent('hospital:server:CanHelp', helperId, false)
-    end
+    end---]]
 end)
 
 RegisterNetEvent('hospital:client:HelpPerson', function(targetId)

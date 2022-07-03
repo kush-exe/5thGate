@@ -1,5 +1,5 @@
 Config = {}
-Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
+Config.UseTarget = false -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
 Config.MinimalDoctors = 2 -- How many players with the ambulance job to prevent the hospital check-in system from being used
 Config.WipeInventoryOnRespawn = true -- Enable or disable removing all the players items when they respawn at the hospital
 Config.Helicopter = "polmav" -- Helicopter model that players with the ambulance job can use
@@ -34,11 +34,11 @@ Config.AlertShowInfo = 2 -- How many injuries a player must have before being al
 
 Config.Locations = { -- Edit the various interaction points for players or create new ones
     ["checking"] = {
-	    [1] = vector3(308.19, -595.35, 43.29),
-	    [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
+	    --[1] = vector3(308.19, -595.35, 43.29),
+	    [1] = vector3(-254.54, 6331.78, 32.43), -- paleto
     },
     ["duty"] = {
-        [1] = vector3(311.18, -599.25, 43.29),
+        [1] = vector3(303.9, -600.1, 43.28),
         [2] = vector3(-254.88, 6324.5, 32.58),
     },
     ["vehicle"] = {
@@ -50,17 +50,17 @@ Config.Locations = { -- Edit the various interaction points for players or creat
         [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
     },
     ["armory"] = {
-        [1] = vector3(309.93, -602.94, 43.29),
+        [1] = vector3(306.63, -601.61, 43.28),
         [2] = vector3(-245.13, 6315.71, 32.82),
     },
     ["roof"] = {
         [1] = vector4(338.5, -583.85, 74.16, 245.5),
     },
     ["main"] = {
-        [1] = vector3(298.74, -599.33, 43.29),
+        [1] = vector3(332.09, -595.77, 43.28),
     },
     ["stash"] = {
-        [1] = vector3(309.78, -596.6, 43.29),
+        [1] = vector3(299.12, -597.63, 43.28),
     },
     ["beds"] = {
         [1] = {coords = vector4(353.1, -584.6, 43.11, 152.08), taken = false, model = 1631638868},

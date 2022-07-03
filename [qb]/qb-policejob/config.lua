@@ -375,6 +375,42 @@ Config.Items = {
             type = "item",
             slot = 17,
             authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [18] = {
+            name = "nikon",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 18,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [19] = {
+            name = "gsrtestkit",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 19,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [20] = {
+            name = "dnatestkit",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 20,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
+        },
+        [21] = {
+            name = "breathalyzer",
+            price = 0,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 21,
+            authorizedJobGrades = {0, 1, 2, 3, 4}
         }
     }
 }

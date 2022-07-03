@@ -20,6 +20,9 @@ Config.AdminList = {
 	'discord:931764546606071808', -- Example, change this
 	'discord:560572592151592961',
 	'discord:705300308640923659',
+	'discord:440387476645740555', -- luis
+	
+
 
 }
 

@@ -819,7 +819,10 @@ end
 
 QBCore.Functions.CreateUseableItem("nikon", function(source, item)
     local src = source
-    TriggerClientEvent("nikon:Toggle", src)
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.PlayerData.job.name == 'police' then
+        TriggerClientEvent("nikon:Toggle", src)
+    end
 end)
 
 QBCore.Functions.CreateUseableItem("filled_evidence_bag", function(source, item)

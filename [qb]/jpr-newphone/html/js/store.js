@@ -101,7 +101,7 @@ $(document).on('click', '.storeapp-download', function(e){
             $(".download-password").find('h1').html(AppData.title+', Inc.');
         }
         
-        $(".download-password").find('span').html('<a style="color: #7d7d7d !important;">ACCOUNT: &nbsp;</a>'+'<a style="color: rgba(23, 23, 23, 90%) !important;">'+JPR.Phone.Data.PlayerData.charinfo.firstname+"."+JPR.Phone.Data.PlayerData.charinfo.lastname+"@wildroleplay.com </a>");
+        $(".download-password").find('span').html('<a style="color: #7d7d7d !important;">ACCOUNT: &nbsp;</a>'+'<a style="color: rgba(23, 23, 23, 90%) !important;">'+JPR.Phone.Data.PlayerData.charinfo.firstname+"."+JPR.Phone.Data.PlayerData.charinfo.lastname+"@5thGate.gg </a>");
         
         CurrentApp = AppData.app;
         
