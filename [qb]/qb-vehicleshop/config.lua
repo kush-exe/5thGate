@@ -127,42 +127,32 @@ Config.Shops = {
         ['VehicleSpawn'] = vector4(-614.45, -1142.57, 21.87, 179.88),
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-614.08, -1104.23, 21.65, 270.59),
+                coords = vector4(-614.08, -1104.23, 20.65, 270.59),
                 defaultVehicle = 'redeye',
                 chosenVehicle = 'redeye'
             },
             [2] = {
-                coords = vector4(-605.0, -1127.19, 21.87, 0.83),
+                coords = vector4(-605.0, -1127.19, 20.87, 0.83),
                 defaultVehicle = 'f488pista',
                 chosenVehicle = 'f488pista'
             },
             [3] = {
-                coords = vector4(-613.79, -1114.4, 22.25, 271.23),
+                coords = vector4(-613.79, -1114.4, 21.25, 271.23),
                 defaultVehicle = '21f150',
                 chosenVehicle = '21f150'
             },
             [4] = {
-                coords = vector4(-614.17, -1127.94, 22.01, 270.92),
-                defaultVehicle = 'ikx3gtone',
-                chosenVehicle = 'ikx3gtone'
-            },
-            [5] = {
-                coords = vector4(-614.01, -1132.6, 22.17, 269.18),
-                defaultVehicle = 'rocket',
-                chosenVehicle = 'rocket'
-            },
-            [6] = {
-                coords = vector4(-604.84, -1105.95, 21.46, 182.16),
+                coords = vector4(-604.84, -1105.95, 20.46, 182.16),
                 defaultVehicle = 'c8corvette',
                 chosenVehicle = 'c8corvettee'
             },
-            [7] = {
-                coords = vector4(-604.88, -1116.58, 22.02, 180.99),
+            [5] = {
+                coords = vector4(-604.88, -1116.58, 21.02, 180.99),
                 defaultVehicle = 'm8f91',
                 chosenVehicle = 'm8f91'
             },
-            [8] = {
-                coords = vector4(-605.02, -1135.5, 21.55, 359.09),
+            [6] = {
+                coords = vector4(-605.02, -1135.5, 20.55, 359.09),
                 defaultVehicle = 'durango18',
                 chosenVehicle = 'durango18'
             },

@@ -369,39 +369,12 @@ Config.Products = {
             requiredJob = { "mechanic", "police" }
         },
         [4] = {
-            name = "weapon_pistol",
-            price = 2500,
+            name = "pistol_ammo",
+            price = 500,
             amount = 5,
             info = {},
             type = "item",
             slot = 4,
-            requiresLicense = true
-        },
-        [5] = {
-            name = "weapon_snspistol",
-            price = 1500,
-            amount = 5,
-            info = {},
-            type = "item",
-            slot = 5,
-            requiresLicense = true
-        },
-        [6] = {
-            name = "weapon_vintagepistol",
-            price = 4000,
-            amount = 5,
-            info = {},
-            type = "item",
-            slot = 6,
-            requiresLicense = true
-        },
-        [7] = {
-            name = "pistol_ammo",
-            price = 250,
-            amount = 250,
-            info = {},
-            type = "item",
-            slot = 7,
             requiresLicense = true
         },
     },
