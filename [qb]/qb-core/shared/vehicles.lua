@@ -7707,7 +7707,7 @@ QBShared.Vehicles = {
 		["shop"] = 'luxury',
 	},
 	["m8f91"] = {
-		["name"] = "M8 Coupe Convertible,
+		["name"] = "M8 Coupe Convertible",
 		["brand"] = "BMW",
 		["model"] = "m8f91",
 		["price"] = 130000,
