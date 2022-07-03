@@ -7,21 +7,21 @@ Config.PoliceCallChance = 15
 Config.Products = {
     [1] = {
         name = "weed_white-widow",
-        price = 15,
+        price = 20,
         amount = 150,
         info = {},
         type = "item",
         slot = 1,
-        minrep = 0,
+        minrep = 25,
     },
     [2] = {
         name = "weed_skunk",
-        price = 15,
+        price = 22,
         amount = 150,
         info = {},
         type = "item",
         slot = 2,
-        minrep = 20,
+        minrep = 50,
     },
     [3] = {
         name = "weed_purple-haze",
@@ -30,16 +30,16 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 3,
-        minrep = 40,
+        minrep = 75,
     },
     [4] = {
         name = "weed_og-kush",
-        price = 15,
+        price = 22,
         amount = 150,
         info = {},
         type = "item",
         slot = 4,
-        minrep = 60,
+        minrep = 100,
     },
     [5] = {
         name = "weed_amnesia",
@@ -48,7 +48,7 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 5,
-        minrep = 80,
+        minrep = 125,
     },
     [6] = {
         name = "weed_white-widow_seed",
@@ -57,7 +57,7 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 6,
-        minrep = 100,
+        minrep = 150,
     },
     [7] = {
         name = "weed_skunk_seed",
@@ -66,7 +66,7 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 7,
-        minrep = 120,
+        minrep = 175,
     },
     [8] = {
         name = "weed_purple-haze_seed",
@@ -75,7 +75,7 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 8,
-        minrep = 140,
+        minrep = 200,
     },
     [9] = {
         name = "weed_og-kush_seed",
@@ -93,7 +93,7 @@ Config.Products = {
         info = {},
         type = "item",
         slot = 10,
-        minrep = 180,
+        minrep = 250,
     },
 }
 
@@ -133,11 +133,11 @@ Config.DrugsPrice = {
         max = 34,
     },
     ["weed_purple-haze"] = {
-        min = 18,
+        min = 22,
         max = 37,
     },
     ["weed_ak47"] = {
-        min = 18,
+        min = 26,
         max = 40,
     },
     ["crack_baggy"] = {
@@ -166,12 +166,12 @@ Config.DeliveryItems = {
     [1] = {
         ["item"] = "weed_brick",
         ["minrep"] = 0,
-        ['payout'] = 1000
+        ['payout'] = 250
     },
     [2] = {
         ["item"] = "coke_brick",
         ["minrep"] = 0,
-        ['payout'] = 1000
+        ['payout'] = 350
     },
 }
 
