@@ -7743,7 +7743,7 @@ QBShared.Vehicles = {
 		["shop"] = 'luxury',
 	},
 	["lp670sv"] = {
-		["name"] = "Murcielego SV,
+		["name"] = "Murcielego SV",
 		["brand"] = "Lamborghini",
 		["model"] = "lp670sv",
 		["price"] = 450000,
@@ -7755,7 +7755,7 @@ QBShared.Vehicles = {
 		["shop"] = 'luxury',
 	},
 	["20f350"] = {
-		["name"] = "F350 King Ranch,
+		["name"] = "F350 King Ranch",
 		["brand"] = "Ford",
 		["model"] = "20f350",
 		["price"] = 95000,
@@ -7767,7 +7767,7 @@ QBShared.Vehicles = {
 		["shop"] = 'luxury',
 	},
 	["18f350d"] = {
-		["name"] = "F350 Dually,
+		["name"] = "F350 Dually",
 		["brand"] = "Ford",
 		["model"] = "18f350d",
 		["price"] = 87000,
