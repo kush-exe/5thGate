@@ -369,6 +369,7 @@ RegisterNetEvent('qb-garages:client:takeOutGarage', function(data)
                     TriggerServerEvent('qb-garage:server:updateVehicleState', 0, vehicle.plate, index)
                     closeMenuFull()
                     TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
+                    
                     TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
                     SetVehicleEngineOn(veh, true, true)
                     if type == "house" then

@@ -1,5 +1,5 @@
 ESX = nil
-QBCore = nil
+QBCore = exports['qb-core']:GetCoreObject()
 RegisterServerCallBack_ = {}
 Initialized()
 Citizen.CreateThread(function()
@@ -12,7 +12,7 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterServerCallBack_('renzu_customs:getinventory', function (source, cb, id, share)
+QBCore.Functions.CreateCallback('renzu_customs:getinventory', function (source, cb, id, share)
     local source = source
     local xPlayer = GetPlayerFromId(source)
     local identifier = xPlayer.identifier
@@ -29,7 +29,7 @@ RegisterServerCallBack_('renzu_customs:getinventory', function (source, cb, id, 
     cb(inventory)
 end)
 
-RegisterServerCallBack_('renzu_customs:itemavailable', function (source, cb, id, item, share)
+QBCore.Functions.CreateCallback('renzu_customs:itemavailable', function (source, cb, id, item, share)
     local source = source
     local xPlayer = GetPlayerFromId(source)
     local identifier = xPlayer.identifier
@@ -105,7 +105,7 @@ function Jobmoney(job,xPlayer)
     return value
 end
 
-RegisterServerCallBack_('renzu_customs:pay', function (source, cb, t, shop, vclass)
+QBCore.Functions.CreateCallback('renzu_customs:pay', function (source, cb, t, shop, vclass)
     local src = source  
     local xPlayer = GetPlayerFromId(src)
     local identifier = xPlayer.identifier
@@ -178,7 +178,7 @@ RegisterServerCallBack_('renzu_customs:pay', function (source, cb, t, shop, vcla
     end
 end)
 
-RegisterServerCallBack_('renzu_customs:repair', function (source, cb, shop)
+QBCore.Functions.CreateCallback('renzu_customs:repair', function (source, cb, shop)
     local src = source  
     local xPlayer = GetPlayerFromId(src)
     local jobmoney = 0
@@ -196,7 +196,7 @@ RegisterServerCallBack_('renzu_customs:repair', function (source, cb, shop)
 end)
 
 local inshop = {}
-RegisterServerCallBack_('renzu_customs:getmoney', function (source, cb, net, props)
+QBCore.Functions.CreateCallback('renzu_customs:getmoney', function (source, cb, net, props)
     local src = source  
     local xPlayer = GetPlayerFromId(src)
     inshop[source] = {net = net , props = props}

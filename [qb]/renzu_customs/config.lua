@@ -83,6 +83,20 @@ Config.Customs = { -- Multiple Shop Start
 		},
 		Blips = {sprite = 446, color = 68, scale = 0.8},
     },
+	['Bennys'] = { -- Shop id -- Sample bennys (IPL coordinates) Change this to your liking (CHANGE COORDINATES IF CUSTOM BENNYS MAP)
+		job = 'mechanic', -- job name permmision for this shop
+		min_grade = 0, -- min grade to access the whole shop feature
+		radius = 30, -- radius for whole shop
+		stockroom = {coord = vector4(-227.70811462402,-1322.9874267578,30.890409469604,90.902221679688), grade = 0}, -- vector 4 why the F is this vector4, x,y,z,w (heading)
+		paintmenu = {coord = vector3(-560.27, -914.6, 23.89), grade = 0},
+		garage_inventory = {coord = vector4(-200.8703918457,-1317.6979980469,31.089340209961,267.89974975586), grade = 0},
+		shopcoord = vector4(-206.7, -1313.71, 31.05, 324.54),
+		mod = {
+			{coord = vector4(-223.36, -1328.83, 30.89, 263.17), taken = false},
+			{coord = vector4(-213.09, -1330.46, 30.89, 358.05), taken = false},
+		},
+		Blips = {sprite = 446, color = 68, scale = 0.8},
+    },
 
 	--[[
 	['Custom Garage'] = { -- Shop id -- Custom Map Tuner Garage (2372 Build only, canary and release) IPL and Int https://forum.cfx.re/t/free-mlo-tuner-auto-shop/4247145

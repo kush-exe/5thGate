@@ -179,7 +179,7 @@ Citizen.CreateThread(function()
 		end
 
 		-- GARAGE
-		local garage = Config.Garage
+		local garage <const> = Config.Garage
 		for k2,v2 in pairs(garage) do
 			for k,v in pairs(v2) do
 				local dis = 50
@@ -1175,7 +1175,7 @@ AddEventHandler('renzu_projectcars:openpaint', function(data)
 	Wait(2000)
     local localmultimenu = {}
     local openmenu = false
-	--print(data,'gago')
+	print(data,'gago')
     for k,v in pairs(Config.Paint) do
 		
         local name = k:upper()
@@ -1867,7 +1867,6 @@ AddEventHandler('renzu_projectcars:spawnfinishproject', function(data,props)
 	end
 	local hash = props.model
 	--local offset = GetOffsetFromEntityInWorldCoords(ped, 0.1, 1.0, 0.1)
-	--[[
 	RequestModel(hash)
 	while not HasModelLoaded(hash) do
 		RequestModel(hash)
@@ -1886,15 +1885,6 @@ AddEventHandler('renzu_projectcars:spawnfinishproject', function(data,props)
 	SetVehicleOnGroundProperly(vehicle)
 	SetVehicleNumberPlateText(vehicle,props.plate)
 	SetVehicleProp(vehicle,props)
---]]
-
-	QBCore.Functions.SpawnVehicle(hash, function(veh)
-        exports['ps-fuel']:SetFuel(veh, 100.0)
-		SetEntityHeading(veh, coord.w)
-        TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
-		SetVehicleProp(veh,props)
-    end, coord, true)
-
 	TriggerEvent(Config.KeySystemEvent, GetVehicleNumberPlateText(vehicle))
 end)
 

@@ -13,7 +13,7 @@ Config.Debug = false
 Config.EnableOutline = false
 
 -- Enable default options (Toggling vehicle doors)
-Config.EnableDefaultOptions = false
+Config.EnableDefaultOptions = true
 
 -------------------------------------------------------------------------------
 -- Target Configs

@@ -22,14 +22,14 @@ Config.items = {'vehicle_shell','vehicle_blueprints'} -- note: vehicle_shell usa
 
 -- CONFIGURE THIS PART (MAIN SETTINGS)
 Config.jobonly = true -- enable disable job requirement for using the shops
-Config.carbuilderjob = 'mechanic'
+Config.carbuilderjob = 'carbuilder'
 Config.job_AllShopFree = true
 -- CONFIGURE THIS PART (MAIN SETTINGS)
 
 -- GENERAL CONFIG
-Config.EnableInteraction = true -- if true will use interaction, required my lockgame or progressbar
+Config.EnableInteraction = false -- if true will use interaction, required my lockgame or progressbar
 Config.Interaction = 'actionbar' -- progress | actionbar -- https://github.com/renzuzu/renzu_progressbar -- https://github.com/renzuzu/renzu_lockgame
-Config.Default_garage = 'shoreparking' -- what garage id ex. A , pillboxgarage (important to change this on some garage scripts like renzu_garage)
+Config.Default_garage = 'A' -- what garage id ex. A , pillboxgarage (important to change this on some garage scripts like renzu_garage)
 Config.KeySystemEvent = 'vehiclekeys:client:SetOwner' -- <-- default qbcore keys, change it to whatever key system you have -- if this is not working properly, your key system must be triming the plates incorrectly.
 -- GENERAL CONFIG
 
@@ -46,7 +46,7 @@ Config.JunkShop = {
 		label = 'Auto Shop', -- can change
 		model = GetHashKey('csb_car3guy2'),
 		event = Config.MetaInventory and 'renzu_projectcars:openautoshop' or 'renzu_projectcars:openpartlist',
-		coord = vector3(726.48, -1068.75, 28.31),
+		coord = vector3(867.64739990234,-1061.3259277344,28.947834014893),
 		blip = 642
 	}
 }
@@ -54,9 +54,9 @@ Config.JunkShop = {
 -- Boss can request orders from manufacturer (imaginary) and be paid after releasing orders
 -- integration with my vehicle shop (renzu_vehicleshop v2) Soon
 Config.EnableBuilderJob = true -- enable disable this feature
-Config.MaxProjectOrderList = 100 -- max vehicles from job order lists
+Config.MaxProjectOrderList = 10 -- max vehicles from job order lists
 Config.BuilderJobs = {
-	['mechanic'] = { -- job
+	['carbuilder'] = { -- job
 		blip = 569,
 		label = 'Automotive Service',
 		event = 'renzu_projectcars:gotowarehouse',

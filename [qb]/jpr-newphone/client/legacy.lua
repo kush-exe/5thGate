@@ -267,6 +267,39 @@ AddEventHandler('jpr-newphone:client:UpdateMessages', function(ChatMessages, Sen
 end)
 
 function DisableDisplayControlActions()
+    DisableAllControlActions(0)
+	DisableAllControlActions(1)
+	DisableAllControlActions(2)
+	--[[DisableAllControlActions(3)
+	DisableAllControlActions(4)
+	DisableAllControlActions(5)
+	DisableAllControlActions(6)
+	DisableAllControlActions(7)
+	DisableAllControlActions(8)
+	DisableAllControlActions(9)
+	DisableAllControlActions(10)
+	DisableAllControlActions(11)
+	DisableAllControlActions(12)
+	DisableAllControlActions(13)
+	DisableAllControlActions(14)
+	DisableAllControlActions(15)
+	DisableAllControlActions(16)
+	DisableAllControlActions(17)
+			DisableAllControlActions(18)
+			DisableAllControlActions(19)
+			DisableAllControlActions(20)
+			DisableAllControlActions(21)
+			DisableAllControlActions(22)
+			DisableAllControlActions(23)--]]
+			DisableAllControlActions(24)
+			DisableAllControlActions(25)
+			DisableAllControlActions(26)
+			DisableAllControlActions(27)
+			DisableAllControlActions(28)
+			DisableAllControlActions(29)
+			DisableAllControlActions(30)
+			DisableAllControlActions(31)
+    --[[
     DisableControlAction(0, 1, true) -- disable mouse look
     DisableControlAction(0, 2, true) -- disable mouse look
     DisableControlAction(0, 3, true) -- disable mouse look
@@ -289,7 +322,7 @@ function DisableDisplayControlActions()
 
     DisableControlAction(0, 245, true) -- disable chat
     DisableControlAction(0, 22, true) -- disable jump
-
+--]]
 end
 
 function InPhone()
@@ -299,10 +332,14 @@ end
 CreateThread(function()
     while true do
         if InPhone() then
-            DisablePlayerFiring(PlayerId(), true)
-            DisableDisplayControlActions()
+            --DisablePlayerFiring(PlayerId(), true)
+            --DisableDisplayControlActions()
+            SetNuiFocusKeepInput(false)
+            SetNuiFocus(true, true)
+
         else
             Wait(500)
+            SetNuiFocus(false,false)
         end
 
         Wait(1)
