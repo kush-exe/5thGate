@@ -2364,6 +2364,42 @@ Config.workbenches = {
           recipes = {misc_recipe, medial},
           radius = 3.0
      },
+     {
+          table_model = "gr_prop_gr_bench_04b",
+          coords = vector3(-334.87, -1568.1, 24.23),
+          rotation = vector3(0.0, 0.0, 225.0),
+          job = {
+               allowed_list = {},
+               allowed_grades = {}
+          },
+          categories = {Config.categories.misc, Config.categories.medical},
+          recipes = {misc_recipe, medial},
+          radius = 3.0
+     },
+     {
+          table_model = "gr_prop_gr_bench_04b",
+          coords = vector3(-1322.89, -3396.85, 23.28),
+          rotation = vector3(0.0, 0.0, 225.0),
+          job = {
+               allowed_list = {},
+               allowed_grades = {}
+          },
+          categories = {Config.categories.misc, Config.categories.medical},
+          recipes = {misc_recipe, medial},
+          radius = 3.0
+     },
+     {
+          table_model = "gr_prop_gr_bench_04b",
+          coords = vector3(1398.12, 3616.42, 38.0),
+          rotation = vector3(0.0, 0.0, 225.0),
+          job = {
+               allowed_list = {},
+               allowed_grades = {}
+          },
+          categories = {Config.categories.misc, Config.categories.medical},
+          recipes = {misc_recipe, medial},
+          radius = 3.0
+     },
      -- gun
      {
           table_model = "gr_prop_gr_bench_02b",
@@ -2380,7 +2416,7 @@ Config.workbenches = {
      },
      {
           table_model = "gr_prop_gr_bench_02b",
-          coords = vector3(1062.35, -2460.17, 21.29),
+          coords = vector3(1064.43, -2452.24, 22.29),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
           rotation = vector3(0.0, 0.0, 184.21),
           job = {

@@ -1,6 +1,6 @@
 Config = {}
 Config.UsingTarget = GetConvar('UseTarget', 'false') == 'true'
-Config.Commission = 0.10 -- Percent that goes to sales person from a full car sale 10%
+Config.Commission = 0.15 -- Percent that goes to sales person from a full car sale 10%
 Config.FinanceCommission = 0.05 -- Percent that goes to sales person from a finance sale 5%
 Config.FinanceZone = vector3(-29.53, -1103.67, 26.42)-- Where the finance menu is located
 Config.PaymentWarning = 10 -- time in minutes that player has to make payment before repo
@@ -127,12 +127,12 @@ Config.Shops = {
         ['VehicleSpawn'] = vector4(-614.45, -1142.57, 21.87, 179.88),
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-614.08, -1104.23, 20.65, 270.59),
+                coords = vector4(-614.08, -1104.23, 21.15, 270.59),
                 defaultVehicle = 'redeye',
                 chosenVehicle = 'redeye'
             },
             [2] = {
-                coords = vector4(-605.0, -1127.19, 20.87, 0.83),
+                coords = vector4(-605.0, -1127.19, 21.25, 0.83),
                 defaultVehicle = 'f488pista',
                 chosenVehicle = 'f488pista'
             },
@@ -142,7 +142,7 @@ Config.Shops = {
                 chosenVehicle = '21f150'
             },
             [4] = {
-                coords = vector4(-604.84, -1105.95, 20.46, 182.16),
+                coords = vector4(-604.84, -1105.95, 20.96, 182.16),
                 defaultVehicle = 'c8corvette',
                 chosenVehicle = 'c8corvettee'
             },
@@ -152,7 +152,7 @@ Config.Shops = {
                 chosenVehicle = 'm8f91'
             },
             [6] = {
-                coords = vector4(-605.02, -1135.5, 20.55, 359.09),
+                coords = vector4(-605.02, -1135.5, 20.95, 359.09),
                 defaultVehicle = 'durango18',
                 chosenVehicle = 'durango18'
             },
