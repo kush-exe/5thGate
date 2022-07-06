@@ -240,12 +240,12 @@ Config.Products = {
         },
         [14] = {
             name = "advancedrepairkit",
-            price = 500,
+            price = 250,
             amount = 50,
             info = {},
             type = "item",
             slot = 15,
-            requiredJob = { "mechanic" }
+            --requiredJob = { "mechanic" }
         },
     },
     ["weedshop"] = {

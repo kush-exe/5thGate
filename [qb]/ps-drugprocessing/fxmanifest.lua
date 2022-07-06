@@ -18,11 +18,11 @@ shared_scripts {
 
 server_scripts {
 	'server/coke.lua',
-	'server/lsd.lua',
+	--'server/lsd.lua',
 	'server/meth.lua',
 	'server/weed.lua',
 	--'server/heroin.lua',
-	'server/chemicals.lua',
+	--'server/chemicals.lua',
 	'server/lisenceshop.lua',
 	'server/moneywash.lua',
 }
@@ -31,9 +31,9 @@ client_scripts {
 	'client/weed.lua',
 	'client/meth.lua',
 	'client/coke.lua',
-	'client/lsd.lua',
+	--'client/lsd.lua',
 	--'client/heroin.lua',
-	'client/chemicals.lua',
+	--'client/chemicals.lua',
 	'client/hydrochloricacid.lua',
 	'client/sodiumhydroxide.lua',
 	'client/sulfuricacid.lua',

@@ -4,10 +4,10 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target in
 
 Config.ItemTiers = 1
 
-Config.MinimumPaletoPolice = 0
-Config.MinimumPacificPolice = 0
-Config.MinimumFleecaPolice = 0
-Config.MinimumThermitePolice = 0
+Config.MinimumPaletoPolice = 4
+Config.MinimumPacificPolice = 5
+Config.MinimumFleecaPolice = 4
+Config.MinimumThermitePolice = 3
 Config.OutlawCooldown = 5 -- The amount of minutes it takes for the cops to be able to be called again after they were called
 
 Config.HitsNeeded = 13 -- The amount of powerstation needed to be hit to cause a blackout
