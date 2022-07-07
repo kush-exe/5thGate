@@ -9,7 +9,7 @@ Config.TakeoverPrice = 5000
 Config.TrapHouses = {
     [1] = {
         coords = {
-            ["enter"] = vector3(667.65, -137.06, 59.0),
+            ["enter"] = vector3(667.42, -137.03, 59.0),
             ["interaction"] = vector3(-1207.63, -1311.75, -32.65),
         },
         polyzoneBoxData = {

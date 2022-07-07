@@ -127,15 +127,15 @@ Config.Shops = {
         ['TestDriveTimeLimit'] = 1.0,
         ['Location'] = vector3(-601.78, -1122.15, 22.33),
         ['ReturnLocation'] = vector3(-586.2, -1160.53, 21.72),
-        ['VehicleSpawn'] = vector4(-614.45, -1142.57, 21.87, 179.88),
+        ['VehicleSpawn'] = vector4(-594.79, -1138.81, 22.18, 268.01),
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-614.08, -1104.23, 21.15, 270.59),
+                coords = vector4(-614.08, -1104.23, 21.20, 270.59),
                 defaultVehicle = 'redeye',
                 chosenVehicle = 'redeye'
             },
             [2] = {
-                coords = vector4(-605.0, -1127.19, 21.25, 0.83),
+                coords = vector4(-605.0, -1127.19, 21.50, 0.83),
                 defaultVehicle = 'f488pista',
                 chosenVehicle = 'f488pista'
             },
@@ -150,12 +150,12 @@ Config.Shops = {
                 chosenVehicle = 'c8corvettee'
             },
             [5] = {
-                coords = vector4(-604.88, -1116.58, 21.02, 180.99),
+                coords = vector4(-604.88, -1116.58, 21.12, 180.99),
                 defaultVehicle = 'm8f91',
                 chosenVehicle = 'm8f91'
             },
             [6] = {
-                coords = vector4(-605.02, -1135.5, 20.95, 359.09),
+                coords = vector4(-605.02, -1135.5, 21.25, 359.09),
                 defaultVehicle = 'durango18',
                 chosenVehicle = 'durango18'
             },
@@ -207,6 +207,12 @@ Config.Shops = {
                 coords = vector4(-741.53, -1349.7, -2.00, 229.5),
                 defaultVehicle = 'marquis',
                 chosenVehicle = 'marquis'
+            },
+            [5] = {
+                coords = vector4(-797.61, -1413.24, 0.29, 230.73),
+                defaultVehicle = 'sr650fly',
+                chosenVehicle = 'sr650fly'
+                
             },
         },
     },
