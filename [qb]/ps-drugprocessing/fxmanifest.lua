@@ -22,7 +22,7 @@ server_scripts {
 	'server/meth.lua',
 	'server/weed.lua',
 	--'server/heroin.lua',
-	--'server/chemicals.lua',
+	'server/chemicals.lua',
 	'server/lisenceshop.lua',
 	'server/moneywash.lua',
 }
@@ -33,7 +33,7 @@ client_scripts {
 	'client/coke.lua',
 	--'client/lsd.lua',
 	--'client/heroin.lua',
-	--'client/chemicals.lua',
+	'client/chemicals.lua',
 	'client/hydrochloricacid.lua',
 	'client/sodiumhydroxide.lua',
 	'client/sulfuricacid.lua',

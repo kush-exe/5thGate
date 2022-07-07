@@ -160,44 +160,26 @@ AddEventHandler('ethicalpixel-adminmenu:client:RevivePlayer', function(pid)
 end)
 
 RegisterNetEvent('ethicalpixel-adminmenu:client:SpawnCar')
-AddEventHandler('ethicalpixel-adminmenu:client:SpawnCar', function(model, livery)
-    Citizen.CreateThread(function()
+AddEventHandler('ethicalpixel-adminmenu:client:SpawnCar', function(vehName, livery)
+    local ped = PlayerPedId()
+    local hash = GetHashKey(vehName)
+    local veh = GetVehiclePedIsUsing(ped)
+    if not IsModelInCdimage(hash) then return end
+    RequestModel(hash)
+    while not HasModelLoaded(hash) do
+        Wait(0)
+    end
 
-        local hash = GetHashKey(model)
+    if IsPedInAnyVehicle(ped) then
+        DeleteVehicle(veh)
+    end
 
-        if not IsModelAVehicle(hash) then return end
-        if not IsModelInCdimage(hash) or not IsModelValid(hash) then return end
-        
-        RequestModel(hash)
-
-        while not HasModelLoaded(hash) do
-            Citizen.Wait(0)
-        end
-
-        local localped = PlayerPedId()
-        local coords = GetOffsetFromEntityInWorldCoords(PlayerPedId(), 1.5, 5.0, 0.0)
-
-        local heading = GetEntityHeading(localped)
-        local vehicle = CreateVehicle(hash, coords, heading, true, false)
-        TaskWarpPedIntoVehicle(PlayerPedId(),vehicle,-1)
-        SetVehicleModKit(vehicle, 0)
-        SetVehicleMod(vehicle, 11, 3, false)
-        SetVehicleMod(vehicle, 12, 2, false)
-        SetVehicleMod(vehicle, 13, 2, false)
-        SetVehicleMod(vehicle, 15, 3, false)
-        SetVehicleMod(vehicle, 16, 4, false)
-
-        local plate = GetVehicleNumberPlateText(vehicle)
-        AddVehicleKeys(vehicle,plate)
-        SetModelAsNoLongerNeeded(hash)
-        
-        SetVehicleDirtLevel(vehicle, 0)
-        SetVehicleWindowTint(vehicle, 0)
-
-        if livery ~= nil then
-            SetVehicleLivery(vehicle, tonumber(livery))
-        end
-    end)
+    local vehicle = CreateVehicle(hash, GetEntityCoords(ped), GetEntityHeading(ped), true, false)
+    TaskWarpPedIntoVehicle(ped, vehicle, -1)
+    SetVehicleFuelLevel(vehicle, 100.0)
+    SetVehicleDirtLevel(vehicle, 0.0)
+    SetModelAsNoLongerNeeded(hash)
+    TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(vehicle), vehName)
 end)
 
 
@@ -738,7 +720,8 @@ RegisterNUICallback("RevivePlayer" , function(data, cb)
 end)
 
 RegisterNUICallback("SpawnCar" , function(data, cb)
-    TriggerEvent("ethicalpixel-adminmenu:client:SpawnCar" , data.carmodel , data.livery)
+    --TriggerEvent("ethicalpixel-adminmenu:client:SpawnCar" , data.carmodel , data.livery)
+    TriggerEvent('QBCore:Command:SpawnVehicle', data.carmodel)
 end)
 
 RegisterNUICallback("GodModeToggle" , function(data, cb)
