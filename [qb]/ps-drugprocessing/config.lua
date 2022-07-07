@@ -21,8 +21,8 @@ Config.CircleZones = {
 	SulfuricAcidFarm = {coords = vector3(290.38, -2430.69, 8.04), name = ('Sulfuric Acid'), radius = 50.0},
 	SodiumHydroxideFarm = {coords = vector3(1582.19, 2164.24, 79.4), name = ('Sodium Hydroxide'), radius = 50.0},
 	
-	ChemicalsField = {coords = vector3(1264.97, 1803.96, 82.94), name = ('Chemicals'), radius = 100.0},
-	ChemicalsConvertionMenu = {coords = vector3(3536.71, 3662.63, 28.12), name = ('Chemicals Process'), radius = 100.0},
+	ChemicalsField = {coords = vector3(3110.49, 6653.1, 0.13), name = ('Chemicals'), radius = 100.0},
+	ChemicalsConvertionMenu = {coords = vector3(-317.91, -1051.57, 76.89), name = ('Chemicals Process'), radius = 100.0},
 
 	CokeField = {coords = vector3(5346.69, -5813.02, 22.18), name = ('Coke'), radius = 20.0},
 	CokeProcessing = {coords = vector3(1087.14, -3195.31, -38.99), name = ('Coke Process'), radius = 20.0}, 
@@ -92,9 +92,9 @@ Config.CokeProcessing = {
 --------------------------------
 Config.MethProcessing = {
 	-- Chemical Processing --
-	SulfAcid = 50, -- Amount of Sulfuric Acid Needed for Liquid Mix
-	HydAcid = 50, -- Amount of Hydrochloric Acid Needed for Liquid Mix
-	SodHyd = 50, -- Amount of Sodium Hydroxide Needed for Liquid Mix
+	SulfAcid = 25, -- Amount of Sulfuric Acid Needed for Liquid Mix
+	HydAcid = 25, -- Amount of Hydrochloric Acid Needed for Liquid Mix
+	SodHyd = 25, -- Amount of Sodium Hydroxide Needed for Liquid Mix
 	Meth = math.random(50,100), -- Amount of Meth Recevied From 1 Tray
 }
 
