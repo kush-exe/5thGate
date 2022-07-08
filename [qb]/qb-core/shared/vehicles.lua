@@ -6180,7 +6180,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 160000,
 		["trunkslots"] = 80,
-		["shop"] = 'luxury',
+		["shop"] = '1of1',
 	},
 	["rrphantom"] = {
 		["name"] = "Rolls Royce Phantom",
@@ -6660,7 +6660,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 250000,
 		["trunkslots"] = 150,
-		["shop"] = "luxury",
+		["shop"] = "1of1",
 	},
 	["srt8"] = {
 		["name"] = "Jeep Cherokee SRT-8",

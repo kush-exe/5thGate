@@ -93,6 +93,23 @@ Config.TalkToNPC = {
 		jobs = {	-- Example jobs
 		},
 	},
+	{
+		npc = "a_m_y_acult_01",
+		header = "Antoine Johnson",
+		name = "Antoine",
+		uiText = "Antoine",
+		dialog = "What you want?",
+		coordinates = vector3(-486.27, 291.45, 83.8-1),
+		heading = 68.77,
+		camOffset = vector3(0.0, 0.0, 0.0),
+		camRotation = vector3(0.0, 0.0, 0.0),
+		interactionRange = 2.5,
+		options = {
+			{"Speak with Antoine", 'qb-drugs:client:dealer', 'c'},
+		},
+		jobs = {	-- Example jobs
+		},
+	},
 	--[[
 	{
 		npc = "mp_m_shopkeep_01", --grove

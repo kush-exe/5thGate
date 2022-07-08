@@ -24,6 +24,10 @@ end)
 
 -- Functions
 
+RegisterNetEvent('qb-drugs:client:dealer', function()
+    QBCore.Functions.Notify('Suck My Dick, use your third eye')
+end)
+
 local function GetClosestDealer()
     local ped = PlayerPedId()
     local pCoords = GetEntityCoords(ped)

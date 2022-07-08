@@ -16,7 +16,7 @@ Config.CircleZones = {
 	MethProcessing = {coords = vector3(978.17, -147.98, -48.53), name = ('Meth Process'), radius = 20.0},
 	MethTemp = {coords = vector3(982.56, -145.59, -49.0), name = ('Meth Temperature'), radius = 20.0},
 	MethBag = {coords = vector3(987.81, -140.43, -49.0), name = ('Meth Bagging'), radius = 20.0},
-	HydrochloricAcidFarm = {coords = vector3(-1171.36, -2059.25, 14.31), name = ('Hydrochloric Acid'), radius = 50.0},
+	HydrochloricAcidFarm = {coords = vector3(-1658.7, -3153.17, 35.43), name = ('Hydrochloric Acid'), radius = 35.0},
 
 	SulfuricAcidFarm = {coords = vector3(290.38, -2430.69, 8.04), name = ('Sulfuric Acid'), radius = 50.0},
 	SodiumHydroxideFarm = {coords = vector3(1582.19, 2164.24, 79.4), name = ('Sodium Hydroxide'), radius = 50.0},
