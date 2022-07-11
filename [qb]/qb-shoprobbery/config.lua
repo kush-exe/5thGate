@@ -7,7 +7,7 @@ Config['ShopRobbery'] = {
         eventName = 'esx:getSharedObject', -- Only for ESX users.
     },
     ['setjobForPolice'] = 'police', -- Setjob for check police count and police alert
-    ['requiredPoliceCount'] = 3, -- Required police count for start heist
+    ['requiredPoliceCount'] = 2, -- Required police count for start heist
     ['cooldown'] = { -- If you set globalCooldown to true, players can rob one shop in same time. Cooldown time is the time it takes to each shop or global.
         globalCooldown = false,
         time = 20,
@@ -23,7 +23,7 @@ Config['ShopRobbery'] = {
             return math.random(400, 500)
         end,
     },
-    ['tillGrabTime'] = 15000, -- For grab till time (miliseconds)
+    ['tillGrabTime'] = 90000, -- For grab till time (miliseconds)
     ['clerkWeaponChance'] = 25, -- Chance that the clerk will get scared or pull a gun
     ['clerkWeapon'] = GetHashKey('WEAPON_PISTOL'), -- Clerk weapon
     ['black_money'] = {  -- If change true, all moneys will convert to black. QBCore players can change itemName
