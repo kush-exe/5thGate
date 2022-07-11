@@ -2354,8 +2354,8 @@ Config.workbenches = {
      },
      {
           table_model = "gr_prop_gr_bench_04b",
-          coords = vector3(-59.5, 6388.77, 30.49),
-          rotation = vector3(0.0, 0.0, 225.0),
+          coords = vector3(1549.52, 6319.43, 24.07-1),
+          rotation = vector3(0.0, 0.0, 0.0),
           job = {
                allowed_list = {},
                allowed_grades = {}
