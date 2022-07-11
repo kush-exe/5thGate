@@ -2,19 +2,7 @@ Config = Config or {}
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.PoliceCallChance = 15
 
-Config.Dealers[dealerName] = {
-    ["name"] = 'antoine',
-    ["coords"] = {
-        ["x"] = -486.7,
-        ["y"] = 291.45,
-        ["z"] = 83.8
-    },
-    ["time"] = {
-        ["min"] = 0,
-        ["max"] = 24
-    },
-    ["products"] = Config.Products
-}
+Config.Dealers = {}
 -- Shop Config
 Config.Products = {
     [1] = {
@@ -179,11 +167,6 @@ Config.DeliveryItems = {
         ["item"] = "weed_brick",
         ["minrep"] = 0,
         ['payout'] = 250
-    },
-    [2] = {
-        ["item"] = "coke_brick",
-        ["minrep"] = 0,
-        ['payout'] = 350
     },
 }
 

@@ -1,5 +1,5 @@
 local currentGate = 0
-local requiredItemsShowed = false
+local requiredItemsShowed = true
 local requiredItems = {}
 local inRange = false
 local securityLockdown = false
@@ -106,7 +106,6 @@ RegisterNetEvent('prison:client:PrisonBreakAlert', function()
     local alertData = {title = "New Call", coords = {x = coords.x, y = coords.y, z = coords.z}, description = "Prison outbreak"}
     TriggerEvent("jpr-newphone:client:addPoliceAlert", alertData)
     --TriggerEvent('police:client:policeAlert', coords, "Prison outbreak")
-    exports['ps-dispatch']:PrisonBreak()
 
     local BreakBlip = AddBlipForCoord(coords.x, coords.y, coords.z)
     TriggerServerEvent('prison:server:JailAlarm')
@@ -215,6 +214,7 @@ CreateThread(function()
             TimeBlip = nil
             RemoveBlip(ShopBlip)
             ShopBlip = nil
+            exports['ps-dispatch']:PrisonBreak()
             TriggerServerEvent("prison:server:SecurityLockdown")
             TriggerEvent('prison:client:PrisonBreakAlert')
             TriggerServerEvent("prison:server:SetJailStatus", 0)

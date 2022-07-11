@@ -41,12 +41,12 @@ Config.TalkToNPC = {
 
 	{
 		npc = "u_m_y_smugmech_01", -- legion
-		header = "Redline Performance",
-		name = "Redline Mechanic",
-		uiText = "Roberto",
+		header = "Precision Performance",
+		name = "Precision Mechanic",
+		uiText = "Precision",
 		dialog = "Hello, how may I help you?",
-		coordinates = vector3(-588.94, -930.6, 23.89-1),
-		heading = 97.74,
+		coordinates = vector3(816.08, -990.23, 26.5-1),
+		heading = 303.5,
 		camOffset = vector3(0.0, 0.0, 0.0),
 		camRotation = vector3(0.0, 0.0, 0.0),
 		interactionRange = 3,

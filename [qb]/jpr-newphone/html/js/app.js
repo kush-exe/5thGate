@@ -484,7 +484,7 @@ $(document).on('click', '.phone-home-container', function(event){
 });
 
 JPR.Phone.Functions.Open = function(data) {
-    JPR.Phone.Animations.BottomSlideUp('.container', 300, 0);
+    JPR.Phone.Animations.BottomSlideUp('.container', 100, 0);
     JPR.Phone.Notifications.LoadTweets(data.Tweets);
     JPR.Phone.Data.IsOpen = true;
 }

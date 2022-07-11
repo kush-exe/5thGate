@@ -302,7 +302,7 @@ function OpenCreator()
 end
 
 function setClosestShowroomVehicle()
-    local pos = GetEntityCoords(GLOBAL_PED, true)
+    local pos = GetEntityCoords(PlayerPedId(), true)
     local current = nil
     local dist = nil
 
@@ -321,36 +321,38 @@ function setClosestShowroomVehicle()
         ClosestVehicle = current
     end
 end
-
+--[[
 Citizen.CreateThread(function()
+    local sleep = 2000
     while true do
-        --local pos = GetEntityCoords(GLOBAL_PED, true)
-        --local shopDist = #(pos - vector3(QB.VehicleShops[1].x, QB.VehicleShops[1].y, QB.VehicleShops[1].z))
         if isLoggedIn then
             if insidePDM then
                 setClosestShowroomVehicle()
+                sleep = 500
+            else
+                sleep = 3000
             end
         end
-        Citizen.Wait(2000)
+        Citizen.Wait(sleep)
     end
-end)
+end)--]]
 
 local SellStarted = false
 
 
-
+--[[
 Citizen.CreateThread(function()
     Wait(1000)
     while true do
         --local ped = PlayerPedId()
-        local pos = GetEntityCoords(GLOBAL_PED)
+        local pos = GetEntityCoords(PlayerPedId())
         local inRange = false
         local SellDistance = GetDistanceBetweenCoords(pos, QB.QuickSell.x, QB.QuickSell.y, QB.QuickSell.z, true)
 
         if insidePDM then
             if SellDistance < 20 then
-                if IsPedInAnyVehicle(GLOBAL_PED) then
-                    local VehicleData = QBCore.Shared.VehicleModels[GetEntityModel(GetVehiclePedIsIn(GLOBAL_PED))]
+                if IsPedInAnyVehicle(PlayerPedId()) then
+                    local VehicleData = QBCore.Shared.VehicleModels[GetEntityModel(GetVehiclePedIsIn(PlayerPedId()))]
                     if VehicleData["shop"] == "pdm" then
                         DrawMarker(2, QB.QuickSell.x, QB.QuickSell.y, QB.QuickSell.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.2, 255, 255, 255, 255, 0, 0, 0, 1, 0, 0, 0)
                         inRange = true
@@ -367,12 +369,12 @@ Citizen.CreateThread(function()
                                     QBCore.Functions.TriggerCallback('qb-vehicleshop:server:SellVehicle', function(SoldVehicle)
                                         if SoldVehicle then
                                             TriggerEvent("qb-phone-new:client:BankNotify", "$"..math.ceil(VehicleData["price"] / 100 * 60).." credited")
-                                            local veh = GetVehiclePedIsIn(GLOBAL_PED)
+                                            local veh = GetVehiclePedIsIn(PlayerPedId())
                                             QBCore.Functions.DeleteVehicle(veh)
                                         else
                                             QBCore.Functions.Notify('This is not your vehicle..', 'error')
                                         end
-                                    end, GetEntityModel(GetVehiclePedIsIn(GLOBAL_PED)), GetVehicleNumberPlateText(GetVehiclePedIsIn(GLOBAL_PED)))
+                                    end, GetEntityModel(GetVehiclePedIsIn(PlayerPedId())), GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId())))
                                 end
 
                                 if IsControlJustPressed(0, Keys["8"]) or IsDisabledControlJustPressed(0, Keys["8"]) then
@@ -404,7 +406,7 @@ Citizen.CreateThread(function()
     while true do
         
         --local ped = PlayerPedId()
-        local pos = GetEntityCoords(GLOBAL_PED)
+        local pos = GetEntityCoords(PlayerPedId())
         local dist = GetDistanceBetweenCoords(pos, QB.ShowroomVehicles[ClosestVehicle].coords.x, QB.ShowroomVehicles[ClosestVehicle].coords.y, QB.ShowroomVehicles[ClosestVehicle].coords.z)
 
         if insidePDM then
@@ -516,8 +518,8 @@ Citizen.CreateThread(function()
                             end
                         end
 
-                        if GetVehiclePedIsTryingToEnter(GLOBAL_PED) ~= nil and GetVehiclePedIsTryingToEnter(GLOBAL_PED) ~= 0 then
-                            ClearPedTasksImmediately(GLOBAL_PED)
+                        if GetVehiclePedIsTryingToEnter(PlayerPedId()) ~= nil and GetVehiclePedIsTryingToEnter(PlayerPedId()) ~= 0 then
+                            ClearPedTasksImmediately(PlayerPedId())
                         end
 
                         if IsControlJustPressed(0, Keys["E"]) then
@@ -555,7 +557,7 @@ Citizen.CreateThread(function()
             Citizen.Wait(2000)
         end
     end
-end)
+end)--]]
 
 RegisterNetEvent('qb-vehicleshop:client:setShowroomCarInUse')
 AddEventHandler('qb-vehicleshop:client:setShowroomCarInUse', function(showroomVehicle, inUse)
@@ -589,8 +591,8 @@ end)
 RegisterNetEvent('qb-vehicleshop:client:buyShowroomVehicle')
 AddEventHandler('qb-vehicleshop:client:buyShowroomVehicle', function(vehicle, plate)
     QBCore.Functions.SpawnVehicle(vehicle, function(veh)
-        TaskWarpPedIntoVehicle(GLOBAL_PED, veh, -1)
-        exports['LegacyFuel']:SetFuel(veh, 100)
+        TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
+        exports['ps-fuel']:SetFuel(veh, 100)
         SetVehicleNumberPlateText(veh, plate)
         SetEntityHeading(veh, QB.DefaultBuySpawn.h)
         SetEntityAsMissionEntity(veh, true, true)
@@ -598,4 +600,178 @@ AddEventHandler('qb-vehicleshop:client:buyShowroomVehicle', function(vehicle, pl
         TriggerServerEvent("qb-customs:server:SaveVehicleProps", QBCore.Functions.GetVehicleProperties(veh))
         SetEntityAsMissionEntity(veh, true, true)
     end, QB.DefaultBuySpawn, false)
+end)
+
+local CustomVehicleCats = {}
+local CustomVehicleList = {}
+
+--build our lists of categories and vehicles in each cat
+Citizen.CreateThread(function()
+    Citizen.Wait(1500)
+    local i = 0
+    --create categories
+    for k, v in pairs(QBCore.Shared.Vehicles) do
+        if v["shop"] == "pdm" then
+            local exists = false
+            for _, cat in pairs(CustomVehicleCats) do
+                if cat["header"] == v["brand"] then
+                    exists = true
+                end
+            end
+            if exists == false then
+                i = i + 1
+                table.insert(CustomVehicleCats, {
+                    id = i,
+                    header = v["brand"],
+                    txt = "",
+                    params = {
+                        event = "pdm:client:catalog",
+                        args = {
+                            brand = v["brand"]
+                        }
+                    }
+                })
+            end
+        end
+    end
+
+    --create car list per category
+    
+    for _, v in pairs(CustomVehicleCats) do
+        local x = 1
+        CustomVehicleList[v["header"]] = {}
+        table.insert(CustomVehicleList[v["header"]], {
+            id = x,
+            header = "< Go Back",
+            txt = "",
+            
+        })
+        for a, b in pairs(QBCore.Shared.Vehicles) do
+            if b["brand"] == v["header"] then
+                x = x+1
+                table.insert(CustomVehicleList[v["header"]], {
+                    id = x,
+                    header = b["brand"]..' '..b["name"],
+                    txt = tostring(b["price"]),
+                    params = {
+                        event = "pdm:client:changeveh",
+                        args = {
+                            vehicle = a
+                        }
+                    }
+                    
+                })
+            end
+        end
+    end
+end)
+
+RegisterNetEvent('pdm:client:changeveh')
+AddEventHandler('pdm:client:changeveh', function(data)
+    if modelLoaded then
+        TriggerServerEvent('qb-vehicleshop:server:setShowroomVehicle', data.vehicle, ClosestVehicle)
+        exports['qb-menu']:openMenu({
+            {
+                header = '< Go back',
+                txt = 'View PDM vehicles',
+                params = {
+                    event = 'qb-vehicleshop:client:showVehOptions'
+                }
+            },
+            {
+                header = 'Purchase Vehicle',
+                txt = '$'..QBCore.Shared.Vehicles[data.vehicle].price,
+                params = {
+                    isServer = true,
+                    event = 'qb-vehicleshop:server:buyShowroomVehicle',
+                    args = {
+                        vehicle = data.vehicle
+                    }
+                }
+            },
+        })
+    end
+end)
+local lastBrand = ""
+RegisterNetEvent('pdm:client:catalog')
+AddEventHandler('pdm:client:catalog', function(data)
+    exports['qb-menu']:openMenu(CustomVehicleList[data.brand])
+end)
+
+
+RegisterNetEvent('qb-vehicleshop:client:showVehOptions', function()
+    setClosestShowroomVehicle()
+    exports['qb-menu']:openMenu(CustomVehicleCats)
+end)
+
+local vehHeaderMenu = {
+    {
+        header = 'Catalog',
+        txt = 'View PDM vehicles',
+        params = {
+            event = 'qb-vehicleshop:client:showVehOptions'
+        }
+    }
+}
+
+
+
+
+Citizen.CreateThread(function()
+        --create polys for our cars
+    local car1 = PolyZone:Create({
+        vector2(-47.97876739502, -1090.4895019532),
+        vector2(-41.94401550293, -1092.4401855468),
+        vector2(-43.407817840576, -1096.3552246094),
+        vector2(-49.331428527832, -1094.1822509766)
+    }, {
+        name="pdm1",
+        --minZ = 26.422357559204,
+        --maxZ = 26.422357559204
+    })
+
+    local car2 = PolyZone:Create({
+        vector2(-48.324089050292, -1104.39453125),
+        vector2(-44.39891052246, -1102.5650634766),
+        vector2(-46.367774963378, -1098.6776123046),
+        vector2(-51.291553497314, -1100.9592285156),
+        vector2(-51.383918762208, -1103.2747802734)
+    }, {
+        name="pdm2",
+        --minZ = 26.422330856324,
+        --maxZ = 26.422359466552
+    })
+
+    local car3 = PolyZone:Create({
+        vector2(-39.612487792968, -1106.9443359375),
+        vector2(-37.860046386718, -1102.2713623046),
+        vector2(-41.582050323486, -1100.9158935546),
+        vector2(-42.798137664794, -1105.8801269532)
+    }, {
+        name="pdm3",
+        --minZ = 26.422328948974,
+        --maxZ = 26.422357559204
+    })
+    -- add popup qb-menu when you enter
+    car1:onPlayerInOut(function(isPointInside)
+        if isPointInside then
+            exports['qb-menu']:openMenu(vehHeaderMenu)
+        else
+            exports['qb-menu']:closeMenu()
+        end
+    end)
+    car2:onPlayerInOut(function(isPointInside)
+        if isPointInside then
+            exports['qb-menu']:openMenu(vehHeaderMenu)
+        else
+            exports['qb-menu']:closeMenu()
+        end
+    end)
+    car3:onPlayerInOut(function(isPointInside)
+        if isPointInside then
+            exports['qb-menu']:openMenu(vehHeaderMenu)
+        else
+            exports['qb-menu']:closeMenu()
+        end
+    end)
 end)

@@ -51,8 +51,8 @@ end)
 ---- Client Events ----
 -----------------------
 
---RegisterKeyMapping('createscene', 'Create Scene', 'keyboard', Config.CreateSceneKey)
---RegisterKeyMapping('deletescene', 'Delete Scene', 'keyboard', Config.DeleteSceneKey)
+RegisterKeyMapping('createscene', 'Create Scene', 'keyboard', Config.CreateSceneKey)
+RegisterKeyMapping('deletescene', 'Delete Scene', 'keyboard', Config.DeleteSceneKey)
 
 RegisterCommand('createscene', function()
     OpenMenu()

@@ -164,7 +164,7 @@ Citizen.CreateThread(function()
         EndTextCommandSetBlipName(Dealer)
     end
 end)
-
+--[[
 Citizen.CreateThread(function()
     QuickSell = AddBlipForCoord(QB.QuickSell.x, QB.QuickSell.y, QB.QuickSell.z)
 
@@ -206,23 +206,17 @@ local LuxuryZone = PolyZone:Create({
 })
 
 local HeadBone = 0x796e;
---[[
+
 Citizen.CreateThread(function()
     while true do
         local plyPed = PlayerPedId()
         local coord = GetPedBoneCoords(plyPed, HeadBone)
         local inPolyPDM = PDMZone:isPointInside(coord)
-        local inPolyLuxury = LuxuryZone:isPointInside(coord)
         -- if true, then player just entered zone
         if inPolyPDM and not insidePDM then
             insidePDM = true
         elseif not inPolyPDM and insidePDM then
             insidePDM = false
-        elseif inPolyLuxury and not insideLuxury then
-            insideLuxury = true
-        elseif not inPolyLuxury and insideLuxury then
-            insideLuxury = false
-        end
-        Citizen.Wait(1500)
+        Citizen.Wait(3500)
     end
 end)--]]

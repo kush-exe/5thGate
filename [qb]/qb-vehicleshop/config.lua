@@ -31,19 +31,19 @@ QB.ShowroomVehicles = {
         chosenVehicle = "schafter2",
         inUse = false,
     },
+   -- [3] = {
+   --     coords = {x = -39.6, y = -1096.01, z = 25.44, h = 66.5},
+   --     defaultVehicle = "comet2",
+   --     chosenVehicle = "comet2",
+   --    inUse = false,
+    --},
+   -- [4] = {
+    --    coords = {x = -51.21, y = -1096.77, z = 25.44, h = 254.5},
+   --     defaultVehicle = "vigero",
+   --     chosenVehicle = "vigero",
+   --     inUse = false,
+   -- },
     [3] = {
-        coords = {x = -39.6, y = -1096.01, z = 25.44, h = 66.5},
-        defaultVehicle = "comet2",
-        chosenVehicle = "comet2",
-        inUse = false,
-    },
-    [4] = {
-        coords = {x = -51.21, y = -1096.77, z = 25.44, h = 254.5},
-        defaultVehicle = "vigero",
-        chosenVehicle = "vigero",
-        inUse = false,
-    },
-    [5] = {
         coords = {x = -40.18, y = -1104.13, z = 25.44, h = 338.5},
         defaultVehicle = "t20",
         chosenVehicle = "t20",
@@ -68,6 +68,7 @@ QB.ShowroomVehicles = {
         -- inUse = false,
     -- }
 }
+
 
 QB.VehicleMenuCategories = {
     ["sports"]  = {label = "Sports"},

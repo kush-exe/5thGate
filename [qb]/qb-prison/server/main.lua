@@ -114,3 +114,11 @@ end)
 QBCore.Functions.CreateCallback('prison:server:IsAlarmActive', function(_, cb)
     cb(AlarmActivated)
 end)
+
+QBCore.Functions.CreateUseableItem("electronickit", function(source, item)
+	local Player = QBCore.Functions.GetPlayer(source)
+	local itemData = Player.Functions.GetItemBySlot(item.slot)
+	if Player.Functions.GetItemBySlot(item.slot) then
+        TriggerClientEvent("electronickit:UseElectronickit", source)
+    end
+end)

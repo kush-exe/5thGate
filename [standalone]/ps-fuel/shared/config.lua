@@ -18,6 +18,8 @@ Config.FuelDecor = "_FUEL_LEVEL" -- don't touch
 Config.Blacklist = {
 	--"Adder",
 	--276773164
+    "openwheel1",
+    "bmx"
 }
 
 -- Class multipliers. If you want SUVs to use less fuel, you can change it to anything under 1.0, and vise versa.

@@ -40,6 +40,7 @@ end)
 
 RegisterNetEvent('qb-vehicleshop:server:buyShowroomVehicle')
 AddEventHandler('qb-vehicleshop:server:buyShowroomVehicle', function(vehicle)
+    local vehicle = vehicle.vehicle
     local src = source
     local pData = QBCore.Functions.GetPlayer(src)
     local cid = pData.PlayerData.citizenid

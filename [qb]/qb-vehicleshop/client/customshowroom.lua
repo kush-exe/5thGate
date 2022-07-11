@@ -140,7 +140,7 @@ AddEventHandler('lux:client:catalog', function(data)
     --data.category
     --send nh-context menu of vehicles in category
     --TriggerEvent("nh-context:sendMenu", CustomVehicleList[data.category])
-    exports['qb-menu']:openMenu(CustomVehicleList[data.category])
+    exports['qb-menu']:openMenu(CustomVehicleList[data.brand])
 end)
 
 RegisterNetEvent('lux:client:changeveh')
@@ -257,7 +257,7 @@ end)
     end
 end)]]
 
-CustomVehicleCats = {}
+local CustomVehicleCats = {}
 
 --build our lists of categories and vehicles in each cat
 Citizen.CreateThread(function()
@@ -268,7 +268,7 @@ Citizen.CreateThread(function()
         if v["shop"] == "luxury" then
             local exists = false
             for _, cat in pairs(CustomVehicleCats) do
-                if cat["header"] == v["category"] then
+                if cat["header"] == v["brand"] then
                     exists = true
                 end
             end
@@ -276,12 +276,12 @@ Citizen.CreateThread(function()
                 i = i + 1
                 table.insert(CustomVehicleCats, {
                     id = i,
-                    header = v["category"],
+                    header = v["brand"],
                     txt = "",
                     params = {
                         event = "lux:client:catalog",
                         args = {
-                            category = v["category"]
+                            brand = v["brand"]
                         }
                     }
                 })
@@ -306,7 +306,7 @@ Citizen.CreateThread(function()
             }
         })
         for a, b in pairs(QBCore.Shared.Vehicles) do
-            if b["category"] == v["header"] then
+            if b["brand"] == v["header"] then
                 x = x+1
                 table.insert(CustomVehicleList[v["header"]], {
                     id = x,
