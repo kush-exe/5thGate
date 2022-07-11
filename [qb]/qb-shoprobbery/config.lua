@@ -23,7 +23,7 @@ Config['ShopRobbery'] = {
             return math.random(400, 500)
         end,
     },
-    ['tillGrabTime'] = 90000, -- For grab till time (miliseconds)
+    ['tillGrabTime'] = 40000, -- For grab till time (miliseconds)
     ['clerkWeaponChance'] = 25, -- Chance that the clerk will get scared or pull a gun
     ['clerkWeapon'] = GetHashKey('WEAPON_PISTOL'), -- Clerk weapon
     ['black_money'] = {  -- If change true, all moneys will convert to black. QBCore players can change itemName
