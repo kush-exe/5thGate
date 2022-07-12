@@ -21,7 +21,8 @@ Config.AdminList = {
 	'discord:560572592151592961',
 	'discord:705300308640923659',
 	'discord:440387476645740555', -- luis
-	
+	'discord:254857188210638848', --benji
+	'discord:502683646109417484',
 
 
 }
