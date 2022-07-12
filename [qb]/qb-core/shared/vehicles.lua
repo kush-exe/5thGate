@@ -7061,6 +7061,18 @@ QBShared.Vehicles = {
 		["trunkslots"] = 120,
 		["shop"] = 'luxury',
 	},
+	["coastline"] = {
+		["name"] = "Cullinan Coastline",
+		["brand"] = "Rolls Royce",
+		["model"] = "coastline",
+		["price"] = 500000,
+		["category"] = "suvs",
+		["hash"] = GetHashKey("tas2k"),
+		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
+		["trunkspace"] = 400000,
+		["trunkslots"] = 120,
+		["shop"] = 'nfs',
+	},
 
 
 }
