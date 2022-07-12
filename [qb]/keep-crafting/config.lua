@@ -2416,7 +2416,7 @@ Config.workbenches = {
      },
      {
           table_model = "gr_prop_gr_bench_02b",
-          coords = vector3(1060.52, -2438.93, 23.29-1),
+          coords = vector3(2539.17, 1713.88, 19.16-1),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
           rotation = vector3(0.0, 0.0, 0.00),
           job = {
