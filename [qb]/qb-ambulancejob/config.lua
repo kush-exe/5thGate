@@ -2,8 +2,8 @@ Config = {}
 Config.UseTarget = false -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
 Config.MinimalDoctors = 2 -- How many players with the ambulance job to prevent the hospital check-in system from being used
 Config.WipeInventoryOnRespawn = true -- Enable or disable removing all the players items when they respawn at the hospital
-Config.Helicopter = "polmav" -- Helicopter model that players with the ambulance job can use
-Config.BillCost = 2000 -- Price that players are charged for using the hospital check-in system
+Config.Helicopter = "EMSAW139" -- Helicopter model that players with the ambulance job can use
+Config.BillCost = 1000 -- Price that players are charged for using the hospital check-in system
 Config.DeathTime = 300 -- How long the timer is for players to bleed out completely and respawn at the hospital
 Config.PainkillerInterval = 60 -- Set the length of time painkillers last (per one)
 Config.HealthDamage = 5 -- Minumum damage done to health before checking for injuries
@@ -91,23 +91,43 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
 	-- Grade 0
 	[0] = {
 		["ambulance"] = "Ambulance",
+        ['emsnspeedo'] = "Mercedes Sprinter",
 	},
 	-- Grade 1
 	[1] = {
 		["ambulance"] = "Ambulance",
+        ['emsnspeedo'] = "Mercedes Sprinter",
 
 	},
 	-- Grade 2
 	[2] = {
 		["ambulance"] = "Ambulance",
+        ['emsnspeedo'] = "Mercedes Sprinter",
+        ['amr13fpiu'] = "2013 FPIU",
+        ['amr16fpiu'] = "2016 FPIU",
+        ['amr18tahoe'] = "2018 Tahoe",
+        ['amrf150'] = 'Ford F150',
+        ['amrf250'] = "Ford F250",
 	},
 	-- Grade 3
 	[3] = {
 		["ambulance"] = "Ambulance",
+        ['emsnspeedo'] = "Mercedes Sprinter",
+        ['amr13fpiu'] = "2013 FPIU",
+        ['amr16fpiu'] = "2016 FPIU",
+        ['amr18tahoe'] = "2018 Tahoe",
+        ['amrf150'] = 'Ford F150',
+        ['amrf250'] = "Ford F250",
 	},
 	-- Grade 4
 	[4] = {
 		["ambulance"] = "Ambulance",
+        ['emsnspeedo'] = "Mercedes Sprinter",
+        ['amr13fpiu'] = "2013 FPIU",
+        ['amr16fpiu'] = "2016 FPIU",
+        ['amr18tahoe'] = "2018 Tahoe",
+        ['amrf150'] = 'Ford F150',
+        ['amrf250'] = "Ford F250",
 	}
 }
 

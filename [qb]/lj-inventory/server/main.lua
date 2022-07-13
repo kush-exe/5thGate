@@ -621,10 +621,10 @@ RegisterNetEvent('inventory:server:OpenInventory', function(name, id, other)
 						end
 					end
 				end
-				local maxweight = 1000000
+				local maxweight = 10000000
 				local slots = 50
 				if other then
-					maxweight = other.maxweight or 1000000
+					maxweight = other.maxweight or 10000000
 					slots = other.slots or 50
 				end
 				secondInv.name = "stash-"..id
@@ -635,7 +635,7 @@ RegisterNetEvent('inventory:server:OpenInventory', function(name, id, other)
 				if Stashes[id] and Stashes[id].isOpen then
 					secondInv.name = "none-inv"
 					secondInv.label = "Stash-None"
-					secondInv.maxweight = 1000000
+					secondInv.maxweight = 10000000
 					secondInv.inventory = {}
 					secondInv.slots = 0
 				else
