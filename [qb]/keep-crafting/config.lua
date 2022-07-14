@@ -2445,6 +2445,7 @@ Config.workbenches = {
           coords = vector3(803.02, -2320.11, 55.57-1),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
           rotation = vector3(0.0, 0.0, 86.98),
+
           job = {
                allowed_list = {},
                allowed_grades = {}

@@ -7073,6 +7073,18 @@ QBShared.Vehicles = {
 		["trunkslots"] = 120,
 		["shop"] = 'nfs',
 	},
+	["chrcst"] = {
+		["name"] = "HeLLscatpack",
+		["brand"] = "Dodge",
+		["model"] = "Charger",
+		["price"] = 500000,
+		["category"] = "sedans",
+		["hash"] = GetHashKey("chrcst"),
+		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
+		["trunkspace"] = 400000,
+		["trunkslots"] = 120,
+		["shop"] = 'nfs',
+	},
 
 
 }

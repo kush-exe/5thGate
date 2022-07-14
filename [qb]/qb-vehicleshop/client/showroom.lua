@@ -647,7 +647,7 @@ Citizen.CreateThread(function()
             
         })
         for a, b in pairs(QBCore.Shared.Vehicles) do
-            if b["brand"] == v["header"] then
+            if b["brand"] == v["header"] and b['shop'] == 'pdm' then
                 x = x+1
                 table.insert(CustomVehicleList[v["header"]], {
                     id = x,
