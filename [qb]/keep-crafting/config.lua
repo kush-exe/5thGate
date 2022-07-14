@@ -2431,7 +2431,7 @@ Config.workbenches = {
           table_model = "gr_prop_gr_bench_02b",
           coords = vector3(-2606.23, 1914.42, 160.73-1),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
-          rotation = vector3(0.0, 0.0, 0.00),
+          rotation = vector3(0.0, 0.0, 192.2),
           job = {
                allowed_list = {},
                allowed_grades = {}
@@ -2444,7 +2444,8 @@ Config.workbenches = {
           table_model = "gr_prop_gr_bench_02b",
           coords = vector3(803.02, -2320.11, 55.57-1),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
-          rotation = vector3(0.0, 0.0, 86.0),
+          rotation = vector3(0.0, 0.0, 86.98),
+
           job = {
                allowed_list = {},
                allowed_grades = {}
@@ -2455,9 +2456,9 @@ Config.workbenches = {
      },
      {
           table_model = "gr_prop_gr_bench_02b",
-          coords = vector3(-67.89, 801.06, 224.45-1),
+          coords = vector3(821.73, -588.02, 59.43-1),
           item_show_case_offset = vector3(0.0, 0.0, 1.2),
-          rotation = vector3(0.0, 0.0, 0.00),
+          rotation = vector3(0.0, 0.0, 173.62),
           job = {
                allowed_list = {},
                allowed_grades = {}
