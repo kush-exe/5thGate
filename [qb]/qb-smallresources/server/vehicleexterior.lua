@@ -20,7 +20,7 @@ QBCore.Commands.Add('livery', 'Set vehicle livery ', {}, false, function(source,
     local Player = QBCore.Functions.GetPlayer(src)
     local livery = tonumber(args[1])
 
-    if Player and (Player.PlayerData.job.name == 'police' or Player.PlayerData.job.name == 'ambulance' or Player.PlayerData.job.name == 'mechanic' or Player.PlayerData.job.name == 'mechanic2' or Player.PlayerData.job.name == 'mechanic3') then
+    if Player and (Player.PlayerData.job.name == 'police' or Player.PlayerData.job.name == 'ambulance') then
         if Player then
             TriggerClientEvent('police:livery', src, livery)
         else

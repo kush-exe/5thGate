@@ -3,12 +3,12 @@ Config = Config or {}
 Config.WeaponDamage = {
     ['weapon_bat'] 				 = 0.35,
     ['weapon_unarmed'] 				 = 0.25,
-    ['weapon_combatpistol'] 		 = 0.70,
+    ['weapon_combatpistol'] 		 = 0.75,
     ['weapon_assaultrifle'] 		= 0.35,
     ['weapon_heavypistol'] 			 = 0.75,
     ['weapon_appistol'] 			 = 0.50,
     ['weapon_revolver'] 			 = 0.30,
-    ['weapon_minismg'] 				 = 0.55,
+    ['weapon_minismg'] 				 = 0.56,
     ['weapon_pistol50'] 			 = 0.52,
     ['weapon_microsmg'] 			 = 0.67,
     ['weapon_carbinerifle'] 		= 0.45,
@@ -21,7 +21,7 @@ Config.WeaponDamage = {
     ['weapon_carbinerifle_mk2'] 	= 0.42,
     ['weapon_knuckle']           	= 0.35,
     ['weapon_navyrevolver'] 		 = 0.45,
-    ['weapon_pistol_mk2'] 			 = 1.00,
+    ['weapon_pistol_mk2'] 			 = 0.90,
     ['weapon_snspistol'] 			 = 0.45,
 }
 
