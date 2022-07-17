@@ -75,7 +75,7 @@ Functions = {
             SetEntityHeading(ply, Config.Points[point].coords.h)
             TaskStartScenarioInPlace(ply, "prop_human_muscle_chin_ups", 0, true)
             Citizen.Wait(Config.PullUp)
-            Functions.UpdateSkill('Strength', 0.1)
+            Functions.UpdateSkill('Strength', 0.5)
             ClearPedTasksImmediately(ply)
 
             QBCore.Functions.Notify(''..Config.T["3"]..'')

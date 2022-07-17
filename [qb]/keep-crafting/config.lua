@@ -45,7 +45,21 @@ Config.categories = {
           key = "attachments",
           label = "attachments",
           icon = "fa-solid fa-gun",
-          jobs = {}
+          jobs = {},
+          sub_categories = {
+               ["pistol"] = {
+                    label = "Pistol"
+               },
+               ["smg"] = {
+                    label = "SMG"
+               },
+               ["shotgun"] = {
+                    label = "Shotgun"
+               },
+               ["rifle"] = {
+                    label = "Rifles"
+               }
+          }
      }
 }
 
@@ -229,6 +243,7 @@ local misc_recipe = {
                exp_per_craft = 5
           }
      },
+     --[[
      ["ziptie"] = {
           categories = {
                main = "misc"
@@ -256,7 +271,7 @@ local misc_recipe = {
                },
                exp_per_craft = 2
           }
-     },
+     },--]]
      ["pistol_ammo"] = {
           categories = {
                main = "misc"
@@ -713,6 +728,64 @@ local weapons_recipe = {
                materials = {
                     ["metalscrap"] = 60,
                     ["copper"] = 80
+               },
+               exp_per_craft = 4
+          }
+     },
+     ["rifle_ammo"] = {
+          categories = {
+               
+               sub = "rifle"
+          },
+          item_settings = {
+               label = "Rifle Ammo",
+               image = "rifle_ammo", -- use inventory's images
+               object = {
+                    name = "prop_ld_ammo_pack_01",
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 250,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 100,
+                    ["copper"] = 140
+               },
+               exp_per_craft = 4
+          }
+     },
+     ["mg_ammo"] = {
+          categories = {
+               
+               sub = "rifle"
+          },
+          item_settings = {
+               label = "MG Ammo",
+               image = "mg_ammo", -- use inventory's images
+               object = {
+                    name = "prop_ld_ammo_pack_01",
+                    rotation = vector3(0.0, 0.0, 0.0)
+               },
+               level = 250,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 60,
+               materials = {
+                    ["metalscrap"] = 100,
+                    ["copper"] = 140
                },
                exp_per_craft = 4
           }
@@ -2297,6 +2370,35 @@ local attachments_recipe = {
                amount = 1, -- crafted amount
                duration = 120,
                materials = {
+                    ["metalscrap"] = 750,
+                    ["steel"] = 600,
+                    ["rubber"] = 650
+               },
+               exp_per_craft = 5
+          }
+     },
+     ["combatpistol_extendedclip"] = {
+          categories = {
+               sub = "pistol"
+          },
+          item_settings = {
+               label = "Glock 19 Extended Clip",
+               image = "combatpistol_extendedclip", -- use inventory's images
+               object = {
+                    name = "w_pi_combatpistol",
+                    rotation = vector3(45.0, 0.0, 0.0)
+               },
+               level = 0,
+               job = {
+                    allowed_list = {},
+                    allowed_grades = {}
+               }
+          },
+          crafting = {
+               success_rate = 100,
+               amount = 1, -- crafted amount
+               duration = 120,
+               materials = {
                     ["metalscrap"] = 350,
                     ["steel"] = 300,
                     ["rubber"] = 300
@@ -2304,15 +2406,15 @@ local attachments_recipe = {
                exp_per_craft = 5
           }
      },
-     ["combatpistol_suppressor"] = {
+     ["appistol_extendedclip"] = {
           categories = {
                sub = "pistol"
           },
           item_settings = {
-               label = "Glock suppressor",
-               image = "pistol_suppressor", -- use inventory's images
+               label = "Glock 18C Extended Clip",
+               image = "appistol_extendedclip", -- use inventory's images
                object = {
-                    name = "w_at_ar_supp_02",
+                    name = "w_pi_appistol",
                     rotation = vector3(45.0, 0.0, 0.0)
                },
                level = 0,

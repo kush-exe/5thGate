@@ -42,7 +42,23 @@ Config.Points = {
     [4] = {
         ['coords'] = { ['x'] = -1194.06, ['y'] = -1570.68, ['z'] = 4.62, ['h'] = 214.07 },
         ['type'] = 'Yoga', 
-    }
+    },
+    [5] = {
+        ['coords'] = { ['x'] = 1643.11, ['y'] = 2528.2, ['z'] = 45.56, ['h'] = 231.07 },
+        ['type'] = 'Arms', 
+    },
+    [6] = {
+        ['coords'] = { ['x'] = 1646.95, ['y'] = 2533.56, ['z'] = 45.56, ['h'] = 231.78 },
+        ['type'] = 'Pushups', 
+    },
+    [7] = {
+        ['coords'] = { ['x'] = 1639.69, ['y'] = 2531.12, ['z'] = 45.56, ['h'] = 225.14 },
+        ['type'] = 'Situps', 
+    },
+    [8] = {
+        ['coords'] = { ['x'] = 1638.53, ['y'] = 2525.29, ['z'] = 45.56, ['h'] = 323.14 },
+        ['type'] = 'Yoga', 
+    },
 }
 
 -- Exercise time miliseconds
@@ -51,7 +67,7 @@ Config.PushUp = 15000 -- Pushups
 Config.Situps = 20000 -- Situps
 Config.Yoga = 20000 -- Yoga
 
-Config.GymWait = 60000 -- Relaxing before next exercise
+Config.GymWait = 30000 -- Relaxing before next exercise
 
 -- GAIN IN THE GYN --
 Config.GymStrength = 0.5 -- Strength

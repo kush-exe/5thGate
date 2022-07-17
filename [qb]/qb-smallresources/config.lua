@@ -12,22 +12,41 @@ Config.DefaultPrice = 20 -- carwash
 Config.DirtLevel = 0.1 --carwash dirt level
 
 ConsumeablesEat = {
-    ["sandwich"] = math.random(35, 54),
-    ["tosti"] = math.random(40, 50),
-    ["twerks_candy"] = math.random(35, 54),
-    ["snikkel_candy"] = math.random(40, 50),
+    ["sandwich"] = math.random(5, 10),
+    ["tosti"] = math.random(5, 10),
+    ["twerks_candy"] = math.random(5, 10),
+    ["snikkel_candy"] = math.random(5, 10),
+	["mushroompizza"] = math.random(35, 50),
+	["lasagna"] = math.random(35, 50),
+	["chickenalfredo"] = math.random(35, 50),
+	["breadsticks"] = math.random(35, 50),
+	["meatloverpizza"] = math.random(35, 50),
+	["cheesepizza"] = math.random(35, 50),
+	["pepperonipizza"] = math.random(35, 50),
+	["spaghetti"] = math.random(35, 50),
+	["cannoli"] = math.random(35, 50),
+	["tiramisu"] = math.random(35, 50),
+	["salad"] = math.random(35, 50),
+	["salmon"] = math.random(35, 50),
+	["chickenpasta"] = math.random(35, 50),
+	
 }
 
 ConsumeablesDrink = {
     ["water_bottle"] = math.random(35, 54),
     ["kurkakola"] = math.random(35, 54),
     ["coffee"] = math.random(40, 50),
+	["cocacola"] = math.random(40, 50),
+	["sprite"] = math.random(40, 50),
 }
 
 ConsumeablesAlcohol = {
     ["whiskey"] = math.random(20, 30),
     ["beer"] = math.random(30, 40),
     ["vodka"] = math.random(20, 40),
+	["wineglass"] = math.random(20, 40),
+	["margarita"] = math.random(20, 40),
+	["martini"] = math.random(20, 40),
 }
 
 Config.BlacklistedScenarios = {

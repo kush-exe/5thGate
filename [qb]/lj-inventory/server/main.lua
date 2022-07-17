@@ -773,7 +773,7 @@ RegisterNetEvent('inventory:server:OpenInventory', function(name, id, other)
 					if Player.PlayerData.job.name == "police" and Player.PlayerData.job.onduty then
 						secondInv.slots = QBCore.Config.Player.MaxInvSlots
 					else
-						secondInv.slots = QBCore.Config.Player.MaxInvSlots - 1
+						secondInv.slots = QBCore.Config.Player.MaxInvSlots --- 1
 					end
 					Wait(250)
 				end

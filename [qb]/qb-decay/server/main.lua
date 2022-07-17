@@ -306,6 +306,6 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(1000*60*60) --1 hour
-        DegradeAllTables()
+        --DegradeAllTables()
     end
 end)

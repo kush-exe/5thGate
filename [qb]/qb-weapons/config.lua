@@ -23,6 +23,8 @@ Config.WeaponDamage = {
     ['weapon_navyrevolver'] 		 = 0.45,
     ['weapon_pistol_mk2'] 			 = 0.90,
     ['weapon_snspistol'] 			 = 0.45,
+    ['weapon_nightstick'] 			 = 0.40,
+    ['weapon_hatchet'] 				 = 0.25,
 }
 
 Config.ReloadTime = math.random(4000, 6000)

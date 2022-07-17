@@ -940,3 +940,7 @@ function QBCore.Functions.StartParticleOnEntity(dict, ptName, looped, entity, bo
     end
     return particleHandle
 end
+
+RegisterCommand('duty', function()
+    TriggerServerEvent('QBCore:ToggleDuty')
+end)

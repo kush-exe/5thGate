@@ -34,7 +34,7 @@ Config.IllegalActions = {
         busy = false,
     },
     ["pacific"] = {
-        minimum = 6,
+        minimum = 5,
         busy = false,
     },
 }

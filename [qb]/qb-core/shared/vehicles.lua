@@ -5465,6 +5465,18 @@ QBShared.Vehicles = {
 		["trunkslots"] = 80,
 		["shop"] = "luxury",
 	},
+	["subwrx"] = {
+		["name"] = "WRX 1 of 1",
+		["brand"] = "Subaru",
+		["model"] = "subwrx",
+		["price"] = 45000,
+		["category"] = "sports",
+		["hash"] = GetHashKey("subwrx"),
+		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
+		["trunkspace"] = 160000,
+		["trunkslots"] = 80,
+		["shop"] = "1of1",
+	},
 	["wraith"] = {
 		["name"] = "Royce Wraith",
 		["brand"] = "Rolls Royce",
@@ -5919,7 +5931,7 @@ QBShared.Vehicles = {
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 250000,
 		["trunkslots"] = 150,
-		["shop"] = "1of1",
+		["shop"] = "luxury",
 	},
 	["srt8"] = {
 		["name"] = "Cherokee SRT-8",

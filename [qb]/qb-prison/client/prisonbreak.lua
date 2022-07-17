@@ -66,6 +66,7 @@ RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
 end)
 
 RegisterNetEvent('electronickit:UseElectronickit', function()
+    print('here')
     if currentGate ~= 0 and not securityLockdown and not Gates[currentGate].hit then
         QBCore.Functions.TriggerCallback('QBCore:HasItem', function(result)
             if result then

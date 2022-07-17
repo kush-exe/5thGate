@@ -1,140 +1,105 @@
-local currentLocation = 1
-currentBlip = 0
+local currentLocation = 0
+currentBlip = nil
 local isWorking = false
 
 -- Functions
 
-function CreateJobBlip(noItem) -- Used globally
-    if DoesBlipExist(currentBlip) then
-        RemoveBlip(currentBlip)
-    end
-    local coords = Config.Locations.jobs[currentJob][currentLocation].coords.xyz
-    currentBlip = AddBlipForCoord(coords.x, coords.y, coords.z)
-    SetBlipSprite(currentBlip, 402)
-    SetBlipDisplay(currentBlip, 4)
-    SetBlipScale(currentBlip, 0.8)
-    SetBlipAsShortRange(currentBlip, true)
-    SetBlipColour(currentBlip, 1)
-    BeginTextCommandSetBlipName("STRING")
-    AddTextComponentSubstringPlayerName("Prison Work")
-    EndTextCommandSetBlipName(currentBlip)
-    if noItem then return end
-    TriggerServerEvent('prison:server:CheckChance')
-end
-
-local function CheckAllLocations()
-    local amount = 0
-    for i = 1, #Config.Locations.jobs[currentJob] do
-        local current = Config.Locations.jobs[currentJob][i]
-        if current.done then
-            amount += 1
+function CreateJobBlip()
+    if currentLocation ~= 0 then
+        if DoesBlipExist(currentBlip) then
+            RemoveBlip(currentBlip)
         end
+        currentBlip = AddBlipForCoord(Config.Locations.jobs[currentJob][currentLocation].coords.x, Config.Locations.jobs[currentJob][currentLocation].coords.y, Config.Locations.jobs[currentJob][currentLocation].coords.z)
+
+        SetBlipSprite (currentBlip, 402)
+        SetBlipDisplay(currentBlip, 4)
+        SetBlipScale  (currentBlip, 0.8)
+        SetBlipAsShortRange(currentBlip, true)
+        SetBlipColour(currentBlip, 1)
+
+        BeginTextCommandSetBlipName("STRING")
+        AddTextComponentSubstringPlayerName(Config.Jobs[currentJob])
+        EndTextCommandSetBlipName(currentBlip)
+
+        local Chance = math.random(100)
+        local Odd = math.random(100)
+        if Chance == Odd then
+            TriggerServerEvent('QBCore:Server:AddItem', 'phone', 1)
+            TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["phone"], "add")
+            QBCore.Functions.Notify("You found a phone..", "success")
+        end
+        --[[for prison event --]]
+       local Chance = math.random(100)
+       if Chance <= 10 then
+           TriggerServerEvent('QBCore:Server:AddItem', 'lockpick', 1)
+           TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["lockpick"], "add")
+           QBCore.Functions.Notify("You found a lockpick..", "success")
+       end
+       local Chance = math.random(100)
+       if Chance <= 15 then
+         TriggerServerEvent('QBCore:Server:AddItem', 'weapon_switchblade', 1)
+        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["weapon_switchblade"], "add")
+          QBCore.Functions.Notify("You found a shank!..", "success")
+       end
+         --[[for prison event --]]
     end
-    return amount == #Config.Locations.jobs[currentJob]
 end
 
-local function ResetLocations()
-    for i = 1, #Config.Locations.jobs[currentJob] do
-        Config.Locations.jobs[currentJob][i].done = false
-    end
-end
-
-local function JobDone()
-    if not Config.Locations.jobs[currentJob][currentLocation].done then return end
-    if math.random(1, 100) <= 50 then
-        QBCore.Functions.Notify(Lang:t("success.time_cut"))
-        jailTime -= math.random(1, 2)
+function JobDone()
+    if math.random(1, 100) <= 20 then
+        QBCore.Functions.Notify("You've worked some time off your sentence")
+        jailTime = jailTime - math.random(1, 1)
     end
     local newLocation = math.random(1, #Config.Locations.jobs[currentJob])
-    while newLocation == currentLocation or Config.Locations.jobs[currentJob][newLocation].done do
-        Wait(0)
+    while (newLocation == currentLocation) do
+        Wait(100)
         newLocation = math.random(1, #Config.Locations.jobs[currentJob])
     end
     currentLocation = newLocation
     CreateJobBlip()
-    if CheckAllLocations() then ResetLocations() end
-end
-
-local function StartWork()
-    isWorking = true
-    Config.Locations.jobs[currentJob][currentLocation].done = true
-    QBCore.Functions.Progressbar("work_electric", "Working on electricity..", math.random(5000, 10000), false, true, {
-        disableMovement = true,
-        disableCarMovement = true,
-        disableMouse = false,
-        disableCombat = true,
-    }, {
-        animDict = "anim@gangops@facility@servers@",
-        anim = "hotwire",
-        flags = 16,
-    }, {}, {}, function() -- Done
-        isWorking = false
-        StopAnimTask(PlayerPedId(), "anim@gangops@facility@servers@", "hotwire", 1.0)
-        JobDone()
-    end, function() -- Cancel
-        isWorking = false
-        StopAnimTask(PlayerPedId(), "anim@gangops@facility@servers@", "hotwire", 1.0)
-        QBCore.Functions.Notify(Lang:t("error.cancelled"), "error")
-    end)
 end
 
 -- Threads
 
 CreateThread(function()
-    local isInside = false
-    for k in pairs(Config.Locations.jobs) do
-        for i = 1, #Config.Locations.jobs[k] do
-            local current = Config.Locations.jobs[k][i]
-            if Config.UseTarget then
-                exports['qb-target']:AddBoxZone("work_"..k.."_"..i, current.coords.xyz, 1.5, 1.6, {
-                    name = "work_"..k.."_"..i,
-                    heading = 12.0,
-                    debugPoly = false,
-                    minZ = 19,
-                    maxZ = 219
-                }, {
-                    options = {
-                        {
-                            icon = 'fa-solid fa-bolt',
-                            label = 'Do '..Config.Jobs[k]..' Work',
-                            canInteract = function()
-                                return inJail and currentJob and not Config.Locations.jobs[k][i].done and not isWorking and i == currentLocation
-                            end,
-                            action = function()
-                                StartWork()
-                            end
-                        }
-                    },
-                    distance = 2.5
-                })
-            else
-                local electricityzone = BoxZone:Create(current.coords.xyz, 3.0, 5.0, {
-                    name = "work_"..k.."_"..i,
-                    debugPoly = false,
-                })
-                electricityzone:onPlayerInOut(function(isPointInside)
-                    isInside = isPointInside and inJail and currentJob and not Config.Locations.jobs[k][i].done and not isWorking
-                    if isInside then
-                        exports['qb-core']:DrawText(Lang:t("info.job_interaction"), 'left')
-                    else
-                        exports['qb-core']:HideText()
-                    end
-                end)
-            end
-            Config.Locations.jobs[k][i].done = false
-        end
-    end
-    if not Config.UseTarget then
-        while true do
-            local sleep = 1000
-            if isInside then
-                sleep = 0
-                if IsControlJustReleased(0, 38) then
-                    StartWork()
-                    sleep = 1000
+    while true do
+        Wait(1)
+        if inJail and currentJob ~= nil then
+            if currentLocation ~= 0 then
+                if not DoesBlipExist(currentBlip) then
+                    CreateJobBlip()
                 end
+                local pos = GetEntityCoords(PlayerPedId())
+                if #(pos - vector3(Config.Locations.jobs[currentJob][currentLocation].coords.x, Config.Locations.jobs[currentJob][currentLocation].coords.y, Config.Locations.jobs[currentJob][currentLocation].coords.z)) < 10.0 and not isWorking then
+                    DrawMarker(2, Config.Locations.jobs[currentJob][currentLocation].coords.x, Config.Locations.jobs[currentJob][currentLocation].coords.y, Config.Locations.jobs[currentJob][currentLocation].coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 150, 200, 50, 222, false, false, false, true, false, false, false)
+                    if #(pos - vector3(Config.Locations.jobs[currentJob][currentLocation].coords.x, Config.Locations.jobs[currentJob][currentLocation].coords.y, Config.Locations.jobs[currentJob][currentLocation].coords.z)) < 1 and not isWorking then
+                        isWorking = true
+                        QBCore.Functions.Progressbar("work_electric", "Working on electricity..", math.random(5000, 10000), false, true, {
+                            disableMovement = true,
+                            disableCarMovement = true,
+                            disableMouse = false,
+                            disableCombat = true,
+                        }, {
+                            animDict = "anim@gangops@facility@servers@",
+                            anim = "hotwire",
+                            flags = 16,
+                        }, {}, {}, function() -- Done
+                            isWorking = false
+                            StopAnimTask(PlayerPedId(), "anim@gangops@facility@servers@", "hotwire", 1.0)
+                            JobDone()
+                        end, function() -- Cancel
+                            isWorking = false
+                            StopAnimTask(PlayerPedId(), "anim@gangops@facility@servers@", "hotwire", 1.0)
+                            QBCore.Functions.Notify("Cancelled..", "error")
+                        end)
+                    end
+                end
+            else
+                currentLocation = math.random(1, #Config.Locations.jobs[currentJob])
+                CreateJobBlip()
             end
-            Wait(sleep)
+        else
+            Wait(5000)
         end
     end
 end)

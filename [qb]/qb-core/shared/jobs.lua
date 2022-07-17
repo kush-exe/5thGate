@@ -352,4 +352,28 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['pizza'] = {
+		label = 'Luchettis Pizza',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Cook',
+                payment = 50
+            },
+            ['1'] = {
+                name = 'Cashier',
+                payment = 75
+            },
+            ['2'] = {
+                name = 'Assistant Manager',
+                payment = 100
+            },
+            ['3'] = {
+                name = 'Owner',
+                payment = 125,
+                isboss = true
+            },
+        },
+	},
 }

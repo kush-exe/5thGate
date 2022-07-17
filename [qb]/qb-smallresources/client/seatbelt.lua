@@ -153,7 +153,7 @@ CreateThread(function()
             end
             if frameBodyChange ~= 0 then
                 if lastFrameVehiclespeed > 110 and thisFrameVehicleSpeed < (lastFrameVehiclespeed * 0.75) and not damagedone then
-                    if frameBodyChange > 18.0 then
+                    if frameBodyChange > 50.0 then
                         if not seatbeltOn and not IsThisModelABike(currentVehicle) then
                             if math.random(math.ceil(lastFrameVehiclespeed)) > 60 then
                                 if not harnessOn then
@@ -271,9 +271,9 @@ function EjectFromVehicle()
     SetPedToRagdoll(ped, 5511, 5511, 0, 0, 0, 0)
     SetEntityVelocity(ped, veloc.x*4,veloc.y*4,veloc.z*4)
     local ejectspeed = math.ceil(GetEntitySpeed(ped) * 8)
-    if(GetEntityHealth(ped) - ejectspeed) > 0 then
-        SetEntityHealth(ped, (GetEntityHealth(ped) - ejectspeed) )
-    elseif GetEntityHealth(ped) ~= 0 then
-        SetEntityHealth(ped, 0)
-    end
+    --if(GetEntityHealth(ped) - ejectspeed) > 0 then
+    --    SetEntityHealth(ped, (GetEntityHealth(ped) - ejectspeed) )
+    --elseif GetEntityHealth(ped) ~= 0 then
+    --    SetEntityHealth(ped, 0)
+    --end
 end

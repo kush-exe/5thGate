@@ -6,6 +6,60 @@ exports('IsHandcuffed', function()
     return isHandcuffed
 end)
 
+exports["qb-target"]:AddTargetModel({GetHashKey('mp_m_freemode_01'), GetHashKey('mp_f_freemode_01')}, {
+    options = {
+        {
+            event = "police:client:unziptie",
+            icon = "fas fa-cut",
+            label = "Cut Ziptie"
+        },
+    },
+    distance = 1
+})
+
+exports["qb-target"]:AddTargetModel({GetHashKey('mp_m_freemode_01'), GetHashKey('mp_f_freemode_01')}, {
+    options = {
+        {
+            event = "police:client:cutcuffs",
+            icon = "fas fa-cut",
+            label = "Break Handcuffs"
+        },
+    },
+    distance = 1
+})
+
+RegisterNetEvent('police:client:unziptie', function()
+    local ped = PlayerPedId()
+    local knives = {
+        GetHashKey("WEAPON_KNIFE"),
+        GetHashKey("WEAPON_SWITCHBLADE"),
+        GetHashKey("WEAPON_DAGGER"),
+    }
+    if IsPedArmed(ped, 1) then
+        for k,v in pairs(knives) do
+            if GetSelectedPedWeapon(ped) == v then
+                TriggerEvent("police:client:CuffPlayerSoft")
+            end
+        end
+    end
+end)
+
+RegisterNetEvent('police:client:cutcuffs', function()
+    local ped = PlayerPedId()
+    local knives = {
+        GetHashKey("WEAPON_CROWBAR"),
+        GetHashKey("WEAPON_WRENCH"),
+        GetHashKey("WEAPON_HAMMER"),
+    }
+    if IsPedArmed(ped, 1) then
+        for k,v in pairs(knives) do
+            if GetSelectedPedWeapon(ped) == v then
+                TriggerEvent("police:client:CuffPlayerSoft")
+            end
+        end
+    end
+end)
+
 local function loadAnimDict(dict) -- interactions, job,
     while (not HasAnimDictLoaded(dict)) do
         RequestAnimDict(dict)

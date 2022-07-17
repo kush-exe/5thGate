@@ -8,6 +8,17 @@ local Objects = {}
 local QBCore = exports['qb-core']:GetCoreObject()
 local updatingCops = false
 
+exports('IsCopSV', function(src)
+    local Player = QBCore.Functions.GetPlayer(src)
+    for k, v in pairs(Config.PoliceJobs) do
+        if Player.PlayerData.job.name == v then
+            return true
+        end
+    end
+
+    return false
+end)
+
 -- Functions
 local function UpdateBlips()
     local dutyPlayers = {}
@@ -498,6 +509,16 @@ QBCore.Functions.CreateUseableItem("moneybag", function(source, item)
     Player.Functions.AddMoney("cash", tonumber(item.info.cash), "used-moneybag")
 end)
 
+QBCore.Functions.CreateUseableItem("ziptie", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    if Player.Functions.GetItemByName(item.name) then
+        TriggerClientEvent("police:client:CuffPlayerSoft", src)
+        Player.Functions.RemoveItem("ziptie", 1, item.slot)
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["ziptie"], "remove")
+    end
+end)
+
 -- Callbacks
 QBCore.Functions.CreateCallback('police:server:isPlayerDead', function(_, cb, playerId)
     local Player = QBCore.Functions.GetPlayer(playerId)
@@ -628,7 +649,7 @@ RegisterNetEvent('police:server:TakeOutImpound', function(plate, garage)
     MySQL.update('UPDATE player_vehicles SET state = ? WHERE plate = ?', {0, plate})
     TriggerClientEvent('QBCore:Notify', src, Lang:t("success.impound_vehicle_removed"), 'success')
 end)
-
+--[[
 RegisterNetEvent('police:server:CuffPlayer', function(playerId, isSoftcuff)
     local src = source
     local playerPed = GetPlayerPed(src)
@@ -642,6 +663,17 @@ RegisterNetEvent('police:server:CuffPlayer', function(playerId, isSoftcuff)
     if not Player or not CuffedPlayer or (not Player.Functions.GetItemByName("handcuffs") and Player.PlayerData.job.name ~= "police") then return end
 
     TriggerClientEvent("police:client:GetCuffed", CuffedPlayer.PlayerData.source, Player.PlayerData.source, isSoftcuff)
+end)--]]
+
+RegisterNetEvent('police:server:CuffPlayer', function(playerId, isSoftcuff)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local CuffedPlayer = QBCore.Functions.GetPlayer(playerId)
+    if CuffedPlayer then
+        if Player.Functions.GetItemByName("handcuffs") or Player.Functions.GetItemByName("ziptie") or exports["qb-policejob"]:IsCopSV(src) then
+            TriggerClientEvent("police:client:GetCuffed", CuffedPlayer.PlayerData.source, Player.PlayerData.source, isSoftcuff)
+        end
+    end
 end)
 
 RegisterNetEvent('police:server:EscortPlayer', function(playerId)

@@ -472,5 +472,5 @@ end
 
 
 function enginehotkey()
-	TriggerEvent('vehiclekeys:client:ToggleEngine')
+	TriggerEvent('qb-vehiclekeys:client:ToggleEngine')
 end

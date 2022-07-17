@@ -152,6 +152,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	},
     [5] = {
 		["newvic"] = "Ford Crown Victoria",
@@ -161,6 +162,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	},
     [6] = {
 		["newvic"] = "Ford Crown Victoria",
@@ -170,6 +172,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	},
     [7] = {
 		["newvic"] = "Ford Crown Victoria",
@@ -179,6 +182,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	},
     [8] = {
 		["newvic"] = "Ford Crown Victoria",
@@ -188,6 +192,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	},
     [9] = {
 		["newvic"] = "Ford Crown Victoria",
@@ -197,6 +202,7 @@ Config.AuthorizedVehicles = {
         ["16taurus"] = "Ford Taurus",
         ["16explorer"] = "Ford Explorer",
         ["11caprice"] = "Chevrolet Caprice",
+        ["npolchal"] = "Pursuit Unit",
 	}
 }
 

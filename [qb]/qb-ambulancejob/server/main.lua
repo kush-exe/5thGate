@@ -305,7 +305,7 @@ end)
 QBCore.Commands.Add("revivep", Lang:t('info.revive_player'), {}, false, function(source, _)
 	local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
-	if Player.PlayerData.job.name == "ambulance" then
+	if Player.PlayerData.job.name == "ambulance" or Player.PlayerData.job.name == "police" then
 		TriggerClientEvent("hospital:client:RevivePlayer", src)
 	else
 		TriggerClientEvent('QBCore:Notify', src, Lang:t('error.not_ems'), "error")

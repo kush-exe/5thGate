@@ -75,6 +75,12 @@ RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message
     if tag then
         PerformHttpRequest(webHook, function() end, 'POST', json.encode({ username = 'QB Logs', content = '@everyone'}), { ['Content-Type'] = 'application/json' })
     end
+    Citizen.Wait(500)
+    local dd = {
+        ['message'] = message
+    }
+    --send to datadog
+    lib.logger(-1, title, json.encode(dd))
 end)
 
 QBCore.Commands.Add('testwebhook', 'Test Your Discord Webhook For Logs (God Only)', {}, false, function()

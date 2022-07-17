@@ -31,7 +31,7 @@ local function pickLock(entity)
 
 	CreateThread(function()
 		success = not cache.vehicle and lib.progressCircle({
-			duration = 4000,
+			duration = 45000,
 			canCancel = true,
 			disable = {
 				move = true,

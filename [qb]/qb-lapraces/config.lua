@@ -9,7 +9,8 @@ Config.WhitelistedCreators = {
     "PTA10209",
     "SHB56238",
     "QVF91329",
-    "LBL79663"
+    "LBL79663",
+    "YXB70128"
     
 }
 

@@ -5,6 +5,7 @@ description 'QB-SmallResources'
 version '1.0.0'
 
 shared_script 'config.lua'
+shared_script '@ox_lib/init.lua'
 server_script 'server/*.lua'
 client_script 'client/*.lua'
 
@@ -16,6 +17,10 @@ files {
 	'events.meta',
 	'popgroups.ymt',
 	'relationships.dat',
+}
+
+dependencies {
+	'ox_lib'
 }
 
 lua54 'yes'
