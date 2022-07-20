@@ -1,5 +1,5 @@
 Config = {}
-Config.HotwireChance = 0.5 -- Chance for successful hotwire or not
+Config.HotwireChance = 0.8 -- Chance for successful hotwire or not
 
 Config.RemoveLockpickNormal = 0.5 -- Chance to remove lockpick on fail
 Config.RemoveLockpickAdvanced = 0.2 -- Chance to remove advanced lockpick on fail
@@ -8,8 +8,8 @@ Config.CarjackingTime = 7500 -- How long it takes to carjack
 Config.DelayBetweenCarjackings = 10000 -- Time before you can carjack again
 
 Config.TimeBetweenHotwires = 5000
-Config.minHotwireTime = 20000
-Config.maxHotwireTime = 40000
+Config.minHotwireTime = 10000
+Config.maxHotwireTime = 20000
 
 Config.AlertCooldown = 10000 -- 10 seconds
 Config.PoliceAlertChance = 1.75 -- Chance of alerting police during the day

@@ -352,6 +352,9 @@ QBShared.Items = {
 	['security_card_01'] 			 = {['name'] = 'security_card_01', 			  	['label'] = 'Security Card A', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'security_card_01.png', 	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A security card... I wonder what it goes to'},
 	['security_card_02'] 			 = {['name'] = 'security_card_02', 			  	['label'] = 'Security Card B', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'security_card_02.png', 	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A security card... I wonder what it goes to'},
 
+	['flathead'] 			 		 = {['name'] = 'flathead', 			  	['label'] = 'Flathead Screwdriver', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'flathead.png', 	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A flathead screwdriver'},
+	['usbcharger'] 			 		 = {['name'] = 'usbcharger', 			  	['label'] = 'USB Charger', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'usbcharger.png', 	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Cord to charge your phone'},
+
 	-- Eat ITEMS
 	['tosti'] 						 = {['name'] = 'tosti', 			 	  	  	['label'] = 'Grilled Cheese Sandwich', 	['weight'] = 200, 		['type'] = 'item', 		['image'] = 'tosti.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Nice to eat'},
 	['twerks_candy'] 				 = {['name'] = 'twerks_candy', 			  	  	['label'] = 'Twerks', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'twerks_candy.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Some delicious candy :O'},
@@ -617,7 +620,9 @@ QBShared.Items = {
 	['exhaust'] 				 	 = {['name'] = 'exhaust', 			  	  		['label'] = 'Vehicle exhaust', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'exhaust.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Parts for Vehicle'},
 	['brake'] 				 	 = {['name'] = 'brake', 			  	  		['label'] = 'Vehicle brake', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'brake.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Parts for Vehicle'},
 	['paint'] 				 	 = {['name'] = 'paint', 			  	  		['label'] = 'Vehicle paint', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'paint.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Parts for Vehicle'},
-
+	['stolenwheel'] 				 	 = {['name'] = 'stolenwheel', 			  	  		['label'] = 'Stolen Rim', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'wheel.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Parts for Vehicle'},
+	['tireiron'] 				 	 = {['name'] = 'tireiron', 			  	  		['label'] = 'Tire Iron', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'tireiron.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Tool to take your wheel off'},
+	
 
 	-- tommys pizzeria
 	['cocacola'] 				 	 = {['name'] = 'cocacola', 			  	  		['label'] = 'Coca Cola', 				['weight'] = 200, 		['type'] = 'item', 		['image'] = 'cocacola.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Nice cold bottle of coke'},

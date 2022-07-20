@@ -1,4 +1,5 @@
 local Bones = {Options = {}, Vehicle = {'chassis', 'windscreen', 'seat_pside_r', 'seat_dside_r', 'bodyshell', 'suspension_lm', 'suspension_lr', 'platelight', 'attach_female', 'attach_male', 'bonnet', 'boot', 'chassis_dummy', 'chassis_Control', 'door_dside_f', 'door_dside_r', 'door_pside_f', 'door_pside_r', 'Gun_GripR', 'windscreen_f', 'platelight', 'VFX_Emitter', 'window_lf', 'window_lr', 'window_rf', 'window_rr', 'engine', 'gun_ammo', 'ROPE_ATTATCH', 'wheel_lf', 'wheel_lr', 'wheel_rf', 'wheel_rr', 'exhaust', 'overheat', 'seat_dside_f', 'seat_pside_f', 'Gun_Nuzzle', 'seat_r'}}
+local QBCore = exports['qb-core']:GetCoreObject()
 
 if Config.EnableDefaultOptions then
     local BackEngineVehicles = {
@@ -49,6 +50,15 @@ if Config.EnableDefaultOptions then
             else
                 SetVehicleDoorOpen(vehicle, door, false)
             end
+        end
+    end
+
+    local function smash(vehicle)
+        if IsVehicleWindowIntact(vehicle,0) then
+            SetVehicleDoorsLocked(vehicle,7)
+            TaskEnterVehicle(PlayerPedId(), vehicle, -1, -1, 1.0, 0)
+        else
+            QBCore.Functions.Notify('The cars window is already broken')
         end
     end
 
@@ -107,6 +117,14 @@ if Config.EnableDefaultOptions then
             end,
             distance = 1.2
         },
+        ["Steal Driver Door"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Door",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'door')
+            end,
+            distance = 0.9
+        },
         ["Flip Vehicle"] = {
             icon = "fas fa-car",
             label = "Flip Vehicle",
@@ -115,6 +133,14 @@ if Config.EnableDefaultOptions then
             end,
             action = function()
                 flip()
+            end,
+            distance = 1.2
+        },
+        ["Smash Glass"] = {
+            icon = "fas fa-car",
+            label = "Smash Glass",
+            action = function(entity)
+                smash(entity)
             end,
             distance = 1.2
         }
@@ -131,6 +157,14 @@ if Config.EnableDefaultOptions then
                 ToggleDoor(entity, 1)
             end,
             distance = 1.2
+        },
+        ["Steal Pass Door"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Door",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'door')
+            end,
+            distance = 0.9
         },
         ["Flip Vehicle"] = {
             icon = "fas fa-car",
@@ -157,6 +191,14 @@ if Config.EnableDefaultOptions then
             end,
             distance = 1.2
         },
+        ["Steal Left Door"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Door",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'door')
+            end,
+            distance = 0.9
+        },
         ["Flip Vehicle"] = {
             icon = "fas fa-car",
             label = "Flip Vehicle",
@@ -182,6 +224,14 @@ if Config.EnableDefaultOptions then
             end,
             distance = 1.2
         },
+        ["Steal Right Door"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Door",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'door')
+            end,
+            distance = 0.9
+        },
         ["Flip Vehicle"] = {
             icon = "fas fa-car",
             label = "Flip Vehicle",
@@ -201,6 +251,14 @@ if Config.EnableDefaultOptions then
             label = "Toggle Hood",
             action = function(entity)
                 ToggleDoor(entity, BackEngineVehicles[GetEntityModel(entity)] and 5 or 4)
+            end,
+            distance = 0.9
+        },
+        ["Steal Hood"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Hood",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'bonnet')
             end,
             distance = 0.9
         },
@@ -226,6 +284,14 @@ if Config.EnableDefaultOptions then
             end,
             distance = 0.9
         },
+        ["Steal Trunk"] = {
+            icon = "fas fa-truck-ramp-box",
+            label = "Steal Trunk",
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealbodypart', 'boot')
+            end,
+            distance = 0.9
+        },
         ["Flip Vehicle"] = {
             icon = "fas fa-car",
             label = "Flip Vehicle",
@@ -238,6 +304,62 @@ if Config.EnableDefaultOptions then
             distance = 1.2
         }
     }
+--[[
+    Bones.Options['wheel_lf'] = {
+        ["Steal Rim"] = {
+            icon = "fas fa-mask",
+            label = "Steal Rim",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealrim', entity)
+            end,
+            distance = 1.2
+        }
+    }
+
+    Bones.Options['wheel_lr'] = {
+        ["Steal Rim"] = {
+            icon = "fas fa-mask",
+            label = "Steal Rim",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealrim', entity)
+            end,
+            distance = 1.2
+        }
+    }
+
+    Bones.Options['wheel_rf'] = {
+        ["Steal Rim"] = {
+            icon = "fas fa-mask",
+            label = "Steal Rim",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealrim', entity)
+            end,
+            distance = 1.2
+        }
+    }
+
+    Bones.Options['wheel_rr'] = {
+        ["Steal Rim"] = {
+            icon = "fas fa-mask",
+            label = "Steal Rim",
+            canInteract = function(entity)
+                return true
+            end,
+            action = function(entity)
+                TriggerEvent('qb-stealparts:client:stealrim', entity)
+            end,
+            distance = 1.2
+        }
+    }--]]
 end
 
 return Bones

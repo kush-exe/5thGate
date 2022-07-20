@@ -247,6 +247,33 @@ Config.Products = {
             slot = 15,
             --requiredJob = { "mechanic" }
         },
+        [15] = {
+            name = "usbcharger",
+            price = 15,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 16,
+            --requiredJob = { "mechanic" }
+        },
+        [16] = {
+            name = "flathead",
+            price = 50,
+            amount = 2,
+            info = {},
+            type = "item",
+            slot = 17,
+            --requiredJob = { "mechanic" }
+        },
+        [17] = {
+            name = "tireiron",
+            price = 75,
+            amount = 1,
+            info = {},
+            type = "item",
+            slot = 18,
+            --requiredJob = { "mechanic" }
+        },
     },
     ["weedshop"] = {
         [1] = {

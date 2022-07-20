@@ -3,6 +3,7 @@
 -----------------------
 local QBCore = exports['qb-core']:GetCoreObject()
 local KeysList = {}
+local brokenVehicles = {}
 
 local isTakingKeys = false
 local isCarjacking = false
@@ -39,9 +40,9 @@ CreateThread(function()
                         if not isTakingKeys then
                             isTakingKeys = true
                             local Vehicle = GetVehiclePedIsUsing(PlayerPedId())
-                            for i = 0, -1 do
-                            SetVehicleDoorOpen(Vehicle, i, false, true) -- will open every door from 0-5
-							end
+                            --for i = 0, -1 do
+                            --SetVehicleDoorOpen(Vehicle, i, false, true) -- will open every door from 0-5
+							--end
                             QBCore.Functions.Progressbar("steal_keys", "Taking keys from body...", 2500, false, false, {
                                 disableMovement = false,
                                 disableCarMovement = true,
@@ -61,10 +62,15 @@ CreateThread(function()
 						end
                     end
                 elseif driver == 0 and entering ~= lastPickedVehicle and not HasKeys(plate) and not isTakingKeys then
-                        local Vehicle = GetVehiclePedIsUsing(PlayerPedId())
-                        for i = 0, -1 do
-                        SetVehicleDoorOpen(Vehicle, i, false, true)
-					end
+                        local veh = GetVehiclePedIsUsing(PlayerPedId())
+                        local lock = GetVehicleDoorLockStatus(veh)
+                        if (GetConvertibleRoofState(veh) == 1) or (GetConvertibleRoofState(veh) == 2) then
+                            SetVehicleDoorsLocked(veh, 1)
+                        elseif not IsVehicleWindowIntact(veh, 0) or not IsVehicleWindowIntact(veh, 1) then
+                            SetVehicleDoorsLocked(veh, 7)
+                        else
+                            SetVehicleDoorsLocked(veh, 2)
+                        end
                 end
             end
 
@@ -77,9 +83,10 @@ CreateThread(function()
                 if GetPedInVehicleSeat(vehicle, -1) == PlayerPedId() and not HasKeys(plate) and not isBlacklistedVehicle(vehicle) then
                     sleep = 5
 
-                    local vehiclePos = GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.0, 0.5)
                     --DrawText3D(vehiclePos.x, vehiclePos.y, vehiclePos.z, "~g~[H]~w~ - Search for Keys")
-                    SetVehicleEngineOn(vehicle, false, false, true)
+                    if not brokenVehicles[plate] then
+                        SetVehicleEngineOn(vehicle, false, false, true)
+                    end
 
                     --if IsControlJustPressed(0, 74) then
                     --    Hotwire(vehicle, plate)
@@ -109,6 +116,26 @@ CreateThread(function()
                     end
                 end
             end
+        end
+        Wait(sleep)
+    end
+end)
+
+Citizen.CreateThread(function()
+    local sleep = 500
+    while true do
+        if LocalPlayer.state.isLoggedIn then
+            local ped = PlayerPedId()
+            local veh = GetVehiclePedIsIn(ped)
+            if veh ~= 0 then
+                sleep = 0
+                if not GetIsVehicleEngineRunning(veh) then
+                    DisableControlAction(2,71, true)
+                end
+            else
+                sleep = 150
+            end
+            
         end
         Wait(sleep)
     end
@@ -144,6 +171,7 @@ end)
 -- Handles state right when the player selects their character and location.
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     GetKeys()
+    
 end)
 
 -- Resets state on logout, in case of character change.
@@ -160,7 +188,7 @@ RegisterNetEvent('qb-vehiclekeys:client:AddKeys', function(plate)
         local vehicleplate = QBCore.Functions.GetPlate(vehicle)
 
         if plate == vehicleplate then
-            SetVehicleEngineOn(vehicle, false, false, false)
+            SetVehicleEngineOn(vehicle, false, false, true)
         end
     end
 end)
@@ -178,7 +206,36 @@ RegisterNetEvent('qb-vehiclekeys:client:ToggleEngine', function()
         else
             SetVehicleEngineOn(vehicle, true, false, true)
         end
+    elseif brokenVehicles[QBCore.Functions.GetPlate(vehicle)] then
+        QBCore.Functions.Notify('The ignition column is broken, you need a tool to start this vehicle')
     end
+end)
+
+RegisterNetEvent('qb-vehiclekeys:client:UseCharger', function()
+    QBCore.Functions.Progressbar("hotwire_vehicle", "Turning the ignition...", 2500, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true
+    }, {
+        animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+        anim = "machinic_loop_mechandplayer",
+        flags = 16
+    }, {}, {}, function() -- Done
+        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+        local EngineOn = GetIsVehicleEngineRunning(GetVehiclePedIsIn(PlayerPedId()))
+        local vehicle = GetVehiclePedIsIn(PlayerPedId(), true)
+        if brokenVehicles[QBCore.Functions.GetPlate(vehicle)] then
+            if EngineOn then
+                SetVehicleEngineOn(vehicle, false, false, true)
+            else
+                SetVehicleEngineOn(vehicle, true, false, true)
+            end
+        end
+    end, function() -- Cancel
+        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+    end)
+    
 end)
 
 
@@ -210,6 +267,17 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
     LockpickDoor(isAdvanced)
 end)
 
+RegisterNetEvent('vehiclekeys:UseFlathead', function()
+    local vehicle = GetVehiclePedIsIn(PlayerPedId())
+    local plate = QBCore.Functions.GetPlate(vehicle)
+    print(plate)
+    Hotwire(vehicle, plate)
+end)
+
+RegisterNetEvent('qb-vehiclekeys:client:sendBrokenVehicles', function(v)
+    print(v)
+    brokenVehicles = v
+end)
 
 -- Backwards Compatibility ONLY -- Remove at some point --
 RegisterNetEvent('vehiclekeys:client:SetOwner', function(plate)
@@ -233,6 +301,9 @@ end
 function GetKeys()
     QBCore.Functions.TriggerCallback('qb-vehiclekeys:server:GetVehicleKeys', function(_KeysList)
         KeysList = _KeysList
+    end)
+    QBCore.Functions.TriggerCallback('qb-vehiclekeys:server:GetBrokenVehicles', function(brkoen)
+        brokenVehicles = brkoen
     end)
 end
 
@@ -379,12 +450,12 @@ function lockpickFinish(success)
         TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
         lastPickedVehicle = vehicle
 
-        if GetPedInVehicleSeat(vehicle, -1) == PlayerPedId() then
-            TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', QBCore.Functions.GetPlate(vehicle))
-        else
+        --if GetPedInVehicleSeat(vehicle, -1) == PlayerPedId() then
+            --TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', QBCore.Functions.GetPlate(vehicle))
+        --else
             QBCore.Functions.Notify('You managed to pick the door lock open!', 'success')
             SetVehicleDoorsLocked(vehicle, 1)
-        end
+        --end
 
     else
         TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
@@ -409,32 +480,36 @@ function Hotwire(vehicle, plate)
 
     SetVehicleAlarm(vehicle, true)
     SetVehicleAlarmTimeLeft(vehicle, hotwireTime)
-    QBCore.Functions.Progressbar("hotwire_vehicle", "Searching for the car keys...", hotwireTime, false, true, {
-        disableMovement = true,
-        disableCarMovement = true,
-        disableMouse = false,
-        disableCombat = true
-    }, {
-        animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
-        anim = "machinic_loop_mechandplayer",
-        flags = 16
-    }, {}, {}, function() -- Done
-        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
-        TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
-        if (math.random() <= Config.HotwireChance) then
-            TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+    exports['ps-ui']:Circle(function(success)
+        if success then
+            QBCore.Functions.Progressbar("hotwire_vehicle", "Breaking the ignition column...", hotwireTime, false, true, {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true
+            }, {
+                animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+                anim = "machinic_loop_mechandplayer",
+                flags = 16
+            }, {}, {}, function() -- Done
+                StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+                TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
+                TriggerServerEvent('qb-vehiclekeys:server:setBrokenVehicle', plate)
+                QBCore.Functions.Notify("Successfully broke ignition column")
+                Wait(Config.TimeBetweenHotwires)
+                IsHotwiring = false
+            end, function() -- Cancel
+                StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+                IsHotwiring = false
+            end)
+        
+            Wait(10000)
+            AttemptPoliceAlert("steal")
         else
-            QBCore.Functions.Notify("You fail to find the keys and get frustrated.", "error")
+            QBCore.Functions.Notify('You failed!', 'error')
         end
-        Wait(Config.TimeBetweenHotwires)
-        IsHotwiring = false
-    end, function() -- Cancel
-        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
-        IsHotwiring = false
-    end)
-
-    Wait(10000)
-    AttemptPoliceAlert("steal")
+    end, 6, 10)
+    
 end
 
 function CarjackVehicle(target)

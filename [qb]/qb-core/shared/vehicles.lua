@@ -156,6 +156,15 @@ QBShared.Vehicles = {
 		['hash'] = `weevil`,
 		['shop'] = 'pdm',
 	},
+	['sultanrsv8'] = {
+		['name'] = 'Sultan RSV8 1 of 1',
+		['brand'] = 'Karin',
+		['model'] = 'sultanrsv8',
+		['price'] = 2500,
+		['category'] = 'compacts',
+		['hash'] = `sultanrsv8`,
+		['shop'] = '1of1',
+	},
 	--- Coupes
 	['cogcabrio'] = {
 		['name'] = 'Cognoscenti Cabrio',
@@ -185,8 +194,8 @@ QBShared.Vehicles = {
 		['shop'] = 'nfs',
 	},
 	['felon'] = {
-		['name'] = 'Felon',
-		['brand'] = 'Lampadati',
+		['name'] = 'Optima',
+		['brand'] = 'Kia',
 		['model'] = 'felon',
 		['price'] = 31000,
 		['category'] = 'coupes',
@@ -1945,8 +1954,8 @@ QBShared.Vehicles = {
 		['shop'] = 'nfs',
 	},
 	['rocoto'] = {
-		['name'] = 'Rocoto',
-		['brand'] = 'Obey',
+		['name'] = 'Sportage',
+		['brand'] = 'Kia',
 		['model'] = 'rocoto',
 		['price'] = 13000,
 		['category'] = 'suvs',
@@ -2009,8 +2018,8 @@ QBShared.Vehicles = {
 	},
 	--- Sedans
 	['asea'] = {
-		['name'] = 'Asea',
-		['brand'] = 'Declasse',
+		['name'] = 'Sonata',
+		['brand'] = 'Hyundai',
 		['model'] = 'asea',
 		['price'] = 2500,
 		['category'] = 'sedans',
@@ -7037,13 +7046,13 @@ QBShared.Vehicles = {
 		["trunkslots"] = 120,
 		["shop"] = 'luxury',
 	},
-	["db10"] = {
-		["name"] = "DB10",
+	["db11"] = {
+		["name"] = "DB11",
 		["brand"] = "Aston Martin",
 		["model"] = "db10",
 		["price"] = 500000,
-		["category"] = "suvs",
-		["hash"] = GetHashKey("db10"),
+		["category"] = "super",
+		["hash"] = GetHashKey("db11"),
 		["image"] = "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png",
 		["trunkspace"] = 150000,
 		["trunkslots"] = 120,

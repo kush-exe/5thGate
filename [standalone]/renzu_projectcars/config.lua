@@ -110,7 +110,7 @@ Config.BuildZone = {
 
 -- CHOPSHOP ( configure this correctly ) disable or enable it its up to you ( this is a bonus feature in project cars )
 Config.EnableChopShop = false -- Built in ChopShop (for parts)
-Config.DeleteVehicleSql = true -- Delete the vehicle in database | carefully changing this from true to false, player can abuse the chopshop
+Config.DeleteVehicleSql = false -- Delete the vehicle in database | carefully changing this from true to false, player can abuse the chopshop
 Config.ChopShop = {
 	['Chop Shop 1'] = { -- <-- dont change
 		label = 'Chop Shop 1', -- can change

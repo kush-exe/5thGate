@@ -25,6 +25,9 @@ Config.BossMenus = {
     ['vanilla'] = {
         vector3(97.62, -1303.48, 29.26),
     },
+    ['pizza'] = {
+        vector3(292.42, -988.49, 29.43)
+    },
 }
 
 Config.BossMenuZones = {
@@ -48,6 +51,9 @@ Config.BossMenuZones = {
     },
     ['vanilla'] = {
         { coords = vector3(97.62, -1303.48, 29.26), length = 1.15, width = 2.6, heading = 353.0, minZ = 29.0-1, maxZ = 33.99 },
+    },
+    ['pizza'] = {
+        { coords = vector3(292.42, -988.49, 29.43), length = 1.15, width = 2.6, heading = 353.0, minZ = 29.0-1, maxZ = 33.99 },
     },
 }
 

@@ -3,6 +3,7 @@
 -----------------------
 local QBCore = exports['qb-core']:GetCoreObject()
 local VehicleList = {}
+local brokenVehicles = {}
 
 -----------------------
 ----   Threads     ----
@@ -36,6 +37,13 @@ RegisterNetEvent('qb-vehiclekeys:server:AcquireVehicleKeys', function(plate)
     GiveKeys(src, plate)
 end)
 
+RegisterNetEvent('qb-vehiclekeys:server:setBrokenVehicle', function(plate)
+    --print('here')
+    local src = source
+    brokenVehicles[plate] = true
+    TriggerClientEvent('qb-vehiclekeys:client:sendBrokenVehicles', -1, brokenVehicles)
+end)
+
 QBCore.Functions.CreateCallback('qb-vehiclekeys:server:GetVehicleKeys', function(source, cb)
     local citizenid = QBCore.Functions.GetPlayer(source).PlayerData.citizenid
     local keysList = {}
@@ -45,6 +53,10 @@ QBCore.Functions.CreateCallback('qb-vehiclekeys:server:GetVehicleKeys', function
         end
     end
     cb(keysList)
+end)
+
+QBCore.Functions.CreateCallback('qb-vehiclekeys:server:GetBrokenVehicles', function(source, cb)
+    cb(brokenVehicles)
 end)
 
 -----------------------
@@ -105,3 +117,15 @@ QBCore.Commands.Add("removekeys", "Remove keys to a vehicle for someone.", {{nam
     end
     RemoveKeys(tonumber(args[1]), args[2])
 end, 'admin')
+
+QBCore.Functions.CreateUseableItem("flathead", function(source)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if not Player or not Player.Functions.GetItemByName('flathead') then return end
+    TriggerClientEvent("vehiclekeys:UseFlathead", source)
+end)
+
+QBCore.Functions.CreateUseableItem("usbcharger", function(source)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if not Player or not Player.Functions.GetItemByName('usbcharger') then return end
+    TriggerClientEvent("qb-vehiclekeys:client:UseCharger", source)
+end)

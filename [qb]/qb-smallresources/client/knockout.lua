@@ -3,7 +3,7 @@ local knockedOut = false
 local wait = 15
 local count = 60
 local isdead = false
---[[
+
 CreateThread(function()
         while true do
             Wait(1)
@@ -90,4 +90,4 @@ CreateThread(function()
              end
         end
     end
-)--]]
+)
